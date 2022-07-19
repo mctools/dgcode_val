@@ -1,0 +1,44 @@
+=====> Write file testdata.dmy2
+Flushing writing: idx 0 runnbr 1000 evtnbr 1
+Flushing writing: idx 1 runnbr 1000 evtnbr 2
+Flushing writing: idx 2 runnbr 1000 evtnbr 3
+=====> Standard run through file
+Found event at idx 0: runnbr 1000 evtnbr 1 nbytes_briefdata 24 nbytes_fulldata 24
+   => Found content in brief section: ("Joe", "New York")
+   => Found content in brief section: ("William", "London")
+   => Found content in brief section: ("Olivier", "Paris")
+   => Found content in Full section: (1, 2, "test1", "Will")
+   => Found content in Full section: (1, 2, "test1", "Will")
+   => Found content in Full section: (1, 3, "test1", "Will")
+   => Found content in Full section: (1, 2, "test2", "Will")
+   => Found content in Full section: (1, 2, "test1", "Bill")
+   => Found content in Full section: (1, 2, "test1", "John")
+Found event at idx 1: runnbr 1000 evtnbr 2 nbytes_briefdata 24 nbytes_fulldata 24
+   => Found content in brief section: ("Olivier", "London")
+   => Found content in brief section: ("William", "New York")
+   => Found content in brief section: ("Joe", "Paris")
+   => Found content in Full section: (1, 2, "test1", "Will")
+   => Found content in Full section: (2, 2, "test1", "Will")
+   => Found content in Full section: (3, 3, "test1", "Will")
+   => Found content in Full section: (1, 2, "test2", "Will")
+   => Found content in Full section: (2, 2, "test1", "Bill")
+   => Found content in Full section: (3, 2, "test1", "John")
+Found event at idx 2: runnbr 1000 evtnbr 3 nbytes_briefdata 24 nbytes_fulldata 24
+   => Found content in brief section: ("Olivier", "New York")
+   => Found content in brief section: ("Dundee", "Sydney")
+   => Found content in brief section: ("Paris", "Copenhagen")
+   => Found content in Full section: (1, 2, "Olivier", "Olivier")
+   => Found content in Full section: (2, 2, "test1", "William")
+   => Found content in Full section: (3, 3, "Paris", "Dundee")
+   => Found content in Full section: (1, 2, "test2", "Will")
+   => Found content in Full section: (2, 2, "William", "Bill")
+   => Found content in Full section: (3, 2, "test1", "John")
+=====> File dump
+Dumping testdata.dmy2:
+  File format version: 2
+  Position RunNbr EvtNbr EvtHdr[B] DBData[B] BriefData[B] FullData[B] Total[B] Integrity
+         0   1000      1        24       161           24          24      233 [success]
+         1   1000      2        24        68           24          24      140 [success]
+         2   1000      3        24       119           24          24      191 [success]
+  Total [nevts=3]:              72       348           72          72      564 [success]
+=====> Finished without encountering error conditions.

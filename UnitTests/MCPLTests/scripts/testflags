@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#Test all combinations of MCPL_HASZLIB, MCPL_NO_CUSTOM_GZIP and MCPL_NO_EXT_GZIP
+
+#A bit hackish, but we want to compile mcpl again and again:
+#CC=`python -c 'import os; import pickle;print(pickle.load(open(os.path.join(os.getenv("DGCODE_DIR"),".bld/env.cache"),"rb"))["system"]["volatile"]["c"]["compiler"])'`
+CC=`python -c 'import os; import pickle; import dgbuild.cfg as cfg; print(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["volatile"]["c"]["compiler"])'`
+if [ $? != 0 ]; then
+    exit 1
+fi
+P=$DGCODE_DIR/packages/Framework/MCPL/MCPL
+
+mkdir -p fakebadgzip/
+echo 'int main(){ return 1; }' | $CC -xc - -o fakebadgzip/gzip
+if [ $? != 0 ]; then
+    exit 1
+fi
+
+rpathflags="-Wl,-rpath,$ESS_LIB_DIR -Wl,-rpath,$ESS_LIB_DIR/links"
+echo '#include "mcpl.h"' > main.c
+echo 'int main() {mcpl_closeandgzip_outfile(mcpl_create_outfile("out.mcpl"));}' >> main.c
+for a in 0 1; do
+    for b in 0 1; do
+        for c in 0 1; do
+            rm -f out.mcpl*
+            flags=""
+            if [ $a == 1 ]; then
+                flags="-DMCPL_HASZLIB ${flags} -lPKG__MiniZLib -DMCPL_ZLIB_INCPATH=\"MiniZLib/zlib.h\" -I$ESS_INCLUDE_DIR"
+            fi
+            if [ $b == 1 ]; then
+                flags="${flags} -DMCPL_NO_CUSTOM_GZIP"
+            fi
+            if [ $c == 1 ]; then
+                flags="${flags} -DMCPL_NO_EXT_GZIP"
+            fi
+            echo "=========================================================================="
+            echo "=== Testing flags: "`echo ${flags}|sed "s#$ESS_INCLUDE_DIR#\\$ESSINC#"`
+            $CC -std=c99 -lm ${flags} ${rpathflags} -I$ESS_INCLUDE_DIR/MCPL -L$ESS_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} -o main && ./main
+            EC=$?
+            ls -1 out.mcpl*
+            if [ $? == 0 ]; then
+                echo "=== Again with broken gzip:"
+                rm -f out.mcpl*
+                PATH="$PWD/fakebadgzip:$PATH" ./main
+                ls -1 out.mcpl*
+            else
+                echo "compilation failed"
+                exit 1
+            fi
+        done
+    done
+done

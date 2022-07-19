@@ -1,0 +1,2 @@
+#!/bin/bash
+ess_mcpltests_stdcmp cxx

@@ -1,0 +1,233 @@
+Tokenizing >><<:
+Tokenizing >>   'dsfsdf sdf  '     'sdfsdf' <<:
+    => token[2] >>dsfsdf sdf  <<
+    => token[2] >>sdfsdf<<
+Tokenizing >> 'dsfsdf sdf  ' 'sdfsdf' ' ' <<:
+    => token[2] >>dsfsdf sdf  <<
+    => token[2] >>sdfsdf<<
+    => token[2] >> <<
+Tokenizing >>   'dsfsdf sdf  '     'sdfs\'df'  <<:
+    => token[2] >>dsfsdf sdf  <<
+    => token[2] >>sdfs'df<<
+Tokenizing >>'\''   'dsf"sdf sdf  '  "'sdf'"   'sdfs\'df' '\''<<:
+    => token[2] >>\'<<
+    => token[2] >>dsf"sdf sdf  <<
+    => token[2] >>'sdf'<<
+    => token[2] >>sdfs'df<<
+    => token[2] >>\'<<
+Tokenizing >>'A string' .34e+12 (17.0)<<:
+    => token[2] >>A string<<
+    => token[4] >>.34e+12<<
+    => token[0] >>(<<
+    => token[4] >>17.0<<
+    => token[1] >>)<<
+Tokenizing >>'A ()string' .34e+12 (17.0)<<:
+    => token[2] >>A ()string<<
+    => token[4] >>.34e+12<<
+    => token[0] >>(<<
+    => token[4] >>17.0<<
+    => token[1] >>)<<
+Tokenizing >>'A ()string' .34e+12 2pname2_b(17.0)<<:
+    => token[2] >>A ()string<<
+    => token[4] >>.34e+12<<
+    => token[3] >>2<<
+    => token[6] >>pname2_b<<
+    => token[0] >>(<<
+    => token[4] >>17.0<<
+    => token[1] >>)<<
+Tokenizing >>'A string' || -.34e+12 +(17.0)> (5.0)<<:
+    => token[2] >>A string<<
+    => token[5] >>||<<
+    => token[5] >>-<<
+    => token[4] >>.34e+12<<
+    => token[5] >>+<<
+    => token[0] >>(<<
+    => token[4] >>17.0<<
+    => token[1] >>)<<
+    => token[5] >>><<
+    => token[0] >>(<<
+    => token[4] >>5.0<<
+    => token[1] >>)<<
+Tokenizing >>'A string' || -.34e+12 +(17.0)> (5.0-1)<<:
+    => token[2] >>A string<<
+    => token[5] >>||<<
+    => token[5] >>-<<
+    => token[4] >>.34e+12<<
+    => token[5] >>+<<
+    => token[0] >>(<<
+    => token[4] >>17.0<<
+    => token[1] >>)<<
+    => token[5] >>><<
+    => token[0] >>(<<
+    => token[4] >>5.0<<
+    => token[5] >>-<<
+    => token[3] >>1<<
+    => token[1] >>)<<
+Tokenizing >>5.0 meV<<:
+    => token[4] >>5.0<<
+    => token[6] >>meV<<
+Tokenizing >>5.0meV<<:
+    => token[4] >>5.0<<
+    => token[6] >>meV<<
+Tokenizing >>5.0 eV<<:
+    => token[4] >>5.0<<
+    => token[6] >>eV<<
+Tokenizing >>5.0eV<<:
+    => token[4] >>5.0<<
+    => token[6] >>eV<<
+Tokenizing >>5.0 E<<:
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+Tokenizing >>5.0E<<:
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+Tokenizing >>5.0 - 1<<:
+    => token[4] >>5.0<<
+    => token[5] >>-<<
+    => token[3] >>1<<
+Tokenizing >>5.0-1<<:
+    => token[4] >>5.0<<
+    => token[5] >>-<<
+    => token[3] >>1<<
+Tokenizing >>5.0E-1<<:
+    => token[4] >>5.0E-1<<
+Tokenizing >>5.0E- 1<<:
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+    => token[5] >>-<<
+    => token[3] >>1<<
+Tokenizing >>5.0E -1<<:
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+    => token[5] >>-<<
+    => token[3] >>1<<
+Tokenizing >>5.0E- 1<<:
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+    => token[5] >>-<<
+    => token[3] >>1<<
+Tokenizing >>5.0E-<<:
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+    => token[5] >>-<<
+Tokenizing >>-5.0E-<<:
+    => token[5] >>-<<
+    => token[4] >>5.0<<
+    => token[6] >>E<<
+    => token[5] >>-<<
+Tokenizing >>test && 0x456F<<:
+    => token[6] >>test<<
+    => token[5] >>&&<<
+    => token[3] >>17775<<
+Tokenizing >>0x40F5a6 0744 744 0b101<<:
+    => token[3] >>4257190<<
+    => token[3] >>484<<
+    => token[3] >>744<<
+    => token[3] >>5<<
+Tokenizing >>9223372036854775807<<:
+    => token[3] >>9223372036854775807<<
+Tokenizing >>0b0111111111111111111111111111111111111111111111111111111111111111<<:
+    => token[3] >>9223372036854775807<<
+Tokenizing >>0B111111111111111111111111111111111111111111111111111111111111111<<:
+    => token[3] >>9223372036854775807<<
+Tokenizing >>0x7FFFFFFFFFFFFFFF<<:
+    => token[3] >>9223372036854775807<<
+Tokenizing >>0X7ffffffffffffffe<<:
+    => token[3] >>9223372036854775806<<
+Tokenizing >>0X8000000000000000<<:
+    => token[3] >>-9223372036854775808<<
+Tokenizing >>0xFFFFFFFFFFFFFFFF<<:
+    => token[3] >>-1<<
+Tokenizing >>0b1111111111111111111111111111111111111111111111111111111111111111<<:
+    => token[3] >>-1<<
+Tokenizing >>0x000000000000<<:
+    => token[3] >>0<<
+Tokenizing >>0b000000000000<<:
+    => token[3] >>0<<
+Tokenizing >>0x0000000000000000000000011<<:
+    => token[3] >>17<<
+Tokenizing >>1+-2<<:
+    => token[3] >>1<<
+    => token[5] >>+<<
+    => token[5] >>-<<
+    => token[3] >>2<<
+Tokenizing >>1+----2<<:
+    => token[3] >>1<<
+    => token[5] >>+<<
+    => token[5] >>-<<
+    => token[5] >>-<<
+    => token[5] >>-<<
+    => token[5] >>-<<
+    => token[3] >>2<<
+Tokenizing >>1+---+2<<:
+    => token[3] >>1<<
+    => token[5] >>+<<
+    => token[5] >>-<<
+    => token[5] >>-<<
+    => token[5] >>-<<
+    => token[5] >>+<<
+    => token[3] >>2<<
+Tokenizing >>1&&!0<<:
+    => token[3] >>1<<
+    => token[5] >>&&<<
+    => token[5] >>!<<
+    => token[3] >>0<<
+Tokenizing >>1!&&!0<<:
+    => token[3] >>1<<
+    => token[5] >>!<<
+    => token[5] >>&&<<
+    => token[5] >>!<<
+    => token[3] >>0<<
+Tokenizing >>1!=0<<:
+    => token[3] >>1<<
+    => token[5] >>!=<<
+    => token[3] >>0<<
+Tokenizing >>2e<<:
+    => token[3] >>2<<
+    => token[6] >>e<<
+Tokenizing >>2e-1<<:
+    => token[4] >>2e-1<<
+Tokenizing >>2e - 5<<:
+    => token[3] >>2<<
+    => token[6] >>e<<
+    => token[5] >>-<<
+    => token[3] >>5<<
+Tokenizing >>bla.lala<<:
+    => token[6] >>bla.lala<<
+Tokenizing >>bla . lala<<:
+Tokenization gives exception: ParseError : malformed floating point constant in input : .
+Tokenizing >>bla .lala<<:
+Tokenization gives exception: ParseError : malformed floating point constant in input : .
+Tokenizing >>bla. lala<<:
+Tokenization gives exception: ParseError : identifiers are not allowed to end with a dot
+Tokenizing >>bla.la.la<<:
+    => token[6] >>bla.la.la<<
+Tokenizing >>bla..lala<<:
+Tokenization gives exception: ParseError : identifiers are not allowed to contain consecutive dots
+Tokenizing >>.bla<<:
+Tokenization gives exception: ParseError : malformed floating point constant in input : .
+Tokenizing >>bla .2<<:
+    => token[6] >>bla<<
+    => token[4] >>.2<<
+Tokenizing >>1.0e9<<:
+    => token[4] >>1.0e9<<
+Tokenizing >>1.0E+9<<:
+    => token[4] >>1.0E+9<<
+Tokenizing >>1.0e-9<<:
+    => token[4] >>1.0e-9<<
+Tokenizing >>1e9<<:
+    => token[4] >>1e9<<
+Tokenizing >>1E+9<<:
+    => token[4] >>1E+9<<
+Tokenizing >>1e-9<<:
+    => token[4] >>1e-9<<
+Tokenizing >>0b9<<:
+    => token[3] >>0<<
+    => token[6] >>b9<<
+Tokenizing >>0xG<<:
+    => token[3] >>0<<
+    => token[6] >>xG<<
+Tokenizing >>09<<:
+Tokenization gives exception: ParseError : Digit 9 is out of range in octal numbers
+Tokenizing >>0b151<<:
+Tokenization gives exception: ParseError : Digit 5 is out of range in base-2 numbers

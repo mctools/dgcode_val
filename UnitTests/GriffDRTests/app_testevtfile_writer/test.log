@@ -1,0 +1,71 @@
+=====> Write file testdata.dmy
+Flushing writing: idx 0 runnbr 1000 evtnbr 1
+Flushing writing: idx 1 runnbr 1000 evtnbr 2
+Flushing writing: idx 2 runnbr 1000 evtnbr 3
+Flushing writing: idx 3 runnbr 1000 evtnbr 5
+Flushing writing: idx 4 runnbr 1000 evtnbr 7
+Flushing writing: idx 5 runnbr 1000 evtnbr 9
+Flushing writing: idx 6 runnbr 1000 evtnbr 11
+Flushing writing: idx 7 runnbr 1100 evtnbr 0
+Flushing writing: idx 8 runnbr 1100 evtnbr 1
+Flushing writing: idx 9 runnbr 1100 evtnbr 2
+Flushing writing: idx 10 runnbr 1100 evtnbr 3
+Flushing writing: idx 11 runnbr 1100 evtnbr 4
+=====> Standard run through file
+DB Listener: Received 14 bytes of data
+Found event at idx 0: runnbr 1000 evtnbr 1 nbytes_briefdata 24 nbytes_fulldata 24
+DB Listener: Received 2 bytes of data
+Found event at idx 1: runnbr 1000 evtnbr 2 nbytes_briefdata 8 nbytes_fulldata 24
+DB Listener: Received 4 bytes of data
+Found event at idx 2: runnbr 1000 evtnbr 3 nbytes_briefdata 4 nbytes_fulldata 4
+Found event at idx 3: runnbr 1000 evtnbr 5 nbytes_briefdata 4 nbytes_fulldata 4
+DB Listener: Received 4 bytes of data
+Found event at idx 4: runnbr 1000 evtnbr 7 nbytes_briefdata 4 nbytes_fulldata 4
+Found event at idx 5: runnbr 1000 evtnbr 9 nbytes_briefdata 4 nbytes_fulldata 4
+DB Listener: Received 4 bytes of data
+Found event at idx 6: runnbr 1000 evtnbr 11 nbytes_briefdata 4 nbytes_fulldata 4
+DB Listener: Received 4 bytes of data
+Found event at idx 7: runnbr 1100 evtnbr 0 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 8: runnbr 1100 evtnbr 1 nbytes_briefdata 0 nbytes_fulldata 0
+DB Listener: Received 4 bytes of data
+Found event at idx 9: runnbr 1100 evtnbr 2 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 10: runnbr 1100 evtnbr 3 nbytes_briefdata 0 nbytes_fulldata 0
+DB Listener: Received 4 bytes of data
+Found event at idx 11: runnbr 1100 evtnbr 4 nbytes_briefdata 0 nbytes_fulldata 0
+TestDBListener destructor: Received a total of 40 bytes
+=====> Read with a bit of jumping around
+DB Listener: Received 14 bytes of data
+skipEvents(8)
+DB Listener: Received 2 bytes of data
+DB Listener: Received 4 bytes of data
+DB Listener: Received 4 bytes of data
+DB Listener: Received 4 bytes of data
+DB Listener: Received 4 bytes of data
+Found event at idx 8: runnbr 1100 evtnbr 1 nbytes_briefdata 0 nbytes_fulldata 0
+goToNextEvent()
+DB Listener: Received 4 bytes of data
+Found event at idx 9: runnbr 1100 evtnbr 2 nbytes_briefdata 0 nbytes_fulldata 0
+skipEvents(-7)
+Found event at idx 2: runnbr 1000 evtnbr 3 nbytes_briefdata 4 nbytes_fulldata 4
+run forward through events...
+Found event at idx 3: runnbr 1000 evtnbr 5 nbytes_briefdata 4 nbytes_fulldata 4
+Found event at idx 4: runnbr 1000 evtnbr 7 nbytes_briefdata 4 nbytes_fulldata 4
+Found event at idx 5: runnbr 1000 evtnbr 9 nbytes_briefdata 4 nbytes_fulldata 4
+Found event at idx 6: runnbr 1000 evtnbr 11 nbytes_briefdata 4 nbytes_fulldata 4
+Found event at idx 7: runnbr 1100 evtnbr 0 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 8: runnbr 1100 evtnbr 1 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 9: runnbr 1100 evtnbr 2 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 10: runnbr 1100 evtnbr 3 nbytes_briefdata 0 nbytes_fulldata 0
+DB Listener: Received 4 bytes of data
+Found event at idx 11: runnbr 1100 evtnbr 4 nbytes_briefdata 0 nbytes_fulldata 0
+goToFirstEvent()
+Found event at idx 0: runnbr 1000 evtnbr 1 nbytes_briefdata 24 nbytes_fulldata 24
+seekEventByIndex(8) and run forward through events...
+Found event at idx 8: runnbr 1100 evtnbr 1 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 9: runnbr 1100 evtnbr 2 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 10: runnbr 1100 evtnbr 3 nbytes_briefdata 0 nbytes_fulldata 0
+Found event at idx 11: runnbr 1100 evtnbr 4 nbytes_briefdata 0 nbytes_fulldata 0
+gotoEvent(1100,2)
+Found event at idx 9: runnbr 1100 evtnbr 2 nbytes_briefdata 0 nbytes_fulldata 0
+TestDBListener destructor: Received a total of 40 bytes
+=====> Finished without encountering error conditions.

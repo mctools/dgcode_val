@@ -1,0 +1,82 @@
+G4Launcher:: Pre-init started
+G4Launcher:: Installing FPE detection
+G4Launcher:: setSeed() not called, picking standard seed.
+G4Launcher:: Installing xoroshiro128+ random generator (via NCrystal)
+
+**************************************************************
+ Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+G4Launcher:: Setting up physics list ESS_Empty
+G4Launcher:: Setting up geometry:
+G4Launcher::   --> GeoConstructor[DummyGeo]:
+G4Launcher::   -->   [dbl] boxThickness = 200
+G4Launcher:: Setting up particle generation:
+G4Launcher::   --> ParticleGenerator[G4Launcher/SingleParticleGun]:
+G4Launcher::   -->   [dbl] x_meter = 0
+G4Launcher::   -->   [dbl] y_meter = 0
+G4Launcher::   -->   [dbl] z_meter = -5
+G4Launcher::   -->   [dbl] energy_eV = 0.025
+G4Launcher::   -->   [dbl] momdirx = 0
+G4Launcher::   -->   [dbl] momdiry = 0
+G4Launcher::   -->   [dbl] momdirz = 1
+G4Launcher::   -->   [int] nParticles = 1
+G4Launcher::   -->   [str] particleName = ""
+G4Launcher::   -->   [int] pdgCode = 2112
+G4Launcher:: Requested to not set output of GRIFF files:
+G4Launcher:: Pre-init done
+G4Launcher:: Calling G4RunManager::Initialize()
+Checking overlaps for volume PVSomeBox ... OK! 
+G4Launcher:: G4RunManager::Initialize() done
+G4Launcher:: Applying command: /tracking/verbose 1
+-------------------------------------------------------
+    |BooleanAnd_ii2i
+    |  ConstCmpEqual_iv1i
+    |    trk.trkid
+    |  ConstCmpGT_iv2i
+    |    step.stepnbr
+-------------------------------------------------------
+    |BinAdd_fi2f
+    |  BinAdd_ff2f
+    |    BinAdd_ff2f
+    |      BinDiv_ff2f
+    |        step.steplength
+    |        ConstantValue_f(10.0000)
+    |      BinMult_ff2f
+    |        ConstantValue_f(3.1416)
+    |        func_sin_f2f
+    |          step.edep
+    |    BinDiv_ff2f
+    |      BinMult_fi2f
+    |        ConstantValue_f(1000000000.0000)
+    |        step.post.volcopyno
+    |      ConstantValue_f(0.0010)
+    |  BinMult_ii2i
+    |    ConstantValue_i(5)
+    |    ConstCmpEqual_svWorlds
+    |      step.post.volname_2
+-------------------------------------------------------
+G4Launcher:: Starting simulation of 1 events
+G4Launcher:: Begin simulation of event 1 [seed 123456789]
+
+*********************************************************************************************************
+* G4Track Information:   Particle = neutron,   Track ID = 1,   Parent ID = 0
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0        0        0   -5e+03   2.5e-08        0        0         0       World initStep
+    1        0        0     -100   2.5e-08        0  4.9e+03   4.9e+03   PVSomeBox Transportation
+Test - filter: 0
+Test - value : 490
+    2        0        0      100   2.5e-08        0      200   5.1e+03       World Transportation
+Test - filter: 0
+Test - value : 20
+    3        0        0    1e+04   2.5e-08        0  9.9e+03   1.5e+04  OutOfWorld Transportation
+Test - filter: 1
+Test - value : 990
+G4Launcher:: Simulation done

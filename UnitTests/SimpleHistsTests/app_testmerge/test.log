@@ -1,0 +1,62 @@
+Add histogram 0 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 1 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 2 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 3 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 4 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 5 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 6 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 7 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 8 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 9 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 10 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 11 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 12 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 13 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 14 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 15 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 16 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 17 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 18 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 19 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 20 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 21 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 22 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 23 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 24 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 25 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 26 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 27 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 28 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Add histogram 29 to test collections and fill
+  .. performing basic serialisation/deserialisation/similarity checks
+Attempting persistification to file and subsequent collection-level merging of re-loaded instances.
+Success - merged collections are similar

@@ -1,0 +1,2983 @@
+--------------------------------------------------
+Testing expression "1+2.0"
+  AST:
+     | BinAdd_if2f(3.0000)
+     |   ConstantValue_i(1)
+     |   ConstantValue_f(2.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "1+2"
+  AST:
+     | BinAdd_ii2i(3)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(3)
+--------------------------------------------------
+Testing expression "(1+2.0)"
+  AST:
+     | BinAdd_if2f(3.0000)
+     |   ConstantValue_i(1)
+     |   ConstantValue_f(2.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "(1+2.0"
+ASTBuilder.buildTree(..) gives exception: ParseError : parenthesis never closed
+--------------------------------------------------
+Testing expression "1+2.0)"
+ASTBuilder.buildTree(..) gives exception: ParseError : mismatched parenthesis
+--------------------------------------------------
+Testing expression "1+2.0+3"
+  AST:
+     | BinAdd_fi2f(6.0000)
+     |   BinAdd_if2f(3.0000)
+     |     ConstantValue_i(1)
+     |     ConstantValue_f(2.0000)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(6.0000)
+--------------------------------------------------
+Testing expression "1+2.0*3"
+  AST:
+     | BinAdd_if2f(7.0000)
+     |   ConstantValue_i(1)
+     |   BinMult_fi2f(6.0000)
+     |     ConstantValue_f(2.0000)
+     |     ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(7.0000)
+--------------------------------------------------
+Testing expression "(2.0*3)+1"
+  AST:
+     | BinAdd_fi2f(7.0000)
+     |   BinMult_fi2f(6.0000)
+     |     ConstantValue_f(2.0000)
+     |     ConstantValue_i(3)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(7.0000)
+--------------------------------------------------
+Testing expression "2.0*3+1"
+  AST:
+     | BinAdd_fi2f(7.0000)
+     |   BinMult_fi2f(6.0000)
+     |     ConstantValue_f(2.0000)
+     |     ConstantValue_i(3)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(7.0000)
+--------------------------------------------------
+Testing expression "2.0*3+-1"
+  AST:
+     | BinAdd_fi2f(5.0000)
+     |   BinMult_fi2f(6.0000)
+     |     ConstantValue_f(2.0000)
+     |     ConstantValue_i(3)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(5.0000)
+--------------------------------------------------
+Testing expression "2.0*3+-+--1"
+  AST:
+     | BinAdd_fi2f(5.0000)
+     |   BinMult_fi2f(6.0000)
+     |     ConstantValue_f(2.0000)
+     |     ConstantValue_i(3)
+     |   UnaryMinus_i(-1)
+     |     UnaryMinus_i(1)
+     |       UnaryMinus_i(-1)
+     |         ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(5.0000)
+--------------------------------------------------
+Testing expression "2.0*-3"
+  AST:
+     | BinMult_fi2f(-6.0000)
+     |   ConstantValue_f(2.0000)
+     |   UnaryMinus_i(-3)
+     |     ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(-6.0000)
+--------------------------------------------------
+Testing expression "2*-1"
+  AST:
+     | BinMult_ii2i(-2)
+     |   ConstantValue_i(2)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(-2)
+--------------------------------------------------
+Testing expression "sin(2.0)"
+  AST:
+     | func_sin_f2f(0.9093)
+     |   ConstantValue_f(2.0000)
+  Optimised AST:
+     | ConstantValue_f(0.9093)
+--------------------------------------------------
+Testing expression "asin(sin(0.513))"
+  AST:
+     | func_asin_f2f(0.5130)
+     |   func_sin_f2f(0.4908)
+     |     ConstantValue_f(0.5130)
+  Optimised AST:
+     | ConstantValue_f(0.5130)
+--------------------------------------------------
+Testing expression "acos(cos(0.513))"
+  AST:
+     | func_acos_f2f(0.5130)
+     |   func_cos_f2f(0.8713)
+     |     ConstantValue_f(0.5130)
+  Optimised AST:
+     | ConstantValue_f(0.5130)
+--------------------------------------------------
+Testing expression "atan(tan(0.513))"
+  AST:
+     | func_atan_f2f(0.5130)
+     |   func_tan_f2f(0.5633)
+     |     ConstantValue_f(0.5130)
+  Optimised AST:
+     | ConstantValue_f(0.5130)
+--------------------------------------------------
+Testing expression "asinh(sinh(0.513))"
+  AST:
+     | func_asinh_f2f(0.5130)
+     |   func_sinh_f2f(0.5358)
+     |     ConstantValue_f(0.5130)
+  Optimised AST:
+     | ConstantValue_f(0.5130)
+--------------------------------------------------
+Testing expression "acosh(cosh(0.513))"
+  AST:
+     | func_acosh_f2f(0.5130)
+     |   func_cosh_f2f(1.1345)
+     |     ConstantValue_f(0.5130)
+  Optimised AST:
+     | ConstantValue_f(0.5130)
+--------------------------------------------------
+Testing expression "atanh(tanh(0.513))"
+  AST:
+     | func_atanh_f2f(0.5130)
+     |   func_tanh_f2f(0.4723)
+     |     ConstantValue_f(0.5130)
+  Optimised AST:
+     | ConstantValue_f(0.5130)
+--------------------------------------------------
+Testing expression "erf(1)"
+  AST:
+     | func_erf_i2f(0.8427)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(0.8427)
+--------------------------------------------------
+Testing expression "erfc(1.)"
+  AST:
+     | func_erfc_f2f(0.1573)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(0.1573)
+--------------------------------------------------
+Testing expression "sqrt(4.0)"
+  AST:
+     | func_sqrt_f2f(2.0000)
+     |   ConstantValue_f(4.0000)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "cbrt(27)"
+  AST:
+     | func_cbrt_i2f(3.0000)
+     |   ConstantValue_i(27)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "expm1(1)"
+  AST:
+     | func_expm1_i2f(1.7183)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(1.7183)
+--------------------------------------------------
+Testing expression "exp(10.0)"
+  AST:
+     | func_exp_f2f(22026.4658)
+     |   ConstantValue_f(10.0000)
+  Optimised AST:
+     | ConstantValue_f(22026.4658)
+--------------------------------------------------
+Testing expression "exp2(3.4)"
+  AST:
+     | func_exp2_f2f(10.5561)
+     |   ConstantValue_f(3.4000)
+  Optimised AST:
+     | ConstantValue_f(10.5561)
+--------------------------------------------------
+Testing expression "sum(5.5)"
+  AST:
+     | ConstantValue_f(5.5000)
+  Optimised AST:
+     | ConstantValue_f(5.5000)
+--------------------------------------------------
+Testing expression "sum()"
+  AST:
+     | ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "sum(1,2)"
+  AST:
+     | BinAdd_ii2i(3)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(3)
+--------------------------------------------------
+Testing expression "sum(2.2,1.0,-1.3)"
+  AST:
+     | BinAdd_ff2f(1.9000)
+     |   BinAdd_ff2f(3.2000)
+     |     ConstantValue_f(2.2000)
+     |     ConstantValue_f(1.0000)
+     |   UnaryMinus_f(-1.3000)
+     |     ConstantValue_f(1.3000)
+  Optimised AST:
+     | ConstantValue_f(1.9000)
+--------------------------------------------------
+Testing expression "sum(2.2,1,-1.3)"
+  AST:
+     | BinAdd_ff2f(1.9000)
+     |   BinAdd_fi2f(3.2000)
+     |     ConstantValue_f(2.2000)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_f(-1.3000)
+     |     ConstantValue_f(1.3000)
+  Optimised AST:
+     | ConstantValue_f(1.9000)
+--------------------------------------------------
+Testing expression "sum(2,1,-1,17,-18)"
+  AST:
+     | BinAdd_ii2i(1)
+     |   BinAdd_ii2i(19)
+     |     BinAdd_ii2i(2)
+     |       BinAdd_ii2i(3)
+     |         ConstantValue_i(2)
+     |         ConstantValue_i(1)
+     |       UnaryMinus_i(-1)
+     |         ConstantValue_i(1)
+     |     ConstantValue_i(17)
+     |   UnaryMinus_i(-18)
+     |     ConstantValue_i(18)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1+sum(,2)"
+ASTBuilder.buildTree(..) gives exception: ParseError : unexpected comma
+--------------------------------------------------
+Testing expression "1+sum(2,(,))"
+ASTBuilder.buildTree(..) gives exception: ParseError : unexpected comma
+--------------------------------------------------
+Testing expression "1+sum(2,())"
+ASTBuilder.buildTree(..) gives exception: ParseError : empty parenthesis
+--------------------------------------------------
+Testing expression "-3^2"
+  AST:
+     | UnaryMinus_f(-9.0000)
+     |   BinPow_ii2f(9.0000)
+     |     ConstantValue_i(3)
+     |     ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(-9.0000)
+--------------------------------------------------
+Testing expression "2.0^-2"
+  AST:
+     | BinPow_fi2f(0.2500)
+     |   ConstantValue_f(2.0000)
+     |   UnaryMinus_i(-2)
+     |     ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(0.2500)
+--------------------------------------------------
+Testing expression "2^-2.0"
+  AST:
+     | BinPow_if2f(0.2500)
+     |   ConstantValue_i(2)
+     |   UnaryMinus_f(-2.0000)
+     |     ConstantValue_f(2.0000)
+  Optimised AST:
+     | ConstantValue_f(0.2500)
+--------------------------------------------------
+Testing expression "2.0**-2"
+  AST:
+     | BinPow_fi2f(0.2500)
+     |   ConstantValue_f(2.0000)
+     |   UnaryMinus_i(-2)
+     |     ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(0.2500)
+--------------------------------------------------
+Testing expression "2**-2"
+  AST:
+     | BinPow_ii2f(0.2500)
+     |   ConstantValue_i(2)
+     |   UnaryMinus_i(-2)
+     |     ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(0.2500)
+--------------------------------------------------
+Testing expression "1+()"
+ASTBuilder.buildTree(..) gives exception: ParseError : empty parenthesis
+--------------------------------------------------
+Testing expression "2^3"
+  AST:
+     | BinPow_ii2f(8.0000)
+     |   ConstantValue_i(2)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(8.0000)
+--------------------------------------------------
+Testing expression "3**2"
+  AST:
+     | BinPow_ii2f(9.0000)
+     |   ConstantValue_i(3)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(9.0000)
+--------------------------------------------------
+Testing expression "2^3^2"
+  AST:
+     | BinPow_if2f(512.0000)
+     |   ConstantValue_i(2)
+     |   BinPow_ii2f(9.0000)
+     |     ConstantValue_i(3)
+     |     ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(512.0000)
+--------------------------------------------------
+Testing expression "4**2**3"
+  AST:
+     | BinPow_if2f(65536.0000)
+     |   ConstantValue_i(4)
+     |   BinPow_ii2f(8.0000)
+     |     ConstantValue_i(2)
+     |     ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(65536.0000)
+--------------------------------------------------
+Testing expression "exp(log(20))"
+  AST:
+     | func_exp_f2f(20.0000)
+     |   func_log_i2f(2.9957)
+     |     ConstantValue_i(20)
+  Optimised AST:
+     | ConstantValue_f(20.0000)
+--------------------------------------------------
+Testing expression "log10(1000.0)"
+  AST:
+     | func_log10_f2f(3.0000)
+     |   ConstantValue_f(1000.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "log2(8.0)"
+  AST:
+     | func_log2_f2f(3.0000)
+     |   ConstantValue_f(8.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "log1p(10.0)"
+  AST:
+     | func_log1p_f2f(2.3979)
+     |   ConstantValue_f(10.0000)
+  Optimised AST:
+     | ConstantValue_f(2.3979)
+--------------------------------------------------
+Testing expression "pow(14.3,3.4)"
+  AST:
+     | BinPow_ff2f(8475.0550)
+     |   ConstantValue_f(14.3000)
+     |   ConstantValue_f(3.4000)
+  Optimised AST:
+     | ConstantValue_f(8475.0550)
+--------------------------------------------------
+Testing expression "float(0)"
+  AST:
+     | TypeCast_i2f(0.0000)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "double(14)"
+  AST:
+     | TypeCast_i2f(14.0000)
+     |   ConstantValue_i(14)
+  Optimised AST:
+     | ConstantValue_f(14.0000)
+--------------------------------------------------
+Testing expression "float('hejsa14')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to floating point constant : "hejsa14"
+--------------------------------------------------
+Testing expression "float("hejsa14")"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to floating point constant : "hejsa14"
+--------------------------------------------------
+Testing expression "int('hejsa14')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to integer constant : "hejsa14"
+--------------------------------------------------
+Testing expression "str('hejsa14')"
+  AST:
+     | ConstantValue_s("hejsa14")
+  Optimised AST:
+     | ConstantValue_s("hejsa14")
+--------------------------------------------------
+Testing expression "int(14.1)"
+  AST:
+     | TypeCast_f2i(14)
+     |   ConstantValue_f(14.1000)
+  Optimised AST:
+     | ConstantValue_i(14)
+--------------------------------------------------
+Testing expression "int(14.9)"
+  AST:
+     | TypeCast_f2i(14)
+     |   ConstantValue_f(14.9000)
+  Optimised AST:
+     | ConstantValue_i(14)
+--------------------------------------------------
+Testing expression "int(-14.1)"
+  AST:
+     | TypeCast_f2i(-14)
+     |   UnaryMinus_f(-14.1000)
+     |     ConstantValue_f(14.1000)
+  Optimised AST:
+     | ConstantValue_i(-14)
+--------------------------------------------------
+Testing expression "int(-14.9)"
+  AST:
+     | TypeCast_f2i(-14)
+     |   UnaryMinus_f(-14.9000)
+     |     ConstantValue_f(14.9000)
+  Optimised AST:
+     | ConstantValue_i(-14)
+--------------------------------------------------
+Testing expression "int('-14')"
+  AST:
+     | TypeCast_s2i(-14)
+     |   ConstantValue_s("-14")
+  Optimised AST:
+     | ConstantValue_i(-14)
+--------------------------------------------------
+Testing expression "str(5)"
+  AST:
+     | TypeCast_i2s("5")
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_s("5")
+--------------------------------------------------
+Testing expression "string(-5)"
+  AST:
+     | TypeCast_i2s("-5")
+     |   UnaryMinus_i(-5)
+     |     ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_s("-5")
+--------------------------------------------------
+Testing expression "str(5.5)"
+  AST:
+     | TypeCast_f2s("5.500000")
+     |   ConstantValue_f(5.5000)
+  Optimised AST:
+     | ConstantValue_s("5.500000")
+--------------------------------------------------
+Testing expression "float('14hejsa')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to floating point constant : "14hejsa"
+--------------------------------------------------
+Testing expression "float('1.4hejsa')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to floating point constant : "1.4hejsa"
+--------------------------------------------------
+Testing expression "int('14hejsa')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to integer constant : "14hejsa"
+--------------------------------------------------
+Testing expression "float('')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to floating point constant : ""
+--------------------------------------------------
+Testing expression "int('')"
+Resulting AST gives exception on evaluation: DomainError : Can not cast string to integer constant : ""
+--------------------------------------------------
+Testing expression "float('1.2')"
+  AST:
+     | TypeCast_s2f(1.2000)
+     |   ConstantValue_s("1.2")
+  Optimised AST:
+     | ConstantValue_f(1.2000)
+--------------------------------------------------
+Testing expression "int('-3')"
+  AST:
+     | TypeCast_s2i(-3)
+     |   ConstantValue_s("-3")
+  Optimised AST:
+     | ConstantValue_i(-3)
+--------------------------------------------------
+Testing expression "5.0 % 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - modulo operator only implemented for integers
+--------------------------------------------------
+Testing expression "5 % 2.0"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - modulo operator only implemented for integers
+--------------------------------------------------
+Testing expression "'lala' % 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - modulo operator only implemented for integers
+--------------------------------------------------
+Testing expression "2 % 'lala'"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - modulo operator only implemented for integers
+--------------------------------------------------
+Testing expression "17 % 13"
+  AST:
+     | BinModulo_ii2i(4)
+     |   ConstantValue_i(17)
+     |   ConstantValue_i(13)
+  Optimised AST:
+     | ConstantValue_i(4)
+--------------------------------------------------
+Testing expression "-17 % 13"
+  AST:
+     | BinModulo_ii2i(-4)
+     |   UnaryMinus_i(-17)
+     |     ConstantValue_i(17)
+     |   ConstantValue_i(13)
+  Optimised AST:
+     | ConstantValue_i(-4)
+--------------------------------------------------
+Testing expression "-17 % int(13.3)"
+  AST:
+     | BinModulo_ii2i(-4)
+     |   UnaryMinus_i(-17)
+     |     ConstantValue_i(17)
+     |   TypeCast_f2i(13)
+     |     ConstantValue_f(13.3000)
+  Optimised AST:
+     | ConstantValue_i(-4)
+--------------------------------------------------
+Testing expression "12 && 2"
+  AST:
+     | BooleanAnd_ii2i(1)
+     |   ConstantValue_i(12)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0 && 12"
+  AST:
+     | BooleanAnd_ii2i(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(12)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0 && 0"
+  AST:
+     | BooleanAnd_ii2i(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1 && 0"
+  AST:
+     | BooleanAnd_ii2i(0)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0 and 12"
+  AST:
+     | BooleanAnd_ii2i(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(12)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0and 12"
+  AST:
+     | BooleanAnd_ii2i(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(12)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "12and 2"
+  AST:
+     | BooleanAnd_ii2i(1)
+     |   ConstantValue_i(12)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "211%2==0"
+  AST:
+     | CmpEqual_ivi(0)
+     |   BinModulo_ii2i(1)
+     |     ConstantValue_i(211)
+     |     ConstantValue_i(2)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "212%2==0"
+  AST:
+     | CmpEqual_ivi(1)
+     |   BinModulo_ii2i(0)
+     |     ConstantValue_i(212)
+     |     ConstantValue_i(2)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0==0"
+  AST:
+     | CmpEqual_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "10==10"
+  AST:
+     | CmpEqual_ivi(1)
+     |   ConstantValue_i(10)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "-1==-1"
+  AST:
+     | CmpEqual_ivi(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0.==0."
+  AST:
+     | CmpEqual_fvf(1)
+     |   ConstantValue_f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "10.==10."
+  AST:
+     | CmpEqual_fvf(1)
+     |   ConstantValue_f(10.0000)
+     |   ConstantValue_f(10.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "-1.==-1."
+  AST:
+     | CmpEqual_fvf(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0==0."
+  AST:
+     | CmpEqual_ivf(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "10.==10"
+  AST:
+     | CmpEqual_fvi(1)
+     |   ConstantValue_f(10.0000)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "-1==-1."
+  AST:
+     | CmpEqual_ivf(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'hello'=='hello'"
+  AST:
+     | CmpEqual_svs(1)
+     |   ConstantValue_s("hello")
+     |   ConstantValue_s("hello")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "''=="""
+  AST:
+     | CmpEqual_svs(1)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0==1"
+  AST:
+     | CmpEqual_ivi(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "2==1.0"
+  AST:
+     | CmpEqual_ivf(0)
+     |   ConstantValue_i(2)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1.0==2"
+  AST:
+     | CmpEqual_fvi(0)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1.0=='hello'"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "1.0==''"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "'hello'==0"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "0!=0"
+  AST:
+     | CmpNotEqual_ivi(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "10!=10"
+  AST:
+     | CmpNotEqual_ivi(0)
+     |   ConstantValue_i(10)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1!=-1"
+  AST:
+     | CmpNotEqual_ivi(0)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0.!=0."
+  AST:
+     | CmpNotEqual_fvf(0)
+     |   ConstantValue_f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "10.!=10."
+  AST:
+     | CmpNotEqual_fvf(0)
+     |   ConstantValue_f(10.0000)
+     |   ConstantValue_f(10.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1.!=-1."
+  AST:
+     | CmpNotEqual_fvf(0)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0!=0."
+  AST:
+     | CmpNotEqual_ivf(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "10.!=10"
+  AST:
+     | CmpNotEqual_fvi(0)
+     |   ConstantValue_f(10.0000)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1!=-1."
+  AST:
+     | CmpNotEqual_ivf(0)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'hello'!='hello'"
+  AST:
+     | CmpNotEqual_svs(0)
+     |   ConstantValue_s("hello")
+     |   ConstantValue_s("hello")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "''!="""
+  AST:
+     | CmpNotEqual_svs(0)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0!=1"
+  AST:
+     | CmpNotEqual_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "2 != 1.0"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   ConstantValue_i(2)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1.0!=2"
+  AST:
+     | CmpNotEqual_fvi(1)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1.0!='hello'"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "1.0!=''"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "'hello' != 0"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "0 < 0"
+  AST:
+     | CmpLT_ivi(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0 < 1"
+  AST:
+     | CmpLT_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1 < -1"
+  AST:
+     | CmpLT_ivi(0)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 < -1.0"
+  AST:
+     | CmpLT_ivf(0)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1.0 < 2"
+  AST:
+     | CmpLT_fvi(1)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1 < 1.0"
+  AST:
+     | CmpLT_ivf(0)
+     |   ConstantValue_i(1)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'aaaa' < 'b'"
+  AST:
+     | CmpLT_svs(1)
+     |   ConstantValue_s("aaaa")
+     |   ConstantValue_s("b")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'aa' < 'aa'"
+  AST:
+     | CmpLT_svs(0)
+     |   ConstantValue_s("aa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'' < 'a'"
+  AST:
+     | CmpLT_svs(1)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("a")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'Aaaa' < 'aa'"
+  AST:
+     | CmpLT_svs(1)
+     |   ConstantValue_s("Aaaa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'Aaaa' < 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "0 <= 0"
+  AST:
+     | CmpLE_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0 <= 1"
+  AST:
+     | CmpLE_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1 <= -1"
+  AST:
+     | CmpLE_ivi(0)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 <= -1.0"
+  AST:
+     | CmpLE_ivf(0)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1.0 <= 2"
+  AST:
+     | CmpLE_fvi(1)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1 <= 1.0"
+  AST:
+     | CmpLE_ivf(1)
+     |   ConstantValue_i(1)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'aaaa' <= 'b'"
+  AST:
+     | CmpLE_svs(1)
+     |   ConstantValue_s("aaaa")
+     |   ConstantValue_s("b")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'aa' <= 'aa'"
+  AST:
+     | CmpLE_svs(1)
+     |   ConstantValue_s("aa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'' <= 'a'"
+  AST:
+     | CmpLE_svs(1)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("a")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'Aaaa' <= 'aa'"
+  AST:
+     | CmpLE_svs(1)
+     |   ConstantValue_s("Aaaa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'Aaaa' <= 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "0 > 0"
+  AST:
+     | CmpGT_ivi(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0 > 1"
+  AST:
+     | CmpGT_ivi(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 > -1"
+  AST:
+     | CmpGT_ivi(1)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1 > -1.0"
+  AST:
+     | CmpGT_ivf(1)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1.0 > 2"
+  AST:
+     | CmpGT_fvi(0)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 > 1.0"
+  AST:
+     | CmpGT_ivf(0)
+     |   ConstantValue_i(1)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'aaaa' > 'b'"
+  AST:
+     | CmpGT_svs(0)
+     |   ConstantValue_s("aaaa")
+     |   ConstantValue_s("b")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'aa' > 'aa'"
+  AST:
+     | CmpGT_svs(0)
+     |   ConstantValue_s("aa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'' > 'a'"
+  AST:
+     | CmpGT_svs(0)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("a")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'Aaaa' > 'aa'"
+  AST:
+     | CmpGT_svs(0)
+     |   ConstantValue_s("Aaaa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'Aaaa' > 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "0 >= 0"
+  AST:
+     | CmpGE_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0 >= 1"
+  AST:
+     | CmpGE_ivi(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 >= -1"
+  AST:
+     | CmpGE_ivi(1)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1 >= -1.0"
+  AST:
+     | CmpGE_ivf(1)
+     |   ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1.0 >= 2"
+  AST:
+     | CmpGE_fvi(0)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 >= 1.0"
+  AST:
+     | CmpGE_ivf(1)
+     |   ConstantValue_i(1)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'aaaa' >= 'b'"
+  AST:
+     | CmpGE_svs(0)
+     |   ConstantValue_s("aaaa")
+     |   ConstantValue_s("b")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'aa' >= 'aa'"
+  AST:
+     | CmpGE_svs(1)
+     |   ConstantValue_s("aa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "'' >= 'a'"
+  AST:
+     | CmpGE_svs(0)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("a")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'Aaaa' >= 'aa'"
+  AST:
+     | CmpGE_svs(0)
+     |   ConstantValue_s("Aaaa")
+     |   ConstantValue_s("aa")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'Aaaa' >= 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "10!=10"
+  AST:
+     | CmpNotEqual_ivi(0)
+     |   ConstantValue_i(10)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1!=-1"
+  AST:
+     | CmpNotEqual_ivi(0)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0.!=0."
+  AST:
+     | CmpNotEqual_fvf(0)
+     |   ConstantValue_f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "10.!=10."
+  AST:
+     | CmpNotEqual_fvf(0)
+     |   ConstantValue_f(10.0000)
+     |   ConstantValue_f(10.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1.!=-1."
+  AST:
+     | CmpNotEqual_fvf(0)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0!=0."
+  AST:
+     | CmpNotEqual_ivf(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "10.!=10"
+  AST:
+     | CmpNotEqual_fvi(0)
+     |   ConstantValue_f(10.0000)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "-1!=-1."
+  AST:
+     | CmpNotEqual_ivf(0)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "'hello'!='hello'"
+  AST:
+     | CmpNotEqual_svs(0)
+     |   ConstantValue_s("hello")
+     |   ConstantValue_s("hello")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "''!="""
+  AST:
+     | CmpNotEqual_svs(0)
+     |   ConstantValue_s("")
+     |   ConstantValue_s("")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "0!=1"
+  AST:
+     | CmpNotEqual_ivi(1)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "2 != 1.0"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   ConstantValue_i(2)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1.0!=2"
+  AST:
+     | CmpNotEqual_fvi(1)
+     |   ConstantValue_f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "1.0!='hello'"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "1.0!=''"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "'hello' != 0"
+ASTBuilder.buildTree(..) gives exception: ParseError : Incompatible types - can not compare strings with numbers
+--------------------------------------------------
+Testing expression "bool('hello')"
+  AST:
+     | UnaryBool_s(1)
+     |   ConstantValue_s("hello")
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "bool('')"
+  AST:
+     | UnaryBool_s(0)
+     |   ConstantValue_s("")
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "bool(0)"
+  AST:
+     | UnaryBool_i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "bool(0.0)"
+  AST:
+     | UnaryBool_f(0)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "bool(10.0)"
+  AST:
+     | UnaryBool_f(1)
+     |   ConstantValue_f(10.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "bool(10)"
+  AST:
+     | UnaryBool_i(1)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "0xF0F0  |  0X00ff"
+  AST:
+     | BitwiseOr(61695)
+     |   ConstantValue_i(61680)
+     |   ConstantValue_i(255)
+  Optimised AST:
+     | ConstantValue_i(61695)
+--------------------------------------------------
+Testing expression "0xF0F0  &  0X00ff"
+  AST:
+     | BitwiseAnd(240)
+     |   ConstantValue_i(61680)
+     |   ConstantValue_i(255)
+  Optimised AST:
+     | ConstantValue_i(240)
+--------------------------------------------------
+Testing expression "0xF0F0 xor 0X00ff"
+  AST:
+     | BitwiseXor(61455)
+     |   ConstantValue_i(61680)
+     |   ConstantValue_i(255)
+  Optimised AST:
+     | ConstantValue_i(61455)
+--------------------------------------------------
+Testing expression "1 << 1"
+  AST:
+     | BitwiseLShift(2)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(2)
+--------------------------------------------------
+Testing expression "2 << 1"
+  AST:
+     | BitwiseLShift(4)
+     |   ConstantValue_i(2)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(4)
+--------------------------------------------------
+Testing expression "4 >> 1"
+  AST:
+     | BitwiseRShift(2)
+     |   ConstantValue_i(4)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(2)
+--------------------------------------------------
+Testing expression "0xF0F << 4"
+  AST:
+     | BitwiseLShift(61680)
+     |   ConstantValue_i(3855)
+     |   ConstantValue_i(4)
+  Optimised AST:
+     | ConstantValue_i(61680)
+--------------------------------------------------
+Testing expression "0xF0F >> 4"
+  AST:
+     | BitwiseRShift(240)
+     |   ConstantValue_i(3855)
+     |   ConstantValue_i(4)
+  Optimised AST:
+     | ConstantValue_i(240)
+--------------------------------------------------
+Testing expression "0x5d06a << 7"
+  AST:
+     | BitwiseLShift(48772352)
+     |   ConstantValue_i(381034)
+     |   ConstantValue_i(7)
+  Optimised AST:
+     | ConstantValue_i(48772352)
+--------------------------------------------------
+Testing expression "~ 0xFFFFFFFFFFFFFFFF"
+  AST:
+     | BitwiseNot(0)
+     |   ConstantValue_i(-1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "~ 0"
+  AST:
+     | BitwiseNot(-1)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(-1)
+--------------------------------------------------
+Testing expression "~ 0xF0F0F0F0F0F0F0F0"
+  AST:
+     | BitwiseNot(1085102592571150095)
+     |   ConstantValue_i(-1085102592571150096)
+  Optimised AST:
+     | ConstantValue_i(1085102592571150095)
+--------------------------------------------------
+Testing expression "isnan(17)"
+  AST:
+     | func_isnan_i2i(0)
+     |   ConstantValue_i(17)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isnan(17.0)"
+  AST:
+     | func_isnan_f2i(0)
+     |   ConstantValue_f(17.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isnan(nan)"
+  AST:
+     | func_isnan_f2i(1)
+     |   ConstantValue_f(nan)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "isnan(inf)"
+  AST:
+     | func_isnan_f2i(0)
+     |   ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isnan(-inf)"
+  AST:
+     | func_isnan_f2i(0)
+     |   UnaryMinus_f(-inf)
+     |     ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isinf(17)"
+  AST:
+     | func_isinf_i2i(0)
+     |   ConstantValue_i(17)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isinf(17.0)"
+  AST:
+     | func_isinf_f2i(0)
+     |   ConstantValue_f(17.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isinf(nan)"
+  AST:
+     | func_isinf_f2i(0)
+     |   ConstantValue_f(nan)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isinf(inf)"
+  AST:
+     | func_isinf_f2i(1)
+     |   ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "isinf(-inf)"
+  AST:
+     | func_isinf_f2i(1)
+     |   UnaryMinus_f(-inf)
+     |     ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "isnormal(inf)"
+  AST:
+     | func_isnormal_f2i(0)
+     |   ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isnormal(-inf)"
+  AST:
+     | func_isnormal_f2i(0)
+     |   UnaryMinus_f(-inf)
+     |     ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isnormal(nan)"
+  AST:
+     | func_isnormal_f2i(0)
+     |   ConstantValue_f(nan)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isnormal(17)"
+  AST:
+     | func_isnormal_i2i(1)
+     |   ConstantValue_i(17)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "isnormal(17.0)"
+  AST:
+     | func_isnormal_f2i(1)
+     |   ConstantValue_f(17.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "isfinite(inf)"
+  AST:
+     | func_isfinite_f2i(0)
+     |   ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isfinite(-inf)"
+  AST:
+     | func_isfinite_f2i(0)
+     |   UnaryMinus_f(-inf)
+     |     ConstantValue_f(inf)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isfinite(nan)"
+  AST:
+     | func_isfinite_f2i(0)
+     |   ConstantValue_f(nan)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "isfinite(17)"
+  AST:
+     | func_isfinite_i2i(1)
+     |   ConstantValue_i(17)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "isfinite(17.0)"
+  AST:
+     | func_isfinite_f2i(1)
+     |   ConstantValue_f(17.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "ipow(3,3)"
+  AST:
+     | BinPowInt_ii2i(27)
+     |   ConstantValue_i(3)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_i(27)
+--------------------------------------------------
+Testing expression "ipow(0,1)"
+  AST:
+     | BinPowInt_ii2i(0)
+     |   ConstantValue_i(0)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "ipow(1,0)"
+  AST:
+     | BinPowInt_ii2i(1)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "ipow(10,0)"
+  AST:
+     | BinPowInt_ii2i(1)
+     |   ConstantValue_i(10)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "ipow(-10,0)"
+  AST:
+     | BinPowInt_ii2i(1)
+     |   UnaryMinus_i(-10)
+     |     ConstantValue_i(10)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "ipow(0,0)"
+Resulting AST gives exception on evaluation: DomainError : 0^0 is undefined
+--------------------------------------------------
+Testing expression "ipow(1,0)"
+  AST:
+     | BinPowInt_ii2i(1)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "ipow(-1,0)"
+  AST:
+     | BinPowInt_ii2i(1)
+     |   UnaryMinus_i(-1)
+     |     ConstantValue_i(1)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "ipow(1,-1)"
+Resulting AST gives exception on evaluation: DomainError : a^n is undefined for integers for negative n
+--------------------------------------------------
+Testing expression "ipow(volatile(3),0)"
+  AST:
+     | BinPowInt_ii2i(1)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | BinPowInt_ii2i(1)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "ipow(volatile(3),1)"
+  AST:
+     | BinPowInt_ii2i(3)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "ipow(volatile(3),2)"
+  AST:
+     | BinPowInt_ii2i(9)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | FixedPow2_i2i(9)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "ipow(volatile(3),3)"
+  AST:
+     | BinPowInt_ii2i(27)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | FixedPow3_i2i(27)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "ipow(volatile(3),9)"
+  AST:
+     | BinPowInt_ii2i(19683)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(9)
+  Optimised AST:
+     | FixedPow9_i2i(19683)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "ipow(volatile(3),10)"
+  AST:
+     | BinPowInt_ii2i(59049)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | BinPowInt_ii2i(59049)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(10)
+--------------------------------------------------
+Testing expression "pow(volatile(3),0)"
+  AST:
+     | BinPow_ii2f(1.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | BinPow_ii2f(1.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "pow(volatile(3),1)"
+  AST:
+     | BinPow_ii2f(3.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | TypeCast_i2f(3.0000)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "pow(volatile(3),2)"
+  AST:
+     | BinPow_ii2f(9.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | FixedPow2_i2f(9.0000)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "pow(volatile(3),3)"
+  AST:
+     | BinPow_ii2f(27.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | FixedPow3_i2f(27.0000)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "pow(volatile(3),9)"
+  AST:
+     | BinPow_ii2f(19683.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(9)
+  Optimised AST:
+     | FixedPow9_i2f(19683.0000)
+     |   VolatileValue_i(3)
+--------------------------------------------------
+Testing expression "pow(volatile(3),10)"
+  AST:
+     | BinPow_ii2f(59049.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(10)
+  Optimised AST:
+     | BinPow_ii2f(59049.0000)
+     |   VolatileValue_i(3)
+     |   ConstantValue_i(10)
+--------------------------------------------------
+Testing expression "volatile(-3.0)^2"
+  AST:
+     | BinPow_fi2f(9.0000)
+     |   VolatileValue_f(-3.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | FixedPow2_f2f(9.0000)
+     |   VolatileValue_f(-3.0000)
+--------------------------------------------------
+Testing expression "volatile(3.0)^2"
+  AST:
+     | BinPow_fi2f(9.0000)
+     |   VolatileValue_f(3.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | FixedPow2_f2f(9.0000)
+     |   VolatileValue_f(3.0000)
+--------------------------------------------------
+Testing expression "ceil(-1.5)"
+  AST:
+     | func_ceil_f2f(-1.0000)
+     |   UnaryMinus_f(-1.5000)
+     |     ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "ceil(-1.0)"
+  AST:
+     | func_ceil_f2f(-1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "ceil(-0.5)"
+  AST:
+     | func_ceil_f2f(-0.0000)
+     |   UnaryMinus_f(-0.5000)
+     |     ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(-0.0000)
+--------------------------------------------------
+Testing expression "ceil(0.0)"
+  AST:
+     | func_ceil_f2f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "ceil(0.5)"
+  AST:
+     | func_ceil_f2f(1.0000)
+     |   ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "ceil(1.0)"
+  AST:
+     | func_ceil_f2f(1.0000)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "ceil(1.5)"
+  AST:
+     | func_ceil_f2f(2.0000)
+     |   ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "floor(-1.5)"
+  AST:
+     | func_floor_f2f(-2.0000)
+     |   UnaryMinus_f(-1.5000)
+     |     ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(-2.0000)
+--------------------------------------------------
+Testing expression "floor(-1.0)"
+  AST:
+     | func_floor_f2f(-1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "floor(-0.5)"
+  AST:
+     | func_floor_f2f(-1.0000)
+     |   UnaryMinus_f(-0.5000)
+     |     ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "floor(0.0)"
+  AST:
+     | func_floor_f2f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "floor(0.5)"
+  AST:
+     | func_floor_f2f(0.0000)
+     |   ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "floor(1.0)"
+  AST:
+     | func_floor_f2f(1.0000)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "floor(1.5)"
+  AST:
+     | func_floor_f2f(1.0000)
+     |   ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "trunc(-1.5)"
+  AST:
+     | func_trunc_f2f(-1.0000)
+     |   UnaryMinus_f(-1.5000)
+     |     ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "trunc(-1.0)"
+  AST:
+     | func_trunc_f2f(-1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "trunc(-0.5)"
+  AST:
+     | func_trunc_f2f(-0.0000)
+     |   UnaryMinus_f(-0.5000)
+     |     ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(-0.0000)
+--------------------------------------------------
+Testing expression "trunc(0.0)"
+  AST:
+     | func_trunc_f2f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "trunc(0.5)"
+  AST:
+     | func_trunc_f2f(0.0000)
+     |   ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "trunc(1.0)"
+  AST:
+     | func_trunc_f2f(1.0000)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "trunc(1.5)"
+  AST:
+     | func_trunc_f2f(1.0000)
+     |   ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "round(-1.5)"
+  AST:
+     | func_round_f2f(-2.0000)
+     |   UnaryMinus_f(-1.5000)
+     |     ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(-2.0000)
+--------------------------------------------------
+Testing expression "round(-1.0)"
+  AST:
+     | func_round_f2f(-1.0000)
+     |   UnaryMinus_f(-1.0000)
+     |     ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "round(-0.5)"
+  AST:
+     | func_round_f2f(-1.0000)
+     |   UnaryMinus_f(-0.5000)
+     |     ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(-1.0000)
+--------------------------------------------------
+Testing expression "round(0.0)"
+  AST:
+     | func_round_f2f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "round(0.5)"
+  AST:
+     | func_round_f2f(1.0000)
+     |   ConstantValue_f(0.5000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "round(1.0)"
+  AST:
+     | func_round_f2f(1.0000)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "round(1.5)"
+  AST:
+     | func_round_f2f(2.0000)
+     |   ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "min(5.5)"
+  AST:
+     | ConstantValue_f(5.5000)
+  Optimised AST:
+     | ConstantValue_f(5.5000)
+--------------------------------------------------
+Testing expression "min()"
+ASTBuilder.buildTree(..) gives exception: ParseError : Functions min and max requires at least one argument
+--------------------------------------------------
+Testing expression "min(1,2)"
+  AST:
+     | ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "min(1,2.0)"
+  AST:
+     | TypeCast_i2f(1.0000)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "min(1,2.0,3)"
+  AST:
+     | TypeCast_i2f(1.0000)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "min(2.2,1.0,-1.3)"
+  AST:
+     | UnaryMinus_f(-1.3000)
+     |   ConstantValue_f(1.3000)
+  Optimised AST:
+     | ConstantValue_f(-1.3000)
+--------------------------------------------------
+Testing expression "min(2.2,1,-1.3)"
+  AST:
+     | UnaryMinus_f(-1.3000)
+     |   ConstantValue_f(1.3000)
+  Optimised AST:
+     | ConstantValue_f(-1.3000)
+--------------------------------------------------
+Testing expression "min(2,1,-1,17,-18)"
+  AST:
+     | UnaryMinus_i(-18)
+     |   ConstantValue_i(18)
+  Optimised AST:
+     | ConstantValue_i(-18)
+--------------------------------------------------
+Testing expression "min(2,1,volatile(-1),17,volatile(-18))"
+  AST:
+     | BinMin_ii2i(-18)
+     |   BinMin_ii2i(-1)
+     |     ConstantValue_i(1)
+     |     VolatileValue_i(-1)
+     |   VolatileValue_i(-18)
+  Optimised AST:
+     | BinMin_ii2i(-18)
+     |   BinMin_ii2i(-1)
+     |     ConstantValue_i(1)
+     |     VolatileValue_i(-1)
+     |   VolatileValue_i(-18)
+--------------------------------------------------
+Testing expression "min(volatile(2),volatile(1),volatile(-1),volatile(17),volatile(-18))"
+  AST:
+     | BinMin_ii2i(-18)
+     |   BinMin_ii2i(-1)
+     |     BinMin_ii2i(-1)
+     |       BinMin_ii2i(1)
+     |         VolatileValue_i(2)
+     |         VolatileValue_i(1)
+     |       VolatileValue_i(-1)
+     |     VolatileValue_i(17)
+     |   VolatileValue_i(-18)
+  Optimised AST:
+     | BinMin_ii2i(-18)
+     |   BinMin_ii2i(-1)
+     |     BinMin_ii2i(-1)
+     |       BinMin_ii2i(1)
+     |         VolatileValue_i(2)
+     |         VolatileValue_i(1)
+     |       VolatileValue_i(-1)
+     |     VolatileValue_i(17)
+     |   VolatileValue_i(-18)
+--------------------------------------------------
+Testing expression "max(5.5)"
+  AST:
+     | ConstantValue_f(5.5000)
+  Optimised AST:
+     | ConstantValue_f(5.5000)
+--------------------------------------------------
+Testing expression "max()"
+ASTBuilder.buildTree(..) gives exception: ParseError : Functions min and max requires at least one argument
+--------------------------------------------------
+Testing expression "max(1,2)"
+  AST:
+     | ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_i(2)
+--------------------------------------------------
+Testing expression "max(1.0,2)"
+  AST:
+     | TypeCast_i2f(2.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "max(1.0,2,0)"
+  AST:
+     | TypeCast_i2f(2.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "max(2.2,1.0,-1.3)"
+  AST:
+     | ConstantValue_f(2.2000)
+  Optimised AST:
+     | ConstantValue_f(2.2000)
+--------------------------------------------------
+Testing expression "max(2.2,1,-1.3)"
+  AST:
+     | ConstantValue_f(2.2000)
+  Optimised AST:
+     | ConstantValue_f(2.2000)
+--------------------------------------------------
+Testing expression "max(2,1,-1,17,-18)"
+  AST:
+     | ConstantValue_i(17)
+  Optimised AST:
+     | ConstantValue_i(17)
+--------------------------------------------------
+Testing expression "2*pi"
+  AST:
+     | BinMult_if2f(6.2832)
+     |   ConstantValue_i(2)
+     |   ConstantValue_f(3.1416)
+  Optimised AST:
+     | ConstantValue_f(6.2832)
+--------------------------------------------------
+Testing expression "lgamma(-1.5)"
+  AST:
+     | func_lgamma_f2f(0.8600)
+     |   UnaryMinus_f(-1.5000)
+     |     ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(0.8600)
+--------------------------------------------------
+Testing expression "lgamma(4.5)"
+  AST:
+     | func_lgamma_f2f(2.4537)
+     |   ConstantValue_f(4.5000)
+  Optimised AST:
+     | ConstantValue_f(2.4537)
+--------------------------------------------------
+Testing expression "lgamma(1)"
+  AST:
+     | func_lgamma_i2f(0.0000)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "lgamma(2)"
+  AST:
+     | func_lgamma_i2f(0.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "lgamma(3)"
+  AST:
+     | func_lgamma_i2f(0.6931)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(0.6931)
+--------------------------------------------------
+Testing expression "lgamma(4)"
+  AST:
+     | func_lgamma_i2f(1.7918)
+     |   ConstantValue_i(4)
+  Optimised AST:
+     | ConstantValue_f(1.7918)
+--------------------------------------------------
+Testing expression "lgamma(5)"
+  AST:
+     | func_lgamma_i2f(3.1781)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_f(3.1781)
+--------------------------------------------------
+Testing expression "lgamma(1.)"
+  AST:
+     | func_lgamma_f2f(0.0000)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "lgamma(2.)"
+  AST:
+     | func_lgamma_f2f(0.0000)
+     |   ConstantValue_f(2.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "lgamma(3.)"
+  AST:
+     | func_lgamma_f2f(0.6931)
+     |   ConstantValue_f(3.0000)
+  Optimised AST:
+     | ConstantValue_f(0.6931)
+--------------------------------------------------
+Testing expression "lgamma(4.)"
+  AST:
+     | func_lgamma_f2f(1.7918)
+     |   ConstantValue_f(4.0000)
+  Optimised AST:
+     | ConstantValue_f(1.7918)
+--------------------------------------------------
+Testing expression "lgamma(5.)"
+  AST:
+     | func_lgamma_f2f(3.1781)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstantValue_f(3.1781)
+--------------------------------------------------
+Testing expression "tgamma(-1.5)"
+  AST:
+     | func_lgamma_f2f(2.3633)
+     |   UnaryMinus_f(-1.5000)
+     |     ConstantValue_f(1.5000)
+  Optimised AST:
+     | ConstantValue_f(2.3633)
+--------------------------------------------------
+Testing expression "tgamma(4.5)"
+  AST:
+     | func_lgamma_f2f(11.6317)
+     |   ConstantValue_f(4.5000)
+  Optimised AST:
+     | ConstantValue_f(11.6317)
+--------------------------------------------------
+Testing expression "tgamma(1)"
+  AST:
+     | func_lgamma_i2f(1.0000)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "tgamma(2)"
+  AST:
+     | func_lgamma_i2f(1.0000)
+     |   ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "tgamma(3)"
+  AST:
+     | func_lgamma_i2f(2.0000)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "tgamma(4)"
+  AST:
+     | func_lgamma_i2f(6.0000)
+     |   ConstantValue_i(4)
+  Optimised AST:
+     | ConstantValue_f(6.0000)
+--------------------------------------------------
+Testing expression "tgamma(5)"
+  AST:
+     | func_lgamma_i2f(24.0000)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_f(24.0000)
+--------------------------------------------------
+Testing expression "tgamma(1.)"
+  AST:
+     | func_lgamma_f2f(1.0000)
+     |   ConstantValue_f(1.0000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "tgamma(2.)"
+  AST:
+     | func_lgamma_f2f(1.0000)
+     |   ConstantValue_f(2.0000)
+  Optimised AST:
+     | ConstantValue_f(1.0000)
+--------------------------------------------------
+Testing expression "tgamma(3.)"
+  AST:
+     | func_lgamma_f2f(2.0000)
+     |   ConstantValue_f(3.0000)
+  Optimised AST:
+     | ConstantValue_f(2.0000)
+--------------------------------------------------
+Testing expression "tgamma(4.)"
+  AST:
+     | func_lgamma_f2f(6.0000)
+     |   ConstantValue_f(4.0000)
+  Optimised AST:
+     | ConstantValue_f(6.0000)
+--------------------------------------------------
+Testing expression "tgamma(5.)"
+  AST:
+     | func_lgamma_f2f(24.0000)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstantValue_f(24.0000)
+--------------------------------------------------
+Testing expression "fabs(-3)"
+  AST:
+     | Abs_i2f(3.0000)
+     |   UnaryMinus_i(-3)
+     |     ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "fabs(0)"
+  AST:
+     | Abs_i2f(0.0000)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "fabs(3)"
+  AST:
+     | Abs_i2f(3.0000)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "abs(-3)"
+  AST:
+     | Abs_i2i(3)
+     |   UnaryMinus_i(-3)
+     |     ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_i(3)
+--------------------------------------------------
+Testing expression "abs(0)"
+  AST:
+     | Abs_i2i(0)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "abs(3)"
+  AST:
+     | Abs_i2i(3)
+     |   ConstantValue_i(3)
+  Optimised AST:
+     | ConstantValue_i(3)
+--------------------------------------------------
+Testing expression "fabs(-3.)"
+  AST:
+     | Abs_f2f(3.0000)
+     |   UnaryMinus_f(-3.0000)
+     |     ConstantValue_f(3.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "fabs(-0.)"
+  AST:
+     | Abs_f2f(0.0000)
+     |   UnaryMinus_f(-0.0000)
+     |     ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "fabs(0.)"
+  AST:
+     | Abs_f2f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "fabs(3.)"
+  AST:
+     | Abs_f2f(3.0000)
+     |   ConstantValue_f(3.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "abs(-3.)"
+  AST:
+     | Abs_f2f(3.0000)
+     |   UnaryMinus_f(-3.0000)
+     |     ConstantValue_f(3.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "abs(-0.)"
+  AST:
+     | Abs_f2f(0.0000)
+     |   UnaryMinus_f(-0.0000)
+     |     ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "abs(0.)"
+  AST:
+     | Abs_f2f(0.0000)
+     |   ConstantValue_f(0.0000)
+  Optimised AST:
+     | ConstantValue_f(0.0000)
+--------------------------------------------------
+Testing expression "abs(3.)"
+  AST:
+     | Abs_f2f(3.0000)
+     |   ConstantValue_f(3.0000)
+  Optimised AST:
+     | ConstantValue_f(3.0000)
+--------------------------------------------------
+Testing expression "5()"
+ASTBuilder.buildTree(..) gives exception: ParseError : forbidden function call parenthesis after 5
+--------------------------------------------------
+Testing expression "5 2"
+ASTBuilder.buildTree(..) gives exception: ParseError : unexpected value : 2
+--------------------------------------------------
+Testing expression " "
+ASTBuilder.buildTree(..) gives exception: ParseError : syntax error : empty expression
+--------------------------------------------------
+Testing expression " ()"
+ASTBuilder.buildTree(..) gives exception: ParseError : empty parenthesis
+--------------------------------------------------
+Testing expression " )"
+ASTBuilder.buildTree(..) gives exception: ParseError : mismatched parenthesis
+--------------------------------------------------
+Testing expression " pi)"
+ASTBuilder.buildTree(..) gives exception: ParseError : mismatched parenthesis
+--------------------------------------------------
+Testing expression "blabla"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed identifier : blabla
+--------------------------------------------------
+Testing expression "sin"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed identifier : sin
+--------------------------------------------------
+Testing expression "sin(2,3)"
+ASTBuilder.buildTree(..) gives exception: ParseError : wrong number of arguments for function
+--------------------------------------------------
+Testing expression "sin()"
+ASTBuilder.buildTree(..) gives exception: ParseError : wrong number of arguments for function
+--------------------------------------------------
+Testing expression "bla()"
+ASTBuilder.buildTree(..) gives exception: ParseError : unknown function : bla [ 0 arguments]
+--------------------------------------------------
+Testing expression "sin(3,)"
+ASTBuilder.buildTree(..) gives exception: ParseError : missing argument after comma
+--------------------------------------------------
+Testing expression "sin(,3)"
+ASTBuilder.buildTree(..) gives exception: ParseError : unexpected comma
+--------------------------------------------------
+Testing expression "2+sin(3,)"
+ASTBuilder.buildTree(..) gives exception: ParseError : missing argument after comma
+--------------------------------------------------
+Testing expression "sin(,)"
+ASTBuilder.buildTree(..) gives exception: ParseError : unexpected comma
+--------------------------------------------------
+Testing expression "(,)"
+ASTBuilder.buildTree(..) gives exception: ParseError : unexpected comma
+--------------------------------------------------
+Testing expression "5 +"
+ASTBuilder.buildTree(..) gives exception: ParseError : missing arguments for operator : +
+--------------------------------------------------
+Testing expression "+ 5"
+  AST:
+     | ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_i(5)
+--------------------------------------------------
+Testing expression "*"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed symbol : *
+--------------------------------------------------
+Testing expression "volatile(4.0) > 5.0"
+  AST:
+     | CmpGT_fvf(0)
+     |   VolatileValue_f(4.0000)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpGT_fv5f(0)
+     |   VolatileValue_f(4.0000)
+--------------------------------------------------
+Testing expression "5.0 < volatile(4.0)"
+  AST:
+     | CmpLT_fvf(0)
+     |   ConstantValue_f(5.0000)
+     |   VolatileValue_f(4.0000)
+  Optimised AST:
+     | ConstCmpGT_fv5f(0)
+     |   VolatileValue_f(4.0000)
+--------------------------------------------------
+Testing expression "volatile(6.0) > 5.0"
+  AST:
+     | CmpGT_fvf(1)
+     |   VolatileValue_f(6.0000)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpGT_fv5f(1)
+     |   VolatileValue_f(6.0000)
+--------------------------------------------------
+Testing expression "5.0 < volatile(6.0)"
+  AST:
+     | CmpLT_fvf(1)
+     |   ConstantValue_f(5.0000)
+     |   VolatileValue_f(6.0000)
+  Optimised AST:
+     | ConstCmpGT_fv5f(1)
+     |   VolatileValue_f(6.0000)
+--------------------------------------------------
+Testing expression "volatile(4.0) >= 5.0"
+  AST:
+     | CmpGE_fvf(0)
+     |   VolatileValue_f(4.0000)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpGE_fv5f(0)
+     |   VolatileValue_f(4.0000)
+--------------------------------------------------
+Testing expression "5.0 <= volatile(4.0)"
+  AST:
+     | CmpLE_fvf(0)
+     |   ConstantValue_f(5.0000)
+     |   VolatileValue_f(4.0000)
+  Optimised AST:
+     | ConstCmpGE_fv5f(0)
+     |   VolatileValue_f(4.0000)
+--------------------------------------------------
+Testing expression "volatile(6.0) >= 5.0"
+  AST:
+     | CmpGE_fvf(1)
+     |   VolatileValue_f(6.0000)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpGE_fv5f(1)
+     |   VolatileValue_f(6.0000)
+--------------------------------------------------
+Testing expression "5.0 <= volatile(6.0)"
+  AST:
+     | CmpLE_fvf(1)
+     |   ConstantValue_f(5.0000)
+     |   VolatileValue_f(6.0000)
+  Optimised AST:
+     | ConstCmpGE_fv5f(1)
+     |   VolatileValue_f(6.0000)
+--------------------------------------------------
+Testing expression "volatile(5.0) >= 5.0"
+  AST:
+     | CmpGE_fvf(1)
+     |   VolatileValue_f(5.0000)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpGE_fv5f(1)
+     |   VolatileValue_f(5.0000)
+--------------------------------------------------
+Testing expression "5.0 <= volatile(5.0)"
+  AST:
+     | CmpLE_fvf(1)
+     |   ConstantValue_f(5.0000)
+     |   VolatileValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpGE_fv5f(1)
+     |   VolatileValue_f(5.0000)
+--------------------------------------------------
+Testing expression "volatile(4) > 5"
+  AST:
+     | CmpGT_ivi(0)
+     |   VolatileValue_i(4)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstCmpGT_iv5i(0)
+     |   VolatileValue_i(4)
+--------------------------------------------------
+Testing expression "5 < volatile(4)"
+  AST:
+     | CmpLT_ivi(0)
+     |   ConstantValue_i(5)
+     |   VolatileValue_i(4)
+  Optimised AST:
+     | ConstCmpGT_iv5i(0)
+     |   VolatileValue_i(4)
+--------------------------------------------------
+Testing expression "volatile(6) > 5"
+  AST:
+     | CmpGT_ivi(1)
+     |   VolatileValue_i(6)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstCmpGT_iv5i(1)
+     |   VolatileValue_i(6)
+--------------------------------------------------
+Testing expression "5 < volatile(6)"
+  AST:
+     | CmpLT_ivi(1)
+     |   ConstantValue_i(5)
+     |   VolatileValue_i(6)
+  Optimised AST:
+     | ConstCmpGT_iv5i(1)
+     |   VolatileValue_i(6)
+--------------------------------------------------
+Testing expression "volatile(4) >= 5"
+  AST:
+     | CmpGE_ivi(0)
+     |   VolatileValue_i(4)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstCmpGE_iv5i(0)
+     |   VolatileValue_i(4)
+--------------------------------------------------
+Testing expression "5 <= volatile(4)"
+  AST:
+     | CmpLE_ivi(0)
+     |   ConstantValue_i(5)
+     |   VolatileValue_i(4)
+  Optimised AST:
+     | ConstCmpGE_iv5i(0)
+     |   VolatileValue_i(4)
+--------------------------------------------------
+Testing expression "volatile(6) >= 5"
+  AST:
+     | CmpGE_ivi(1)
+     |   VolatileValue_i(6)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstCmpGE_iv5i(1)
+     |   VolatileValue_i(6)
+--------------------------------------------------
+Testing expression "5 <= volatile(6)"
+  AST:
+     | CmpLE_ivi(1)
+     |   ConstantValue_i(5)
+     |   VolatileValue_i(6)
+  Optimised AST:
+     | ConstCmpGE_iv5i(1)
+     |   VolatileValue_i(6)
+--------------------------------------------------
+Testing expression "volatile(5) >= 5"
+  AST:
+     | CmpGE_ivi(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstCmpGE_iv5i(1)
+     |   VolatileValue_i(5)
+--------------------------------------------------
+Testing expression "5 <= volatile(5)"
+  AST:
+     | CmpLE_ivi(1)
+     |   ConstantValue_i(5)
+     |   VolatileValue_i(5)
+  Optimised AST:
+     | ConstCmpGE_iv5i(1)
+     |   VolatileValue_i(5)
+--------------------------------------------------
+Testing expression "5.01 != 5"
+  AST:
+     | CmpNotEqual_fvi(1)
+     |   ConstantValue_f(5.0100)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "5.01 == 5"
+  AST:
+     | CmpEqual_fvi(0)
+     |   ConstantValue_f(5.0100)
+     |   ConstantValue_i(5)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) == 6.1"
+  AST:
+     | CmpEqual_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(6.1000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) == 5.1"
+  AST:
+     | CmpEqual_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(5.1000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) != 6.1"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(6.1000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) != 5.1"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(5.1000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) == 6.0"
+  AST:
+     | CmpEqual_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(6.0000)
+  Optimised AST:
+     | ConstCmpEqual_iv6f(0)
+     |   VolatileValue_i(5)
+--------------------------------------------------
+Testing expression "volatile(5) == 5.0"
+  AST:
+     | CmpEqual_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpEqual_iv5f(1)
+     |   VolatileValue_i(5)
+--------------------------------------------------
+Testing expression "volatile(5) != 6.0"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(6.0000)
+  Optimised AST:
+     | ConstCmpNotEqual_iv6f(1)
+     |   VolatileValue_i(5)
+--------------------------------------------------
+Testing expression "volatile(5) != 5.0"
+  AST:
+     | CmpNotEqual_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(5.0000)
+  Optimised AST:
+     | ConstCmpNotEqual_iv5f(0)
+     |   VolatileValue_i(5)
+--------------------------------------------------
+Testing expression "volatile(5) <= -1.0e19"
+  AST:
+     | CmpLE_ivf(0)
+     |   VolatileValue_i(5)
+     |   UnaryMinus_f(-10000000000000000000.0000)
+     |     ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) < -1.0e19"
+  AST:
+     | CmpLT_ivf(0)
+     |   VolatileValue_i(5)
+     |   UnaryMinus_f(-10000000000000000000.0000)
+     |     ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) > -1.0e19"
+  AST:
+     | CmpGT_ivf(1)
+     |   VolatileValue_i(5)
+     |   UnaryMinus_f(-10000000000000000000.0000)
+     |     ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) >= -1.0e19"
+  AST:
+     | CmpGE_ivf(1)
+     |   VolatileValue_i(5)
+     |   UnaryMinus_f(-10000000000000000000.0000)
+     |     ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) == -1.0e19"
+  AST:
+     | CmpEqual_ivf(0)
+     |   VolatileValue_i(5)
+     |   UnaryMinus_f(-10000000000000000000.0000)
+     |     ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) != -1.0e19"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   VolatileValue_i(5)
+     |   UnaryMinus_f(-10000000000000000000.0000)
+     |     ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) <= 1.0e19"
+  AST:
+     | CmpLE_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) < 1.0e19"
+  AST:
+     | CmpLT_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "volatile(5) > 1.0e19"
+  AST:
+     | CmpGT_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) >= 1.0e19"
+  AST:
+     | CmpGE_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) == 1.0e19"
+  AST:
+     | CmpEqual_ivf(0)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "volatile(5) != 1.0e19"
+  AST:
+     | CmpNotEqual_ivf(1)
+     |   VolatileValue_i(5)
+     |   ConstantValue_f(10000000000000000000.0000)
+  Optimised AST:
+     | ConstantValue_i(1)
+--------------------------------------------------
+Testing expression "pi"
+  AST:
+     | ConstantValue_f(3.1416)
+  Optimised AST:
+     | ConstantValue_f(3.1416)
+--------------------------------------------------
+Testing expression "2 pi"
+  AST:
+     | BinMult_if2f(6.2832)
+     |   ConstantValue_i(2)
+     |   ConstantValue_f(3.1416)
+  Optimised AST:
+     | ConstantValue_f(6.2832)
+--------------------------------------------------
+Testing expression "2.0 pi"
+  AST:
+     | BinMult_ff2f(6.2832)
+     |   ConstantValue_f(2.0000)
+     |   ConstantValue_f(3.1416)
+  Optimised AST:
+     | ConstantValue_f(6.2832)
+--------------------------------------------------
+Testing expression "pi pi"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed identifier : pi
+--------------------------------------------------
+Testing expression "1/2pi"
+  AST:
+     | BinDiv_if2f(0.1592)
+     |   ConstantValue_i(1)
+     |   BinMult_if2f(6.2832)
+     |     ConstantValue_i(2)
+     |     ConstantValue_f(3.1416)
+  Optimised AST:
+     | ConstantValue_f(0.1592)
+--------------------------------------------------
+Testing expression "2pi^2"
+  AST:
+     | BinMult_if2f(19.7392)
+     |   ConstantValue_i(2)
+     |   BinPow_fi2f(9.8696)
+     |     ConstantValue_f(3.1416)
+     |     ConstantValue_i(2)
+  Optimised AST:
+     | ConstantValue_f(19.7392)
+--------------------------------------------------
+Testing expression "sin(1)"
+  AST:
+     | func_sin_i2f(0.8415)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(0.8415)
+--------------------------------------------------
+Testing expression "2sin(1)"
+  AST:
+     | BinMult_if2f(1.6829)
+     |   ConstantValue_i(2)
+     |   func_sin_i2f(0.8415)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(1.6829)
+--------------------------------------------------
+Testing expression "2.0sin(1)"
+  AST:
+     | BinMult_ff2f(1.6829)
+     |   ConstantValue_f(2.0000)
+     |   func_sin_i2f(0.8415)
+     |     ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(1.6829)
+--------------------------------------------------
+Testing expression "sin(1) sin(2)"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed identifier : sin
+--------------------------------------------------
+Testing expression "1/2sin(1)"
+  AST:
+     | BinDiv_if2f(0.5942)
+     |   ConstantValue_i(1)
+     |   BinMult_if2f(1.6829)
+     |     ConstantValue_i(2)
+     |     func_sin_i2f(0.8415)
+     |       ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_f(0.5942)
+--------------------------------------------------
+Testing expression "0b9"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed identifier : b9
+--------------------------------------------------
+Testing expression "0xG"
+ASTBuilder.buildTree(..) gives exception: ParseError : Unknown or badly placed identifier : xG
+--------------------------------------------------
+Testing expression "09"
+createTokens("09") gives exception: ParseError : Digit 9 is out of range in octal numbers
+--------------------------------------------------
+Testing expression "0b151"
+createTokens("0b151") gives exception: ParseError : Digit 5 is out of range in base-2 numbers
+--------------------------------------------------
+Testing expression "1 and 0"
+  AST:
+     | BooleanAnd_ii2i(0)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(0)
+  Optimised AST:
+     | ConstantValue_i(0)
+--------------------------------------------------
+Testing expression "1 and 1"
+  AST:
+     | BooleanAnd_ii2i(1)
+     |   ConstantValue_i(1)
+     |   ConstantValue_i(1)
+  Optimised AST:
+     | ConstantValue_i(1)

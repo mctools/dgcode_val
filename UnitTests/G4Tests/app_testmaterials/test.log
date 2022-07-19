@@ -1,0 +1,447 @@
+
+**************************************************************
+ Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Geant4 Physics List simulation engine: QGSP_BERT 4.0
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+=========== G4Material getNISTMaterial("H") ==========
+ Material:     G4_H    density:  0.084 kg/m3   RadL:   7.528 km   Nucl.Int.Length:   4.179 km 
+                       Imean:  19.200 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: no
+
+=========== G4Material getNISTMaterial("He") ==========
+ Material:    G4_He    density:  0.166 kg/m3   RadL:   5.671 km   Nucl.Int.Length:   3.341 km 
+                       Imean:  41.800 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: He (He)   Z =  2.0   N =     4   A =  4.003 g/mole
+         --->  Isotope:   He3   Z =  2   N =   3   A =   3.02 g/mole   abundance:  0.000 %
+         --->  Isotope:   He4   Z =  2   N =   4   A =   4.00 g/mole   abundance: 100.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: no
+
+=========== G4Material getNISTMaterial("Li") ==========
+ Material:    G4_Li    density: 534.000 mg/cm3  RadL:   1.550 m    Nucl.Int.Length:   1.250 m  
+                       Imean:  40.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Li (Li)   Z =  3.0   N =     7   A =  6.940 g/mole
+         --->  Isotope:   Li6   Z =  3   N =   6   A =   6.02 g/mole   abundance:  7.590 %
+         --->  Isotope:   Li7   Z =  3   N =   7   A =   7.02 g/mole   abundance: 92.410 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getNISTMaterial("Be") ==========
+ Material:    G4_Be    density:  1.848 g/cm3   RadL:  35.276 cm   Nucl.Int.Length:  39.413 cm 
+                       Imean:  63.700 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Be (Be)   Z =  4.0   N =     9   A =  9.012 g/mole
+         --->  Isotope:   Be9   Z =  4   N =   9   A =   9.01 g/mole   abundance: 100.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getNISTMaterial("B") ==========
+ Material:     G4_B    density:  2.370 g/cm3   RadL:  22.231 cm   Nucl.Int.Length:  32.654 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: B (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getNISTMaterial("C") ==========
+ Material:     G4_C    density:  2.000 g/cm3   RadL:  21.349 cm   Nucl.Int.Length:  40.077 cm 
+                       Imean:  81.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getNISTMaterial("O") ==========
+ Material:     G4_O    density:  1.332 mg/cm3  RadL: 257.138 m    Nucl.Int.Length: 662.356 m  
+                       Imean:  95.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: O (O)   Z =  8.0   N =    16   A = 15.999 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: no
+
+=========== G4Material getNISTMaterial("Al") ==========
+ Material:    G4_Al    density:  2.699 g/cm3   RadL:   8.896 cm   Nucl.Int.Length:  38.894 cm 
+                       Imean: 166.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Al (Al)   Z = 13.0   N =    27   A = 26.982 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getNISTMaterial("Gd") ==========
+ Material:    G4_Gd    density:  7.900 g/cm3   RadL:   9.472 mm   Nucl.Int.Length:  23.912 cm 
+                       Imean: 591.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Gd (Gd)   Z = 64.0   N =   157   A = 157.252 g/mole
+         --->  Isotope: Gd152   Z = 64   N = 152   A = 151.92 g/mole   abundance:  0.200 %
+         --->  Isotope: Gd154   Z = 64   N = 154   A = 153.92 g/mole   abundance:  2.180 %
+         --->  Isotope: Gd155   Z = 64   N = 155   A = 154.92 g/mole   abundance: 14.800 %
+         --->  Isotope: Gd156   Z = 64   N = 156   A = 155.92 g/mole   abundance: 20.470 %
+         --->  Isotope: Gd157   Z = 64   N = 157   A = 156.92 g/mole   abundance: 15.650 %
+         --->  Isotope: Gd158   Z = 64   N = 158   A = 157.92 g/mole   abundance: 24.840 %
+         --->  Isotope: Gd160   Z = 64   N = 160   A = 159.93 g/mole   abundance: 21.860 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getNISTMaterial("Fe") ==========
+ Material:    G4_Fe    density:  7.874 g/cm3   RadL:   1.757 cm   Nucl.Int.Length:  16.990 cm 
+                       Imean: 286.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Fe (Fe)   Z = 26.0   N =    56   A = 55.845 g/mole
+         --->  Isotope:  Fe54   Z = 26   N =  54   A =  53.94 g/mole   abundance:  5.845 %
+         --->  Isotope:  Fe56   Z = 26   N =  56   A =  55.93 g/mole   abundance: 91.754 %
+         --->  Isotope:  Fe57   Z = 26   N =  57   A =  56.94 g/mole   abundance:  2.119 %
+         --->  Isotope:  Fe58   Z = 26   N =  58   A =  57.93 g/mole   abundance:  0.282 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Element getNISTElement("H") ==========
+ Element: H (H)   Z =  1.0   N =     1   A =  0.000 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+
+=========== G4Element getNISTElement("He") ==========
+ Element: He (He)   Z =  2.0   N =     4   A =  4.003 g/mole
+         --->  Isotope:   He3   Z =  2   N =   3   A =   3.02 g/mole   abundance:  0.000 %
+         --->  Isotope:   He4   Z =  2   N =   4   A =   4.00 g/mole   abundance: 100.000 %
+
+=========== G4Element getNISTElement("Li") ==========
+ Element: Li (Li)   Z =  3.0   N =     7   A =  6.940 g/mole
+         --->  Isotope:   Li6   Z =  3   N =   6   A =   6.02 g/mole   abundance:  7.590 %
+         --->  Isotope:   Li7   Z =  3   N =   7   A =   7.02 g/mole   abundance: 92.410 %
+
+=========== G4Element getNISTElement("Be") ==========
+ Element: Be (Be)   Z =  4.0   N =     9   A =  9.012 g/mole
+         --->  Isotope:   Be9   Z =  4   N =   9   A =   9.01 g/mole   abundance: 100.000 %
+
+=========== G4Element getNISTElement("B") ==========
+ Element: B (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+
+=========== G4Element getNISTElement("C") ==========
+ Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+
+=========== G4Element getNISTElement("O") ==========
+ Element: O (O)   Z =  8.0   N =    16   A = 15.999 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
+
+=========== G4Element getNISTElement("Al") ==========
+ Element: Al (Al)   Z = 13.0   N =    27   A = 26.982 g/mole
+         --->  Isotope:  Al27   Z = 13   N =  27   A =  26.98 g/mole   abundance: 100.000 %
+
+=========== G4Element getNISTElement("Gd") ==========
+ Element: Gd (Gd)   Z = 64.0   N =   157   A = 157.252 g/mole
+         --->  Isotope: Gd152   Z = 64   N = 152   A = 151.92 g/mole   abundance:  0.200 %
+         --->  Isotope: Gd154   Z = 64   N = 154   A = 153.92 g/mole   abundance:  2.180 %
+         --->  Isotope: Gd155   Z = 64   N = 155   A = 154.92 g/mole   abundance: 14.800 %
+         --->  Isotope: Gd156   Z = 64   N = 156   A = 155.92 g/mole   abundance: 20.470 %
+         --->  Isotope: Gd157   Z = 64   N = 157   A = 156.92 g/mole   abundance: 15.650 %
+         --->  Isotope: Gd158   Z = 64   N = 158   A = 157.92 g/mole   abundance: 24.840 %
+         --->  Isotope: Gd160   Z = 64   N = 160   A = 159.93 g/mole   abundance: 21.860 %
+
+=========== G4Element getNISTElement("Fe") ==========
+ Element: Fe (Fe)   Z = 26.0   N =    56   A = 55.845 g/mole
+         --->  Isotope:  Fe54   Z = 26   N =  54   A =  53.94 g/mole   abundance:  5.845 %
+         --->  Isotope:  Fe56   Z = 26   N =  56   A =  55.93 g/mole   abundance: 91.754 %
+         --->  Isotope:  Fe57   Z = 26   N =  57   A =  56.94 g/mole   abundance:  2.119 %
+         --->  Isotope:  Fe58   Z = 26   N =  58   A =  57.93 g/mole   abundance:  0.282 %
+
+=========== G4Isotope getIsotope_B10() ==========
+ Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole
+
+=========== G4Isotope getIsotope_B11() ==========
+ Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole
+
+=== getNaturalB10IsotopeFraction() = 0.199000 ===
+=== getNaturalDensity_Boron() = 2.370000 g/cm3 ===
+=== getNaturalDensity_BoronCarbide() = 2.520000 g/cm3 ===
+=========== G4Element getElement_Boron(0.9123456781234567) ==========
+ Element: Boron_fB10_0.912346 (B)   Z =  5.0   N =    10   A = 10.100 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 91.235 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance:  8.765 %
+
+=========== G4Element getElement_Boron() ==========
+ Element: B (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+
+=========== G4Element getElement_Boron(0.0) ==========
+ Element: Boron_fB10_0.000000 (B)   Z =  5.0   N =    11   A = 11.009 g/mole
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 100.000 %
+
+=========== G4Element getElement_Boron(0.17) ==========
+ Element: Boron_fB10_0.170000 (B)   Z =  5.0   N =    11   A = 10.840 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 17.000 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 83.000 %
+
+=========== G4Element getElement_Boron(1.0) ==========
+ Element: Boron_fB10_1.000000 (B)   Z =  5.0   N =    10   A = 10.013 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 100.000 %
+
+=========== G4Element getElement_Boron(0.9123456781234567) ==========
+ Element: Boron_fB10_0.912346 (B)   Z =  5.0   N =    10   A = 10.100 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 91.235 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance:  8.765 %
+
+=========== G4Material getMaterial_Boron(0.9123456781234567) ==========
+ Material: Boron_fB10_0.912346_density_2.370000gcm3    density:  2.370 g/cm3   RadL:  20.769 cm   Nucl.Int.Length:  31.923 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.912346 (B)   Z =  5.0   N =    10   A = 10.100 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 91.235 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance:  8.765 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron() ==========
+ Material:     G4_B    density:  2.370 g/cm3   RadL:  22.231 cm   Nucl.Int.Length:  32.654 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: B (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron(0.0) ==========
+ Material: Boron_fB10_0.000000_density_2.370000gcm3    density:  2.370 g/cm3   RadL:  22.638 cm   Nucl.Int.Length:  32.853 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.000000 (B)   Z =  5.0   N =    11   A = 11.009 g/mole
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 100.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron(0.17) ==========
+ Material: Boron_fB10_0.170000_density_2.370000gcm3    density:  2.370 g/cm3   RadL:  22.290 cm   Nucl.Int.Length:  32.683 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.170000 (B)   Z =  5.0   N =    11   A = 10.840 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 17.000 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 83.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron(1.0) ==========
+ Material: Boron_fB10_1.000000_density_2.370000gcm3    density:  2.370 g/cm3   RadL:  20.590 cm   Nucl.Int.Length:  31.830 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_1.000000 (B)   Z =  5.0   N =    10   A = 10.013 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 100.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron(0.9123456781234567) ==========
+ Material: Boron_fB10_0.912346_density_2.370000gcm3    density:  2.370 g/cm3   RadL:  20.769 cm   Nucl.Int.Length:  31.923 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.912346 (B)   Z =  5.0   N =    10   A = 10.100 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 91.235 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance:  8.765 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron(-1,2.0g/cm3) ==========
+ Material: Boron_fB10_0.199000_density_2.000000gcm3    density:  2.000 g/cm3   RadL:  26.343 cm   Nucl.Int.Length:  38.695 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.199000 (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Boron(0.17,2.0g/cm3) ==========
+ Material: Boron_fB10_0.170000_density_2.000000gcm3    density:  2.000 g/cm3   RadL:  26.414 cm   Nucl.Int.Length:  38.730 cm 
+                       Imean:  76.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.170000 (B)   Z =  5.0   N =    11   A = 10.840 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 17.000 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 83.000 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Element getElement_Carbon() ==========
+ Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+
+=========== G4Material getMaterial_BoronCarbide() ==========
+ Material: G4_BORON_CARBIDE    density:  2.520 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  30.943 cm 
+                       Imean:  84.700 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: B (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+          ElmMassFraction:  78.26 %  ElmAbundance  80.00 % 
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  21.74 %  ElmAbundance  20.00 % 
+
+   ---> Temperature: 293.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_BoronCarbide(0.9,-1,20kelvin) ==========
+ Material: BoronCarbide_fB10_0.900000_density_2.392579gcm3_temp_20.000000K    density:  2.393 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  32.043 cm 
+                       Imean:  84.700 eV   temperature:  20.00 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.900000 (B)   Z =  5.0   N =    10   A = 10.113 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 90.000 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 10.000 %
+          ElmMassFraction:  77.11 %  ElmAbundance  80.00 % 
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  22.89 %  ElmAbundance  20.00 % 
+
+   ---> Temperature: 20.000000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_BoronCarbide(fb10nat*1.00000001) ==========
+ Material: BoronCarbide_fB10_0.199000_density_2.520000gcm3_temp_273.150000K    density:  2.520 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  30.943 cm 
+                       Imean:  84.700 eV   temperature: 273.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.199000 (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+          ElmMassFraction:  78.26 %  ElmAbundance  80.00 % 
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  21.74 %  ElmAbundance  20.00 % 
+
+   ---> Temperature: 273.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_BoronCarbide(fb10nat*1.00000001) ==========
+ Material: BoronCarbide_fB10_0.199000_density_2.520000gcm3_temp_273.150000K    density:  2.520 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  30.943 cm 
+                       Imean:  84.700 eV   temperature: 273.15 K  pressure:   1.00 atm
+
+   --->  Element: Boron_fB10_0.199000 (B)   Z =  5.0   N =    11   A = 10.811 g/mole
+         --->  Isotope:   B10   Z =  5   N =  10   A =  10.01 g/mole   abundance: 19.900 %
+         --->  Isotope:   B11   Z =  5   N =  11   A =  11.01 g/mole   abundance: 80.100 %
+          ElmMassFraction:  78.26 %  ElmAbundance  80.00 % 
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  21.74 %  ElmAbundance  20.00 % 
+
+   ---> Temperature: 273.150000 kelvin
+   ---> Pressure: 1.013250 bar
+   ---> State-solid: yes
+
+=========== G4Material getMaterial_Vacuum() ==========
+ Material: G4_Galactic    density:  0.000 kg/m3   RadL: 204310101.835 pc   Nucl.Int.Length: 113427275.267 pc 
+                       Imean:  21.800 eV   temperature:   2.73 K  pressure:   0.00 atm
+
+   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+   ---> Temperature: 2.730000 kelvin
+   ---> Pressure: 0.000000 bar
+   ---> State-solid: no
+
+=========== CommonMaterials::getDensity_BoronCarbide ==========
+   fb10 = -1 ---> 0.00252 g/mole (rel. diff 0 %)
+   fb10 = 0 ---> 0.00255617 g/mole (rel. diff 1.43541 %)
+   fb10 = 0.1 ---> 0.002538 g/mole (rel. diff 0.7141 %)
+   fb10 = 0.2 ---> 0.00251982 g/mole (rel. diff -0.00721313 %)
+   fb10 = 0.3 ---> 0.00250164 g/mole (rel. diff -0.728526 %)
+   fb10 = 0.4 ---> 0.00248346 g/mole (rel. diff -1.44984 %)
+   fb10 = 0.5 ---> 0.00246529 g/mole (rel. diff -2.17115 %)
+   fb10 = 0.6 ---> 0.00244711 g/mole (rel. diff -2.89246 %)
+   fb10 = 0.7 ---> 0.00242893 g/mole (rel. diff -3.61378 %)
+   fb10 = 0.8 ---> 0.00241076 g/mole (rel. diff -4.33509 %)
+   fb10 = 0.9 ---> 0.00239258 g/mole (rel. diff -5.0564 %)
+   fb10 = 1 ---> 0.0023744 g/mole (rel. diff -5.77772 %)

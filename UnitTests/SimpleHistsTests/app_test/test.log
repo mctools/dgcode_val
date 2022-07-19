@@ -1,0 +1,348 @@
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title (0)
+  xLabel    : <none>
+  yLabel    : <none>
+  comment    : <none>
+  integral  : 0
+  mean      : <n/a>
+  rms       : <n/a>
+  median    : <n/a>
+  minfilled : <n/a>
+  maxfilled : <n/a>
+  underflow : 0
+  overflow  : 0
+  content[ibin=0] : 0 +- 0
+  content[ibin=1] : 0 +- 0
+  content[ibin=2] : 0 +- 0
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 0 +- 0
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title
+  xLabel    : some xlabel
+  yLabel    : some ylabel
+  comment    : some comment
+  integral  : 4.333
+  mean      : 4.04077
+  rms       : 7.8459
+  median    : 5 +- 1
+  minfilled : -15.001
+  maxfilled : 15.001
+  underflow : 0.333
+  overflow  : 1
+  content[ibin=0] : 1.5 +- 1.11803
+  content[ibin=1] : 0 +- 0
+  content[ibin=2] : 1.5 +- 1.5
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 0 +- 0
+
+Serialised to buffer of length 199
+
+Deserialisation 1:
+
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title
+  xLabel    : some xlabel
+  yLabel    : some ylabel
+  comment    : some comment
+  integral  : 4.333
+  mean      : 4.04077
+  rms       : 7.8459
+  median    : 5 +- 1
+  minfilled : -15.001
+  maxfilled : 15.001
+  underflow : 0.333
+  overflow  : 1
+  content[ibin=0] : 1.5 +- 1.11803
+  content[ibin=1] : 0 +- 0
+  content[ibin=2] : 1.5 +- 1.5
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 0 +- 0
+
+Deserialisation 2:
+
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title
+  xLabel    : some xlabel
+  yLabel    : some ylabel
+  comment    : some comment
+  integral  : 4.333
+  mean      : 4.04077
+  rms       : 7.8459
+  median    : 5 +- 1
+  minfilled : -15.001
+  maxfilled : 15.001
+  underflow : 0.333
+  overflow  : 1
+  content[ibin=0] : 1.5 +- 1.11803
+  content[ibin=1] : 0 +- 0
+  content[ibin=2] : 1.5 +- 1.5
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 0 +- 0
+
+Merge test premerge:
+
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title
+  xLabel    : some xlabel
+  yLabel    : some ylabel
+  comment    : some comment
+  integral  : 4.733
+  mean      : 3.91056
+  rms       : 7.51927
+  median    : 5 +- 1
+  minfilled : -15.001
+  maxfilled : 15.001
+  underflow : 0.333
+  overflow  : 1
+  content[ibin=0] : 1.5 +- 1.11803
+  content[ibin=1] : 0.4 +- 0.4
+  content[ibin=2] : 1.5 +- 1.5
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 0 +- 0
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title
+  xLabel    : some xlabel
+  yLabel    : some ylabel
+  comment    : some comment
+  integral  : 8.633
+  mean      : 6.41129
+  rms       : 6.04642
+  median    : 9 +- 1
+  minfilled : -15.001
+  maxfilled : 15.001
+  underflow : 0.333
+  overflow  : 1
+  content[ibin=0] : 1.5 +- 1.11803
+  content[ibin=1] : 0 +- 0
+  content[ibin=2] : 1.5 +- 1.5
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 4.3 +- 4.3
+
+Merge test postmerge:
+
+Hist1D(nbins=5,xmin=0,xmax=10):
+  title     : A title
+  xLabel    : some xlabel
+  yLabel    : some ylabel
+  comment    : some comment
+  integral  : 13.366
+  mean      : 5.52576
+  rms       : 6.71302
+  median    : 5 +- 1
+  minfilled : -15.001
+  maxfilled : 15.001
+  underflow : 0.666
+  overflow  : 2
+  content[ibin=0] : 3 +- 1.58114
+  content[ibin=1] : 0.4 +- 0.4
+  content[ibin=2] : 3 +- 2.12132
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 4.3 +- 4.3
+
+Test HistCollection:
+
+
+Some histogram before persistification:
+
+Hist1D(nbins=7,xmin=-5,xmax=5):
+  title     : <none>
+  xLabel    : A fine xlabel
+  yLabel    : <none>
+  comment    : <none>
+  integral  : 1.01
+  mean      : 1.16436
+  rms       : 0.356436
+  median    : 1.42857 +- 0.714286
+  minfilled : -2.4
+  maxfilled : 1.2
+  underflow : 0
+  overflow  : 0
+  content[ibin=0] : 0 +- 0
+  content[ibin=1] : 0.01 +- 0.01
+  content[ibin=2] : 0 +- 0
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 1 +- 1
+  content[ibin=5] : 0 +- 0
+  content[ibin=6] : 0 +- 0
+
+Same histogram after persistification+loading:
+
+Hist1D(nbins=7,xmin=-5,xmax=5):
+  title     : <none>
+  xLabel    : A fine xlabel
+  yLabel    : <none>
+  comment    : <none>
+  integral  : 1.01
+  mean      : 1.16436
+  rms       : 0.356436
+  median    : 1.42857 +- 0.714286
+  minfilled : -2.4
+  maxfilled : 1.2
+  underflow : 0
+  overflow  : 0
+  content[ibin=0] : 0 +- 0
+  content[ibin=1] : 0.01 +- 0.01
+  content[ibin=2] : 0 +- 0
+  content[ibin=3] : 0 +- 0
+  content[ibin=4] : 1 +- 1
+  content[ibin=5] : 0 +- 0
+  content[ibin=6] : 0 +- 0
+Test normalisation - original:
+  Hist1D(nbins=5,xmin=0,xmax=10):
+    title     : A title
+    xLabel    : some xlabel
+    yLabel    : some ylabel
+    comment    : some comment
+    integral  : 4.333
+    mean      : 4.04077
+    rms       : 7.8459
+    median    : 5 +- 1
+    minfilled : -15.001
+    maxfilled : 15.001
+    underflow : 0.333
+    overflow  : 1
+    content[ibin=0] : 1.5 +- 1.11803
+    content[ibin=1] : 0 +- 0
+    content[ibin=2] : 1.5 +- 1.5
+    content[ibin=3] : 0 +- 0
+    content[ibin=4] : 0 +- 0
+Test normalisation:
+  Hist1D(nbins=5,xmin=0,xmax=10):
+    title     : A title
+    xLabel    : some xlabel
+    yLabel    : some ylabel
+    comment    : some comment
+    integral  : 1
+    mean      : 4.04077
+    rms       : 7.8459
+    median    : 5 +- 1
+    minfilled : -15.001
+    maxfilled : 15.001
+    underflow : 0.0768521
+    overflow  : 0.230787
+    content[ibin=0] : 0.34618 +- 0.258028
+    content[ibin=1] : 0 +- 0
+    content[ibin=2] : 0.34618 +- 0.34618
+    content[ibin=3] : 0 +- 0
+    content[ibin=4] : 0 +- 0
+Hist2D(nbinsx=5,xmin=0,xmax=5,nbinsy=3,ymin=-2,ymax=2):
+  title      : A 2d hist
+  xLabel     : <none>
+  yLabel     : <none>
+  comment    : <none>
+  integral   : 0
+  meanx      : <n/a>
+  rmsy       : <n/a>
+  meanx      : <n/a>
+  rmsy       : <n/a>
+  covxy      : <n/a>
+  corxy      : <n/a>
+  minfilledx : <n/a>
+  maxfilledx : <n/a>
+  minfilledy : <n/a>
+  maxfilledy : <n/a>
+  underflowx : 0
+  overflowx  : 0
+  underflowy : 0
+  overflowy  : 0
+  content[(ix,iy)=(0,0)] : 0
+  content[(ix,iy)=(0,1)] : 0
+  content[(ix,iy)=(0,2)] : 0
+  content[(ix,iy)=(1,0)] : 0
+  content[(ix,iy)=(1,1)] : 0
+  content[(ix,iy)=(1,2)] : 0
+  content[(ix,iy)=(2,0)] : 0
+  content[(ix,iy)=(2,1)] : 0
+  content[(ix,iy)=(2,2)] : 0
+  content[(ix,iy)=(3,0)] : 0
+  content[(ix,iy)=(3,1)] : 0
+  content[(ix,iy)=(3,2)] : 0
+  content[(ix,iy)=(4,0)] : 0
+  content[(ix,iy)=(4,1)] : 0
+  content[(ix,iy)=(4,2)] : 0
+Hist2D(nbinsx=5,xmin=0,xmax=5,nbinsy=3,ymin=-2,ymax=2):
+  title      : A 2d hist
+  xLabel     : some xlabel
+  yLabel     : some ylabel
+  comment    : some comment
+  integral   : 13.2
+  meanx      : 0.0378788
+  rmsx       : 0.132305
+  meany      : 16.1894
+  rmsy       : 4.57775
+  covxy      : -0.605659
+  corxy      : -1
+  minfilledx : 0
+  maxfilledx : 0.5
+  minfilledy : 0.2
+  maxfilledy : 17.5
+  underflowx : 0
+  overflowx  : 0
+  underflowy : 0
+  overflowy  : 12.2
+  content[(ix,iy)=(0,0)] : 0
+  content[(ix,iy)=(0,1)] : 1
+  content[(ix,iy)=(0,2)] : 0
+  content[(ix,iy)=(1,0)] : 0
+  content[(ix,iy)=(1,1)] : 0
+  content[(ix,iy)=(1,2)] : 0
+  content[(ix,iy)=(2,0)] : 0
+  content[(ix,iy)=(2,1)] : 0
+  content[(ix,iy)=(2,2)] : 0
+  content[(ix,iy)=(3,0)] : 0
+  content[(ix,iy)=(3,1)] : 0
+  content[(ix,iy)=(3,2)] : 0
+  content[(ix,iy)=(4,0)] : 0
+  content[(ix,iy)=(4,1)] : 0
+  content[(ix,iy)=(4,2)] : 0
+s1: HistCounts():
+s1:   title     : Stats
+s1:   xLabel    : <none>
+s1:   yLabel    : <none>
+s1:   comment    : <none>
+s1:   integral  : 128.4
+s1:   counter[Counter 1] = 2 +- 1.41421
+s1:   counter[counter_2] = 12.2 +- 12.2
+s1:     => This is a comment about the second counter
+s1:   counter[<Counter 3>] = 100 +- 10
+s1:   counter[An unused counter] = 0 +- 0
+s1:   counter[A counter summing c1 and c2] = 14.2 +- 12.2817
+s2: HistCounts():
+s2:   title     : Stats
+s2:   xLabel    : <none>
+s2:   yLabel    : <none>
+s2:   comment    : <none>
+s2:   integral  : 128.4
+s2:   counter[Counter 1] = 2 +- 1.41421
+s2:   counter[counter_2] = 12.2 +- 12.2
+s2:     => This is a comment about the second counter
+s2:   counter[<Counter 3>] = 100 +- 10
+s2:   counter[An unused counter] = 0 +- 0
+s2:   counter[A counter summing c1 and c2] = 14.2 +- 12.2817
+Serialised to 302 bytes
+s3: HistCounts():
+s3:   title     : Stats
+s3:   xLabel    : <none>
+s3:   yLabel    : <none>
+s3:   comment    : <none>
+s3:   integral  : 128.4
+s3:   counter[Counter 1] = 2 +- 1.41421
+s3:   counter[counter_2] = 12.2 +- 12.2
+s3:     => This is a comment about the second counter
+s3:   counter[<Counter 3>] = 100 +- 10
+s3:   counter[An unused counter] = 0 +- 0
+s3:   counter[A counter summing c1 and c2] = 14.2 +- 12.2817
+getMaxContent() = 100
+Dump after setErrorsByContent:
+s4: HistCounts():
+s4:   title     : Stats
+s4:   xLabel    : <none>
+s4:   yLabel    : <none>
+s4:   comment    : <none>
+s4:   integral  : 128.4
+s4:   counter[Counter 1] = 2 +- 1.41421
+s4:   counter[counter_2] = 12.2 +- 3.49285
+s4:     => This is a comment about the second counter
+s4:   counter[<Counter 3>] = 100 +- 10
+s4:   counter[An unused counter] = 0 +- 0
+s4:   counter[A counter summing c1 and c2] = 14.2 +- 3.76829

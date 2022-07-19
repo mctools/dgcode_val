@@ -1,0 +1,39 @@
+GriffDataReader opened file 10evts_singleneutron_on_b10_full.griff
+Found event 0/0 [ntrks=4] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472345 MeV 
+Neutron daughter info gamma NeutronInelastic 0.470680 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.846394 MeV 
+Found event 0/1 [ntrks=8] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472484 MeV 
+Neutron daughter info gamma NeutronInelastic 0.477603 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.836900 MeV 
+Neutron daughter info gamma NeutronInelastic 0.001263 MeV 
+Neutron daughter info gamma NeutronInelastic 0.001263 MeV 
+Found event 0/2 [ntrks=4] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472330 MeV 
+Neutron daughter info gamma NeutronInelastic 0.474666 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.842502 MeV 
+Found event 0/3 [ntrks=1] ===========================================
+Found event 0/4 [ntrks=1] ===========================================
+Found event 0/5 [ntrks=4] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472662 MeV 
+Neutron daughter info gamma NeutronInelastic 0.477602 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.837794 MeV 
+Found event 0/6 [ntrks=8] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472429 MeV 
+Neutron daughter info gamma NeutronInelastic 0.477601 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.833545 MeV 
+Neutron daughter info gamma NeutronInelastic 0.002969 MeV 
+Neutron daughter info gamma NeutronInelastic 0.002969 MeV 
+Found event 0/7 [ntrks=4] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472352 MeV 
+Neutron daughter info gamma NeutronInelastic 0.472854 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.844265 MeV 
+Found event 0/8 [ntrks=4] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472344 MeV 
+Neutron daughter info gamma NeutronInelastic 0.470183 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.846878 MeV 
+Found event 0/9 [ntrks=4] ===========================================
+Neutron daughter info alpha NeutronInelastic 1.472702 MeV 
+Neutron daughter info gamma NeutronInelastic 0.477601 MeV 
+Neutron daughter info Li7[0.0] NeutronInelastic 0.837263 MeV 
