@@ -1,0 +1,10 @@
+name: Call test workflow
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  Tests:
+    uses: mctools/dgcode_actions/.github/workflows/run_validation_tests.yml@main
