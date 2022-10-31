@@ -29,7 +29,12 @@ export DGCODE_ENABLE_PROJECTS_PKG_SELECTION_FLAG=true
 #Source optional script to adjust configurations. (This may be useful for e.g.,
 #override the above listed configurations in collective repositories where this
 #file is version controlled - and should not be edited -, but the optional
-#script is gitignored, and expected to hold users own configurations)
+#script is gitignored, and expected to hold users own configurations) To get
+#started on a bootstrap_extraconf.sh file you can copy an empty skeleton which
+#you can afterwards edit:
+#
+#    cp bootstrap_extraconf_skeleton.sh bootstrap_extraconf.sh
+#
 if [ -f "$DGCODE_PROJECTS_DIR"/bootstrap_extraconf.sh ]; then
     source "$DGCODE_PROJECTS_DIR"/bootstrap_extraconf.sh
 fi
