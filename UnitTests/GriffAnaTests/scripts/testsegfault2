@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+set -u
+
+f=$ESS_DATA_DIR/GriffDataRead/10evts_singleneutron_on_b10_reduced.griff
+ess_griffanautils_extractevts $f out.griff 0 7
+ess_devtools_gdb run ess_griffformat_dumpfile out.griff
