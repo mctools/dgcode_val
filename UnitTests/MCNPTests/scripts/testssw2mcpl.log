@@ -20,7 +20,7 @@ Opened MCPL file test.mcpl.gz:
   Custom meta data
     Source             : "MCNPX"
     Number of comments : 3
-          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.0)"
+          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.1)"
           -> comment 1 : "SSW metadata: [kods='mcnpx', vers='2.7.0', title='file: ex1']"
           -> comment 2 : "The userflags in this file are the surface IDs found in the SSW file"
     Number of blobs    : 0
@@ -157,7 +157,7 @@ Opened MCPL file test.mcpl.gz:
   Custom meta data
     Source             : "MCNPX"
     Number of comments : 3
-          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.0)"
+          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.1)"
           -> comment 1 : "SSW metadata: [kods='mcnpx', vers='2.7.0', title='bWaterBox']"
           -> comment 2 : "The userflags in this file are the surface IDs found in the SSW file"
     Number of blobs    : 0
@@ -294,7 +294,7 @@ Opened MCPL file test.mcpl.gz:
   Custom meta data
     Source             : "MCNPX"
     Number of comments : 3
-          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.0)"
+          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.1)"
           -> comment 1 : "SSW metadata: [kods='mcnpx', vers='2.7.0', title='bWaterBox']"
           -> comment 2 : "The userflags in this file are the surface IDs found in the SSW file"
     Number of blobs    : 0
@@ -431,7 +431,7 @@ Opened MCPL file test.mcpl.gz:
   Custom meta data
     Source             : "MCNPX"
     Number of comments : 3
-          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.0)"
+          -> comment 0 : "SSW file from MCNPX converted with ssw2mcpl (from MCPL release v1.5.1)"
           -> comment 1 : "SSW metadata: [kods='mcnpx', vers='2.7.0', title='bWaterBox']"
           -> comment 2 : "The userflags in this file are the surface IDs found in the SSW file"
     Number of blobs    : 0
@@ -568,7 +568,7 @@ Opened MCPL file test.mcpl.gz:
   Custom meta data
     Source             : "MCNP6"
     Number of comments : 3
-          -> comment 0 : "SSW file from MCNP6 converted with ssw2mcpl (from MCPL release v1.5.0)"
+          -> comment 0 : "SSW file from MCNP6 converted with ssw2mcpl (from MCPL release v1.5.1)"
           -> comment 1 : "SSW metadata: [kods='mcnp', vers='6', title='C ====================================================================== C']"
           -> comment 2 : "The userflags in this file are the surface IDs found in the SSW file"
     Number of blobs    : 0
@@ -626,7 +626,7 @@ Opened MCPL file test.mcpl.gz:
   Custom meta data
     Source             : "MCNP6"
     Number of comments : 3
-          -> comment 0 : "SSW file from MCNP6 converted with ssw2mcpl (from MCPL release v1.5.0)"
+          -> comment 0 : "SSW file from MCNP6 converted with ssw2mcpl (from MCPL release v1.5.1)"
           -> comment 1 : "SSW metadata: [kods='mcnp', vers='6.mpi', title='Ground surface contamination: Step 1 - 5.0E-02 MeV - Outer Portion']"
           -> comment 2 : "The userflags in this file are the surface IDs found in the SSW file"
     Number of blobs    : 0
