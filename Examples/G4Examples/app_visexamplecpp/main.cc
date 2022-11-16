@@ -28,7 +28,7 @@ public:
     auto logicBox= new G4LogicalVolume(solidBox, mat_boroncarbide, "LVSomeBox");
     new G4PVPlacement(0, G4ThreeVector(0.0,0.0,0.0),"PVSomeBox", logicBox, pv_world, false, 0, true);
 
-    logicWorld -> SetVisAttributes (G4VisAttributes::Invisible);
+    logicWorld -> SetVisAttributes (G4VisAttributes::GetInvisible());
 
     return pv_world;
   }
