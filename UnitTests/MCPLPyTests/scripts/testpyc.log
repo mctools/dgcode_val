@@ -82,7 +82,7 @@ Other options:
   -v, --version   : Display version of MCPL installation.
   -h, --help      : Display this usage information (ignores all other options).
 ===> mcpltool ended with exit code 0
-MCPL version 1.6.0
+MCPL version 1.6.1
 ===> mcpltool ended with exit code 0
 ERROR: Unrecognised option : -y
 
@@ -431,7 +431,8 @@ Rødgrød med
 fløde.
 ===> mcpltool ended with exit code 0
 A 
-Bla===> mcpltool ended with exit code 0
+
+Bla===> mcpltool ended with exit code 0
 ERROR: Can not calculate statistics for an empty file
 
 Run with -h or --help for usage information
