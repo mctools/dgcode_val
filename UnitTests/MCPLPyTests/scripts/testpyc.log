@@ -431,8 +431,7 @@ Rødgrød med
 fløde.
 ===> mcpltool ended with exit code 0
 A 
-
-Bla===> mcpltool ended with exit code 0
+Bla===> mcpltool ended with exit code 0
 ERROR: Can not calculate statistics for an empty file
 
 Run with -h or --help for usage information
