@@ -4567,7 +4567,7 @@ Opened MCPL file dump_dmp.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -4670,7 +4670,7 @@ Opened MCPL file dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -4773,7 +4773,7 @@ Opened MCPL file empty_file.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -4818,7 +4818,7 @@ Opened MCPL file empty_file.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -4863,7 +4863,7 @@ Opened MCPL file ProductTally_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -5048,7 +5048,7 @@ Opened MCPL file Spin_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -5155,7 +5155,7 @@ Opened MCPL file TimeTally_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -5330,7 +5330,7 @@ Opened MCPL file Various2_10p_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -5453,7 +5453,7 @@ Opened MCPL file Various2_13p_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -5578,7 +5578,7 @@ Opened MCPL file Various_10p_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
@@ -5693,7 +5693,7 @@ Opened MCPL file Various_13p_dump_dmp.gz.mcpl.gz:
   Custom meta data
     Source             : "PHITS"
     Number of comments : 1
-          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.1)"
+          -> comment 0 : "Converted from PHITS with phits2mcpl (from MCPL release v1.6.2)"
     Number of blobs    : 0
 
   Particle data format
