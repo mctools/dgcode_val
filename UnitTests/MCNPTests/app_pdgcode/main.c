@@ -77,7 +77,7 @@ static const int64_t known_mcnp6_mappings[] = {
   38, -2212, 0,//anti proton
 };
 
-int main(){
+int main(void){
 
   for (unsigned i = 0; i < sizeof(known_mcnpx_mappings)/sizeof(known_mcnpx_mappings[0]); i+=2) {
     int64_t mcnpx = known_mcnpx_mappings[i];

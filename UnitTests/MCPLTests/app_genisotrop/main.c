@@ -6,7 +6,7 @@
 #include <string.h>
 /* #include <assert.h> */
 
-double random_double() {
+double random_double(void) {
   return ((double)rand()/(double)RAND_MAX);
 }
 

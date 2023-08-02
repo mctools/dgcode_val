@@ -22,7 +22,7 @@ CC="$CC -O0"
 CCXX="$CCXX -O0"
 
 echo '#include "mcpl.h"' > main.c
-echo 'int main() { return 0;}' >> main.c
+echo 'int main(void) { return 0;}' >> main.c
 
 for a in 0 1; do
     for b in 0 1; do
