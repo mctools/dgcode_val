@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "x$MCPLTESTS_TESTTOOL" == "x" ]; then
     MCPLTESTS_TESTTOOL=ess_mcpl_tool

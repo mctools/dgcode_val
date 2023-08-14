@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ess_ncrystalrel_inspectfile --test

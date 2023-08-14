@@ -56,7 +56,7 @@ int main(int,char**) {
   FILE * out = fopen("dummy", "w");
   if (!out)
     return testfail("failed to create dummy");
-  fprintf(out,"#!/bin/bash\necho Test output of executable script\n");
+  fprintf(out,"#!/usr/bin/env bash\necho Test output of executable script\n");
   fclose(out);
 
   if (!Core::file_exists("dummy")) return testfail("dummy exists");

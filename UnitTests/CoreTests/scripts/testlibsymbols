@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ ! -f /proc/cpuinfo ]; then
     echo "This test only works on linux. Ending gracefully."

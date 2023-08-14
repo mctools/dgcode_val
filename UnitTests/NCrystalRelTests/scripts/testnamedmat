@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ess_g4xsectdump_query -m "NCrystal:cfg=Al_sg225.ncmat" -s -f

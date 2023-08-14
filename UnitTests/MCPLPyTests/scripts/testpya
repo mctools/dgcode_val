@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 set -u
 MCPLFILE=$ESS_DATA_DIR/MCPLTests/reffile_1.mcpl

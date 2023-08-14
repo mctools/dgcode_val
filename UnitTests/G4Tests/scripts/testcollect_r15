@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #launch geant4 job through python and dump output in custom file format. Then dump the resulting file.
 ess_g4tests_datacollect -m REDUCED -o testoutput_reduced.griff -n 15|grep -v 'G4Launcher:: Begin simulation of event' | grep -v '/G4NDL4.'
 EC=$?

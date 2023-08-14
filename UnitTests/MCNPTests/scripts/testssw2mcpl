@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 set -u
 ess_mcnp_ssw2mcpl $ESS_DATA_DIR/MCNPTests/test_ssw.w -s test.mcpl && ess_mcpl_tool -l0 test.mcpl.gz

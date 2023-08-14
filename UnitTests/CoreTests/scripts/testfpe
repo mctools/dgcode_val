@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 which ess_coretests_build_is_debug &> /dev/null
 if [ $? != 0 ]; then

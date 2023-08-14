@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #Test all combinations of MCPL_HASZLIB, MCPL_NO_CUSTOM_GZIP and MCPL_NO_EXT_GZIP
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #A bit hackish, but we basically want to compile mcpl without zlib support:
 

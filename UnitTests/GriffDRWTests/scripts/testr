@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #set language vars to not get uniq -c to barf on osx:
 export LC_CTYPE=C
 export LANG=C

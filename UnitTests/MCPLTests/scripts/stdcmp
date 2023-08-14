@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #Check compilation with various C and C++ standards (with all combinations of
 #MCPL_HASZLIB, MCPL_NO_CUSTOM_GZIP and MCPL_NO_EXT_GZIP so all code gets

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ess_generatorexamples_custompygen_inline -lESS_Empty|grep G4Launcher|grep -v '\[seed .*\]'
 if [ ${PIPESTATUS[0]} != 0 ]; then
     exit 1

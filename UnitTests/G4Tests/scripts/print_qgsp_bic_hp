@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ess_g4tests_dumpphyslist QGSP_BIC_HP|grep -v 'G4NDL4.0$'|grep -v 'Geant4 version Name:'

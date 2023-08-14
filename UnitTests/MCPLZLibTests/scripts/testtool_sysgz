@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -u
 set -e
 #A bit hackish, but we basically want to compile mcpl with system zlib:

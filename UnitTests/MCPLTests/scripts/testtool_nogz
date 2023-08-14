@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #A bit hackish, but we basically want to compile mcpl without zlib support:
 CC=`python -c 'import os,pickle;import dgbuild.cfg as cfg; print(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["volatile"]["c"]["compiler"])'`

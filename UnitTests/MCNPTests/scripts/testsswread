@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 for f in test_ssw.w pi_mins.w.gz pi_minus_v2.w.gz ssw_anti_proton.gz wssx.gz wssy.gz mcnpx_v250.w.gz mcnpx_v260.w.gz mcnp5_gamma.w.gz mcnp5_neutron.w.gz mcnp6_ysyeom_ghissue45.w.gz; do
     echo

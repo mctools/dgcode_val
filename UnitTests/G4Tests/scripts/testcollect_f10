@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #launch geant4 job through python and dump output in custom file format. Then dump the resulting file.
 ess_g4tests_datacollect -m FULL -o testoutput_full.griff -n 10 |grep -v 'G4Launcher:: Begin simulation of event'| grep -v '/G4NDL4.'
 EC=${PIPESTATUS[0]}
