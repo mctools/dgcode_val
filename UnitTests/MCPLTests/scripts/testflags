@@ -8,6 +8,9 @@ CC=`python -c 'import os; import pickle; import dgbuild.cfg as cfg; print(pickle
 if [ $? != 0 ]; then
     exit 1
 fi
+
+CAN_USE_RPATHLINK=$(python -c 'import os; import pickle; import dgbuild.cfg as cfg; print(int(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["langs"]["c"]["can_use_rpathlink_flag"]))')
+
 P=$DGCODE_DIR/packages/Framework/MCPL/MCPL
 
 mkdir -p fakebadgzip/
@@ -17,6 +20,17 @@ if [ $? != 0 ]; then
 fi
 
 rpathflags="-Wl,-rpath,$ESS_LIB_DIR -Wl,-rpath,$ESS_LIB_DIR/links"
+if [ x$CAN_USE_RPATHLINK == x1 ]; then
+    rpathflags="${rpathflags} -Wl,-rpath-link,$ESS_LIB_DIR -Wl,-rpath-link,$ESS_LIB_DIR/links"
+fi
+
+if [ "x${CONDA_PREFIX}" != x ]; then
+    rpathflags="${rpathflags} -Wl,-rpath,${CONDA_PREFIX}/lib -Wl,-rpath,${CONDA_PREFIX}/lib"
+    if [ x$CAN_USE_RPATHLINK == x1 ]; then
+        rpathflags="${rpathflags} -Wl,-rpath-link,${CONDA_PREFIX}/lib -Wl,-rpath-link,${CONDA_PREFIX}/lib"
+    fi
+fi
+
 echo '#include "mcpl.h"' > main.c
 echo 'int main() {mcpl_closeandgzip_outfile(mcpl_create_outfile("out.mcpl"));}' >> main.c
 for a in 0 1; do
@@ -35,7 +49,7 @@ for a in 0 1; do
             fi
             echo "=========================================================================="
             echo "=== Testing flags: "`echo ${flags}|sed "s#$ESS_INCLUDE_DIR#\\$ESSINC#"`
-            $CC -std=c99 -lm ${flags} ${rpathflags} -I$ESS_INCLUDE_DIR/MCPL -L$ESS_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} -o main && ./main
+            $CC -std=c99 -lm ${flags} ${rpathflags} -I$ESS_INCLUDE_DIR/MCPL -L$ESS_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
             EC=$?
             ls -1 out.mcpl*
             if [ $? == 0 ]; then
