@@ -49,7 +49,7 @@ for a in 0 1; do
             fi
             echo "=========================================================================="
             echo "=== Testing flags: "`echo ${flags}|sed "s#$ESS_INCLUDE_DIR#\\$ESSINC#"`
-            echo "===    rpathflags: ${rpathflags}"
+            #echo "===    rpathflags: ${rpathflags}"
             $CC -std=c99 -lm ${flags} ${rpathflags} -I$ESS_INCLUDE_DIR/MCPL -L$ESS_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
             EC=$?
             ls -1 out.mcpl*
