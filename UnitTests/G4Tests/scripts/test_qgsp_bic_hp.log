@@ -11760,8 +11760,8 @@ xi(2030)- xi(2030)0 xi- xi0 xi_b- xi_b0 xi_c+ xi_c0
 userDetector->Construct() start.
 World is registered to the default region.
 physicsList->Construct() start.
-<<G4DATADIR>>/NDL4.6
-@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/NDL4.6/Inelastic
-@@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/NDL4.6
+<<G4DATADIR>>/G4NDL4.6
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/G4NDL4.6/Inelastic
+@@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/G4NDL4.6
 physicsList->CheckParticleList() start.
 physicsList->setCut() start.
