@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ess_g4tests_print_qgsp_bic_hp|grep -v G4NDL4.
+ess_g4tests_print_qgsp_bic_hp

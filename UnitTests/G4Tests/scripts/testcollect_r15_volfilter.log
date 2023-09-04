@@ -50,6 +50,9 @@ G4Launcher:: Calling G4RunManager::Initialize()
 Checking overlaps for volume pv_targetbox:0 (G4Box) ... OK! 
 Checking overlaps for volume pv_recordingbox_before:0 (G4Box) ... OK! 
 Checking overlaps for volume pv_recordingbox_after:1 (G4Box) ... OK! 
+<<G4DATADIR>>/NDL4.6
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/NDL4.6/Inelastic
+@@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/NDL4.6
 G4Launcher:: G4RunManager::Initialize() done
 G4NCInstall :: No materials with "NCrystal" property found in active geometry.
 G4NCInstall :: Will not touch existing processes for neutrons
@@ -495,6 +498,7 @@ CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
  UseNRESP71Model ?         0
 =======================================================
 
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to <<G4DATADIR>>/NDL4.6/Inelastic
 
 msc:  for pi+  SubType= 10
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
@@ -925,13 +929,16 @@ GriffDataReader opened file testoutput_reduced_filtered.griff
 >>>     "G4VersionNumber" : "1103"
 >>>     "GriffMode" : "REDUCED"
 >>>     "RandEngine" : "NCrystalXoroshiroEngine"
+>>>     "datadir/G4ABLADATA" : "G4ABLA3.1"
+>>>     "datadir/G4ENSDFSTATEDATA" : "G4ENSDFSTATE2.3"
+>>>     "datadir/G4INCLDATA" : "G4INCL1.0"
 >>>     "datadir/G4LEDATA" : "G4EMLOW8.0"
->>>     "datadir/G4LEVELGAMMADATA" : "PhotonEvaporation5.7"
+>>>     "datadir/G4LEVELGAMMADATA" : "G4PhotonEvaporation5.7"
 >>>     "datadir/G4NEUTRONHPDATA" : "G4NDL4.6"
->>>     "datadir/G4NEUTRONXSDATA" : ""
+>>>     "datadir/G4PARTICLEXSDATA" : "G4PARTICLEXS4.0"
 >>>     "datadir/G4PIIDATA" : "G4PII1.3"
->>>     "datadir/G4RADIOACTIVEDATA" : "RadioactiveDecay5.6"
->>>     "datadir/G4REALSURFACEDATA" : "RealSurface2.2"
+>>>     "datadir/G4RADIOACTIVEDATA" : "G4RadioactiveDecay5.6"
+>>>     "datadir/G4REALSURFACEDATA" : "G4RealSurface2.2"
 >>>     "datadir/G4SAIDXSDATA" : "G4SAIDDATA2.0"
 >>>     "filterName" : "G4CollectFilters/StepFilterVolume"
 >>>     "genName" : "G4Launcher/SingleParticleGun"
