@@ -16,8 +16,8 @@ Molar mass of component CF4: 88.0043 g
 Molar mass of component Ar: 39.9477 g
 Molar mass of component He: 4.00264 g
 Molar mass of component EnrichedHe: 3.11469 g
- Material:     Gas1    density:  1.783 mg/cm3  RadL: 126.842 m    Nucl.Int.Length: 601.663 m  
-                       Imean: 149.302 eV   temperature: 273.15 K  pressure:   1.00 atm
+ Material:     Gas1    density:  1.783 mg/cm3  RadL: 126.842 m    Nucl.Int.Length: 601.662 m  
+                       Imean: 148.939 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -37,7 +37,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  24.02 %  ElmAbundance  40.00 % 
 
  Material: IdealGasMix[0.7*Ar+0.27*CO2+0.03*CF4/273.15K/1.01325bar]    density:  1.896 mg/cm3  RadL: 122.054 m    Nucl.Int.Length: 558.889 m  
-                       Imean: 146.081 eV   temperature: 273.15 K  pressure:   1.00 atm
+                       Imean: 145.581 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -61,7 +61,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  20.34 %  ElmAbundance  32.53 % 
 
  Material:     Gas3    density:  3.926 mg/cm3  RadL:  86.574 m    Nucl.Int.Length: 232.617 m  
-                       Imean: 109.384 eV   temperature: 273.15 K  pressure:   1.00 atm
+                       Imean: 108.796 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
          --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
@@ -72,7 +72,7 @@ Molar mass of component EnrichedHe: 3.11469 g
          --->  Isotope:   F19   Z =  9   N =  19   A =  19.00 g/mole   abundance: 100.000 %
           ElmMassFraction:  86.35 %  ElmAbundance  80.00 % 
 
- Material: IdealGasMix[EnrichedHe/273.15K/1.01325bar]    density:  0.139 kg/m3   RadL:   5.282 km   Nucl.Int.Length:   3.678 km 
+ Material: IdealGasMix[EnrichedHe/273.15K/1.01325bar]    density:  0.139 mg/cm3  RadL:   5.282 km   Nucl.Int.Length:   3.678 km 
                        Imean:  41.800 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: EnrichedHe (He)   Z =  2.0   N =     3   A =  3.115 g/mole
@@ -80,7 +80,7 @@ Molar mass of component EnrichedHe: 3.11469 g
          --->  Isotope:   He4   Z =  2   N =   4   A =   4.00 g/mole   abundance: 10.000 %
           ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
 
- Material:     Gas5    density:  0.179 kg/m3   RadL:   5.282 km   Nucl.Int.Length:   3.112 km 
+ Material:     Gas5    density:  0.179 mg/cm3  RadL:   5.282 km   Nucl.Int.Length:   3.112 km 
                        Imean:  41.800 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: He (He)   Z =  2.0   N =     4   A =  4.003 g/mole
@@ -88,8 +88,8 @@ Molar mass of component EnrichedHe: 3.11469 g
          --->  Isotope:   He4   Z =  2   N =   4   A =   4.00 g/mole   abundance: 100.000 %
           ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
 
- Material: IdealGasMix[0.7*Ar+0.2*CO2+0.1*O2/273.15K/1.01325bar]    density:  1.783 mg/cm3  RadL: 126.842 m    Nucl.Int.Length: 601.663 m  
-                       Imean: 149.302 eV   temperature: 273.15 K  pressure:   1.00 atm
+ Material: IdealGasMix[0.7*Ar+0.2*CO2+0.1*O2/273.15K/1.01325bar]    density:  1.783 mg/cm3  RadL: 126.842 m    Nucl.Int.Length: 601.662 m  
+                       Imean: 148.939 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -108,8 +108,8 @@ Molar mass of component EnrichedHe: 3.11469 g
          --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
           ElmMassFraction:  24.02 %  ElmAbundance  40.00 % 
 
- Material: IdealGasMix[0.2*CO2+0.1*O2+0.7*Ar/273.15K/1.01325bar]    density:  1.783 mg/cm3  RadL: 126.842 m    Nucl.Int.Length: 601.663 m  
-                       Imean: 149.302 eV   temperature: 273.15 K  pressure:   1.00 atm
+ Material: IdealGasMix[0.2*CO2+0.1*O2+0.7*Ar/273.15K/1.01325bar]    density:  1.783 mg/cm3  RadL: 126.842 m    Nucl.Int.Length: 601.662 m  
+                       Imean: 148.939 eV   temperature: 273.15 K  pressure:   1.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -129,7 +129,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  24.02 %  ElmAbundance  40.00 % 
 
  Material: IdealGasMix[0.7*Ar+0.2*CO2+0.1*O2/20K/1.01325bar]    density: 24.352 mg/cm3  RadL:   9.287 m    Nucl.Int.Length:  44.054 m  
-                       Imean: 149.302 eV   temperature:  20.00 K  pressure:   1.00 atm
+                       Imean: 148.939 eV   temperature:  20.00 K  pressure:   1.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -149,7 +149,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  24.02 %  ElmAbundance  40.00 % 
 
  Material: IdealGasMix[0.7*Ar+0.2*CO2+0.1*O2/273.15K/10bar]    density: 17.597 mg/cm3  RadL:  12.852 m    Nucl.Int.Length:  60.963 m  
-                       Imean: 149.302 eV   temperature: 273.15 K  pressure:   9.87 atm
+                       Imean: 148.939 eV   temperature: 273.15 K  pressure:   9.87 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -169,7 +169,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  24.02 %  ElmAbundance  40.00 % 
 
  Material: IdealGasMix[0.7*Ar+0.2*CO2+0.1*O2/20K/10bar]    density: 240.335 mg/cm3  RadL:  94.104 cm   Nucl.Int.Length:   4.464 m  
-                       Imean: 149.302 eV   temperature:  20.00 K  pressure:   9.87 atm
+                       Imean: 148.939 eV   temperature:  20.00 K  pressure:   9.87 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -189,7 +189,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  24.02 %  ElmAbundance  40.00 % 
 
  Material: IdealGasMix[0.2*Ar+0.75*B{10|0.95}F3+0.04*CH4+0.01*N2/293.15K/2bar]    density:  4.858 mg/cm3  RadL:  64.760 m    Nucl.Int.Length: 190.931 m  
-                       Imean: 114.179 eV   temperature: 293.15 K  pressure:   1.97 atm
+                       Imean: 114.142 eV   temperature: 293.15 K  pressure:   1.97 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -221,7 +221,7 @@ Molar mass of component EnrichedHe: 3.11469 g
          --->  Isotope:   N15   Z =  7   N =  15   A =  15.00 g/mole   abundance:  0.368 %
           ElmMassFraction:   0.47 %  ElmAbundance   0.58 % 
 
- Material: IdealGasMix[He{3|0.98}/273.15K/1.5bar]    density:  0.201 kg/m3   RadL:   3.568 km   Nucl.Int.Length:   2.527 km 
+ Material: IdealGasMix[He{3|0.98}/273.15K/1.5bar]    density:  0.201 mg/cm3  RadL:   3.568 km   Nucl.Int.Length:   2.527 km 
                        Imean:  41.800 eV   temperature: 273.15 K  pressure:   1.48 atm
 
    --->  Element: He{3|0.98} (He)   Z =  2.0   N =     3   A =  3.037 g/mole
@@ -229,7 +229,7 @@ Molar mass of component EnrichedHe: 3.11469 g
          --->  Isotope:   He4   Z =  2   N =   4   A =   4.00 g/mole   abundance:  2.000 %
           ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
 
- Material: IdealGasMix[0.1*H{3|0.2,2|0.6}2O+0.9*O2/500K/1.01325bar]    density:  0.751 kg/m3   RadL: 460.447 m    Nucl.Int.Length:   1.152 km 
+ Material: IdealGasMix[0.1*H{3|0.2,2|0.6}2O+0.9*O2/500K/1.01325bar]    density:  0.751 mg/cm3  RadL: 460.447 m    Nucl.Int.Length:   1.152 km 
                        Imean:  93.048 eV   temperature: 500.00 K  pressure:   1.00 atm
 
    --->  Element: H{3|0.2,2|0.6} (H)   Z =  1.0   N =     2   A =  2.013 g/mole
@@ -245,7 +245,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  98.69 %  ElmAbundance  90.48 % 
 
  Material: Gas2 / CalcD    density:  5.178 mg/cm3  RadL:  44.684 m    Nucl.Int.Length: 204.609 m  
-                       Imean: 146.081 eV   temperature: 200.00 K  pressure:   2.00 atm
+                       Imean: 145.581 eV   temperature: 200.00 K  pressure:   2.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -269,7 +269,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  20.34 %  ElmAbundance  32.53 % 
 
  Material: Gas2 / CalcP    density:  5.178 mg/cm3  RadL:  44.684 m    Nucl.Int.Length: 204.609 m  
-                       Imean: 146.081 eV   temperature: 200.00 K  pressure:   2.00 atm
+                       Imean: 145.581 eV   temperature: 200.00 K  pressure:   2.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
@@ -293,7 +293,7 @@ Molar mass of component EnrichedHe: 3.11469 g
           ElmMassFraction:  20.34 %  ElmAbundance  32.53 % 
 
  Material: Gas2 / CalcT    density:  5.178 mg/cm3  RadL:  44.684 m    Nucl.Int.Length: 204.609 m  
-                       Imean: 146.081 eV   temperature: 200.00 K  pressure:   2.00 atm
+                       Imean: 145.581 eV   temperature: 200.00 K  pressure:   2.00 atm
 
    --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
          --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %

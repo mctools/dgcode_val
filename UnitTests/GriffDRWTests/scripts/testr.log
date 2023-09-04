@@ -1,6 +1,12 @@
 
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
 **************************************************************
- Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+ Geant4 version Name: geant4-11-00-patch-03 [MT]   (16-September-2022)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -22,15 +28,15 @@ G4Launcher::   -->   [int] evtshift = 0
 G4Launcher:: Installing hooks for capturing output in "grifftests" in mode REDUCED
 G4Launcher:: Pre-init done
 G4Launcher:: Calling G4RunManager::Initialize()
-Checking overlaps for volume TestVolA ... OK! 
-Checking overlaps for volume LogVolB ... OK! 
-Checking overlaps for volume TestVolC ... OK! 
-Checking overlaps for volume TestVolAA ... OK! 
-Checking overlaps for volume TestVolAB ... OK! 
-Checking overlaps for volume TestVolAC ... OK! 
-Checking overlaps for volume TestVolBA ... OK! 
-Checking overlaps for volume TestVolAAA ... OK! 
-Checking overlaps for volume TestVolBAA ... OK! 
+Checking overlaps for volume TestVolA:0 (G4Box) ... OK! 
+Checking overlaps for volume LogVolB:0 (G4Orb) ... OK! 
+Checking overlaps for volume TestVolC:0 (G4Box) ... OK! 
+Checking overlaps for volume TestVolAA:0 (G4Box) ... OK! 
+Checking overlaps for volume TestVolAB:0 (G4Orb) ... OK! 
+Checking overlaps for volume TestVolAC:0 (G4Box) ... OK! 
+Checking overlaps for volume TestVolBA:0 (G4Box) ... OK! 
+Checking overlaps for volume TestVolAAA:0 (G4Orb) ... OK! 
+Checking overlaps for volume TestVolBAA:0 (G4Box) ... OK! 
 G4Launcher:: G4RunManager::Initialize() done
 G4Launcher:: Starting simulation
 G4Launcher:: Begin simulation of event 1 [seed 123456789]
@@ -65,7 +71,7 @@ G4Launcher:: Simulation done
 Dumping grifftests.griff:
   File format version: 2
   Position RunNbr EvtNbr EvtHdr[B] DBData[B] BriefData[B] FullData[B] Total[B] Integrity
-         0      0      0        24      1263           96         160     1543 [success]
+         0      0      0        24      1252           96         160     1532 [success]
          1      0      1        24         0           96         160      280 [success]
          2      0      2        24         0           96         160      280 [success]
          3      0      3        24         0           96         160      280 [success]
@@ -965,26 +971,26 @@ Dumping grifftests.griff:
        897      0    897        24         0           96         160      280 [success]
        898      0    898        24         0           96         160      280 [success]
        899      0    899        24         0           96         160      280 [success]
-  Total [nevts=900]:         21600      1911       121856      321280   466647 [success]
+  Total [nevts=900]:         21600      1900       121856      321280   466636 [success]
       1 GriffDataReader opened file grifftests.griff
       1 ===========================  GRIFF SETUP  ===========================
       1   UserData:
       1     <none>
       1   MetaData:
-      1     "G4Date" : "(8-February-2019)"
+      1     "G4Date" : "(16-September-2022)"
       1     "G4PhysicsList" : "ESS_Empty"
-      1     "G4Version" : "geant4-10-04-patch-03"
-      1     "G4VersionNumber" : "1043"
+      1     "G4Version" : "geant4-11-00-patch-03_MT"
+      1     "G4VersionNumber" : "1103"
       1     "GriffMode" : "REDUCED"
       1     "RandEngine" : "NCrystalXoroshiroEngine"
-      1     "datadir/G4LEDATA" : "G4EMLOW7.3"
-      1     "datadir/G4LEVELGAMMADATA" : "PhotonEvaporation5.2"
-      1     "datadir/G4NEUTRONHPDATA" : "G4NDL4.5"
-      1     "datadir/G4NEUTRONXSDATA" : "G4NEUTRONXS1.4"
+      1     "datadir/G4LEDATA" : "G4EMLOW8.0"
+      1     "datadir/G4LEVELGAMMADATA" : "PhotonEvaporation5.7"
+      1     "datadir/G4NEUTRONHPDATA" : "G4NDL4.6"
+      1     "datadir/G4NEUTRONXSDATA" : ""
       1     "datadir/G4PIIDATA" : "G4PII1.3"
-      1     "datadir/G4RADIOACTIVEDATA" : "RadioactiveDecay5.2"
-      1     "datadir/G4REALSURFACEDATA" : "RealSurface2.1.1"
-      1     "datadir/G4SAIDXSDATA" : "G4SAIDDATA1.1"
+      1     "datadir/G4RADIOACTIVEDATA" : "RadioactiveDecay5.6"
+      1     "datadir/G4REALSURFACEDATA" : "RealSurface2.2"
+      1     "datadir/G4SAIDXSDATA" : "G4SAIDDATA2.0"
       1     "genName" : "ess_griffdrwtests_sim/SphereUniformGen"
       1     "geoName" : "G4GeoGriffTests/GeoGriffTests"
       1   Geant4 Commands:

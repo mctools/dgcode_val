@@ -1,6 +1,12 @@
 
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
 **************************************************************
- Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+ Geant4 version Name: geant4-11-00-patch-03 [MT]   (16-September-2022)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -48,9 +54,9 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Position - x (mm)   :                    2                1000
          Position - y (mm)   :                    2                   2
          Position - z (mm)   :                    2                   2
-         Global Time (ns)    :           1000000000   1000000003.400126
-         Local Time (ns)     :                    0   3.400126401341225
-         Proper Time (ns)    :                    0  0.6919401191407081
+         Global Time (ns)    :           1000000000    1000000003.40012
+         Local Time (ns)     :                    0   3.400120364432237
+         Proper Time (ns)    :                    0  0.6919388906041682
          Momentum Direct - x :                    1                   1
          Momentum Direct - y :                    0                   0
          Momentum Direct - z :                    0                   0
@@ -59,7 +65,7 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Momentum - z (MeV/c):                    0                   0
          Total Energy (MeV)  :           2.51099891          2.51099891
          Kinetic Energy (MeV):                    2                   2
-         Velocity (mm/ns)    :    293.5184996670494   293.5184996670494
+         Velocity (mm/ns)    :    293.5190208087381   293.5190208087381
          Volume Name         :                World               World
          Safety (mm)         :                    0               5e-10
          Polarization - x    :                    0                   0
@@ -70,11 +76,11 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Process defined Step:            Undefined      Transportation
       -----------------------------------------------------------------------
 
-    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secondaries = 0
 
  **PostStepDoIt (after all invocations):
     ++List of invoked processes 
-      1) Transportation
+      1) Transportation (Forced)
 
     ++G4Step Information 
       Address of G4Track : 0x<snip>
@@ -86,9 +92,9 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Position - x (mm)   :                    2                1000
          Position - y (mm)   :                    2                   2
          Position - z (mm)   :                    2                   2
-         Global Time (ns)    :           1000000000   1000000003.400126
-         Local Time (ns)     :                    0   3.400126401341225
-         Proper Time (ns)    :                    0  0.6919401191407081
+         Global Time (ns)    :           1000000000    1000000003.40012
+         Local Time (ns)     :                    0   3.400120364432237
+         Proper Time (ns)    :                    0  0.6919388906041682
          Momentum Direct - x :                    1                   1
          Momentum Direct - y :                    0                   0
          Momentum Direct - z :                    0                   0
@@ -97,7 +103,7 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Momentum - z (MeV/c):                    0                   0
          Total Energy (MeV)  :           2.51099891          2.51099891
          Kinetic Energy (MeV):                    2                   2
-         Velocity (mm/ns)    :    293.5184996670494   293.5184996670494
+         Velocity (mm/ns)    :    293.5190208087381   293.5190208087381
          Volume Name         :                World          OutOfWorld
          Safety (mm)         :                    0               5e-10
          Polarization - x    :                    0                   0
@@ -135,9 +141,9 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Position - x (mm)   :                    1                1000
          Position - y (mm)   :                    1                   1
          Position - z (mm)   :                    1                   1
-         Global Time (ns)    :           2000000000   2000000101.764683
-         Local Time (ns)     :                    0   101.7646833809911
-         Proper Time (ns)    :                    0   101.7101087811014
+         Global Time (ns)    :           2000000000   2000000101.763324
+         Local Time (ns)     :                    0   101.7633239320714
+         Proper Time (ns)    :                    0   101.7087500612302
          Momentum Direct - x :                    1                   1
          Momentum Direct - y :                    0                   0
          Momentum Direct - z :                    0                   0
@@ -146,7 +152,7 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Momentum - z (MeV/c):                    0                   0
          Total Energy (MeV)  :             3729.379            3729.379
          Kinetic Energy (MeV):                    2                   2
-         Velocity (mm/ns)    :    9.816765176381477   9.816765176381477
+         Velocity (mm/ns)    :    9.816896317840873   9.816896317840873
          Volume Name         :                World               World
          Safety (mm)         :                    0               5e-10
          Polarization - x    :                    0                   0
@@ -157,11 +163,11 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Process defined Step:            Undefined      Transportation
       -----------------------------------------------------------------------
 
-    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secondaries = 0
 
  **PostStepDoIt (after all invocations):
     ++List of invoked processes 
-      1) Transportation
+      1) Transportation (Forced)
 
     ++G4Step Information 
       Address of G4Track : 0x<snip>
@@ -173,9 +179,9 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Position - x (mm)   :                    1                1000
          Position - y (mm)   :                    1                   1
          Position - z (mm)   :                    1                   1
-         Global Time (ns)    :           2000000000   2000000101.764683
-         Local Time (ns)     :                    0   101.7646833809911
-         Proper Time (ns)    :                    0   101.7101087811014
+         Global Time (ns)    :           2000000000   2000000101.763324
+         Local Time (ns)     :                    0   101.7633239320714
+         Proper Time (ns)    :                    0   101.7087500612302
          Momentum Direct - x :                    1                   1
          Momentum Direct - y :                    0                   0
          Momentum Direct - z :                    0                   0
@@ -184,7 +190,7 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Momentum - z (MeV/c):                    0                   0
          Total Energy (MeV)  :             3729.379            3729.379
          Kinetic Energy (MeV):                    2                   2
-         Velocity (mm/ns)    :    9.816765176381477   9.816765176381477
+         Velocity (mm/ns)    :    9.816896317840873   9.816896317840873
          Volume Name         :                World          OutOfWorld
          Safety (mm)         :                    0               5e-10
          Polarization - x    :                    0                   0
@@ -222,9 +228,9 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Position - x (mm)   :                    0                   0
          Position - y (mm)   :                    0                   0
          Position - z (mm)   :                    0                1000
-         Global Time (ns)    :          -1000000000  -999999927.6418707
-         Local Time (ns)     :                    0   72.35812930416628
-         Proper Time (ns)    :                    0   72.28119884044587
+         Global Time (ns)    :          -1000000000  -999999927.6440493
+         Local Time (ns)     :                    0   72.35595073838475
+         Proper Time (ns)    :                    0   72.27902259089441
          Momentum Direct - x :                    0                   0
          Momentum Direct - y :                    0                   0
          Momentum Direct - z :                    1                   1
@@ -233,7 +239,7 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Momentum - z (MeV/c):    43.36047416714905   43.36047416714905
          Total Energy (MeV)  :    940.5653600000001   940.5653600000001
          Kinetic Energy (MeV):                    1                   1
-         Velocity (mm/ns)    :    13.82014722625535   13.82014722625535
+         Velocity (mm/ns)    :     13.8205633371562    13.8205633371562
          Volume Name         :                World               World
          Safety (mm)         :                    0               5e-10
          Polarization - x    :                    0                   0
@@ -244,11 +250,11 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Process defined Step:            Undefined      Transportation
       -----------------------------------------------------------------------
 
-    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secodaries = 0
+    ++List of secondaries generated (x,y,z,kE,t,PID):  No. of secondaries = 0
 
  **PostStepDoIt (after all invocations):
     ++List of invoked processes 
-      1) Transportation
+      1) Transportation (Forced)
 
     ++G4Step Information 
       Address of G4Track : 0x<snip>
@@ -260,9 +266,9 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Position - x (mm)   :                    0                   0
          Position - y (mm)   :                    0                   0
          Position - z (mm)   :                    0                1000
-         Global Time (ns)    :          -1000000000  -999999927.6418707
-         Local Time (ns)     :                    0   72.35812930416628
-         Proper Time (ns)    :                    0   72.28119884044587
+         Global Time (ns)    :          -1000000000  -999999927.6440493
+         Local Time (ns)     :                    0   72.35595073838475
+         Proper Time (ns)    :                    0   72.27902259089441
          Momentum Direct - x :                    0                   0
          Momentum Direct - y :                    0                   0
          Momentum Direct - z :                    1                   1
@@ -271,7 +277,7 @@ Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolu
          Momentum - z (MeV/c):    43.36047416714905   43.36047416714905
          Total Energy (MeV)  :    940.5653600000001   940.5653600000001
          Kinetic Energy (MeV):                    1                   1
-         Velocity (mm/ns)    :    13.82014722625535   13.82014722625535
+         Velocity (mm/ns)    :     13.8205633371562    13.8205633371562
          Volume Name         :                World          OutOfWorld
          Safety (mm)         :                    0               5e-10
          Polarization - x    :                    0                   0

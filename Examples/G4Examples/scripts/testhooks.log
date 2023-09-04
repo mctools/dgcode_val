@@ -1,6 +1,12 @@
 
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
 **************************************************************
- Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+ Geant4 version Name: geant4-11-00-patch-03 [MT]   (16-September-2022)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -70,9 +76,9 @@ G4Launcher:: Pre-init done
 ExampleHooks::preInitHook called!
 prehook_py called!
 G4Launcher:: Calling G4RunManager::Initialize()
-Checking overlaps for volume Target ... OK! 
-Checking overlaps for volume RecordBack ... OK! 
-Checking overlaps for volume RecordFwd ... OK! 
+Checking overlaps for volume Target:0 (G4Box) ... OK! 
+Checking overlaps for volume RecordBack:0 (G4Box) ... OK! 
+Checking overlaps for volume RecordFwd:0 (G4Box) ... OK! 
 G4Launcher:: G4RunManager::Initialize() done
 ExampleHooks::postInitHook called!
 posthook_py called!
@@ -93,8 +99,14 @@ Custom Hook Class parameters: [int] some_param_int = 5
 Custom Hook Class parameters: [dbl] some_param_dbl = 23.3
 
 
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
 **************************************************************
- Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+ Geant4 version Name: geant4-11-00-patch-03 [MT]   (16-September-2022)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -162,9 +174,9 @@ G4Launcher:: Installing hooks for capturing output in "simresults" in mode FULL
 G4Launcher:: Pre-init done
 ExampleHookClass::preInitHook called (pars are 5 and 23.3)
 G4Launcher:: Calling G4RunManager::Initialize()
-Checking overlaps for volume Target ... OK! 
-Checking overlaps for volume RecordBack ... OK! 
-Checking overlaps for volume RecordFwd ... OK! 
+Checking overlaps for volume Target:0 (G4Box) ... OK! 
+Checking overlaps for volume RecordBack:0 (G4Box) ... OK! 
+Checking overlaps for volume RecordFwd:0 (G4Box) ... OK! 
 G4Launcher:: G4RunManager::Initialize() done
 ExampleHookClass::postInitHook called (pars are 5 and 23.3)
 G4Launcher:: Starting simulation of 10 events

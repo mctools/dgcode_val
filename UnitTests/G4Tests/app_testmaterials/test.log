@@ -1,6 +1,12 @@
 
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
 **************************************************************
- Geant4 version Name: geant4-10-04-patch-03    (8-February-2019)
+ Geant4 version Name: geant4-11-00-patch-03 [MT]   (16-September-2022)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -8,11 +14,16 @@
                              WWW : http://geant4.org/
 **************************************************************
 
-<<< Geant4 Physics List simulation engine: QGSP_BERT 4.0
+<<< Geant4 Physics List simulation engine: QGSP_BERT
 
+
+ hInelastic QGSP_BERT  Thresholds: 
+    1) between BERT  and FTF/P over the interval 3 to 6 GeV. 
+    2) between FTF/P and QGS/P over the interval 12 to 25 GeV. 
+  -- quasiElastic: 1 for QGS  and 0 for FTF
 ### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
 =========== G4Material getNISTMaterial("H") ==========
- Material:     G4_H    density:  0.084 kg/m3   RadL:   7.528 km   Nucl.Int.Length:   4.179 km 
+ Material:     G4_H    density:  0.084 mg/cm3  RadL:   7.528 km   Nucl.Int.Length:   4.179 km 
                        Imean:  19.200 eV   temperature: 293.15 K  pressure:   1.00 atm
 
    --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
@@ -25,7 +36,7 @@
    ---> State-solid: no
 
 =========== G4Material getNISTMaterial("He") ==========
- Material:    G4_He    density:  0.166 kg/m3   RadL:   5.671 km   Nucl.Int.Length:   3.341 km 
+ Material:    G4_He    density:  0.166 mg/cm3  RadL:   5.671 km   Nucl.Int.Length:   3.341 km 
                        Imean:  41.800 eV   temperature: 293.15 K  pressure:   1.00 atm
 
    --->  Element: He (He)   Z =  2.0   N =     4   A =  4.003 g/mole
@@ -77,7 +88,7 @@
 
 =========== G4Material getNISTMaterial("C") ==========
  Material:     G4_C    density:  2.000 g/cm3   RadL:  21.349 cm   Nucl.Int.Length:  40.077 cm 
-                       Imean:  81.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+                       Imean:  78.000 eV   temperature: 293.15 K  pressure:   1.00 atm
 
    --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
          --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
@@ -148,7 +159,7 @@
    ---> State-solid: yes
 
 =========== G4Element getNISTElement("H") ==========
- Element: H (H)   Z =  1.0   N =     1   A =  0.000 g/mole
+ Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
          --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
          --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
 
@@ -366,7 +377,7 @@
    ---> State-solid: yes
 
 =========== G4Material getMaterial_BoronCarbide(0.9,-1,20kelvin) ==========
- Material: BoronCarbide_fB10_0.900000_density_2.392579gcm3_temp_20.000000K    density:  2.393 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  32.043 cm 
+ Material: BoronCarbide_fB10_0.900000_density_2.392578gcm3_temp_20.000000K    density:  2.393 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  32.043 cm 
                        Imean:  84.700 eV   temperature:  20.00 K  pressure:   1.00 atm
 
    --->  Element: Boron_fB10_0.900000 (B)   Z =  5.0   N =    10   A = 10.113 g/mole
@@ -420,7 +431,7 @@
    ---> State-solid: yes
 
 =========== G4Material getMaterial_Vacuum() ==========
- Material: G4_Galactic    density:  0.000 kg/m3   RadL: 204310101.835 pc   Nucl.Int.Length: 113427275.267 pc 
+ Material: G4_Galactic    density:  0.000 mg/cm3  RadL: 204310098.490 pc   Nucl.Int.Length: 113427284.261 pc 
                        Imean:  21.800 eV   temperature:   2.73 K  pressure:   0.00 atm
 
    --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
