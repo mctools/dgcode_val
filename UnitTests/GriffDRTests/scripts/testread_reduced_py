@@ -3,7 +3,7 @@
 from __future__ import print_function
 
 import GriffDataRead
-import Core.Units as u
+import G4Units.Units as u
 import Core.FindData
 import Core.FPE
 import sys

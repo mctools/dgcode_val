@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 import G4CustomPyGen
-import Core.Units as Units
+import G4Units.Units as Units
 
 class MyPyGen(G4CustomPyGen.GenBase):
 

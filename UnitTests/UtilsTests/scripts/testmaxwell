@@ -2,7 +2,7 @@
 from __future__ import print_function
 import sys
 import Utils.MaxwellDist as m
-import Core.Units as u
+import G4Units.Units as u
 
 
 for a in [0.1,1,10]:

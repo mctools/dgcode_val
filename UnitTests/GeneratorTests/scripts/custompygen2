@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import G4CustomPyGen
-import Core.Units as Units
+import G4Units.Units as Units
 
 #Nothing random here, but stresses multi-particle gen, weights, time, etc.
 class MyPyGen(G4CustomPyGen.GenBase):

@@ -2,7 +2,7 @@
 from __future__ import print_function
 import sys
 import Utils.NeutronMath as nm
-import Core.Units as u
+import G4Units.Units as u
 
 
 for l in [1.0,1.8,10]:

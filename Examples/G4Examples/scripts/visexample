@@ -8,7 +8,7 @@ parser.add_option("-b", "--boronthickness",type="float", dest="boronthickness_mi
 if args: parser.error("Unrecognised arguments: %s"%' '.join(args))
 
 import G4StdGeometries.GeoSlab as Geo
-import Core.Units as Units
+import G4Units.Units as Units
 import G4Launcher
 
 geo = Geo.create()

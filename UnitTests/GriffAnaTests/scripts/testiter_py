@@ -3,7 +3,7 @@ from __future__ import print_function
 import GriffAnaUtils
 import GriffDataRead
 import Core.FindData
-import Core.Units as Units
+import G4Units.Units as Units
 import Core.FPE
 
 Core.FPE.catch_fpe()

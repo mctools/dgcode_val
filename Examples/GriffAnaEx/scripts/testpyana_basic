@@ -2,7 +2,7 @@
 from __future__ import print_function
 import GriffDataRead
 import Core.FindData
-import Core.Units
+import G4Units.Units
 
 #Same analysis as in the cppana_basic application in this package (see comments
 #in there). But this time in python which is a lot more handy. Unfortunately it
