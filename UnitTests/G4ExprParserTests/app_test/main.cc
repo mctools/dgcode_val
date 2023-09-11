@@ -2,7 +2,7 @@
 #include "ExprParser/ASTDebug.hh"
 #include "G4Launcher/Launcher.hh"
 #include "G4Interfaces/GeoConstructBase.hh"
-#include "Core/Units.hh"
+#include "G4Units/Units.hh"
 
 #include "G4NistManager.hh"
 #include "G4LogicalVolume.hh"

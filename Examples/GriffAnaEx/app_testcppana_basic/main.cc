@@ -1,6 +1,6 @@
 #include "GriffDataRead/GriffDataReader.hh"
 #include "Core/FindData.hh"
-#include "Core/Units.hh"
+#include "G4Units/Units.hh"
 
 int main(int,char**) {
 
