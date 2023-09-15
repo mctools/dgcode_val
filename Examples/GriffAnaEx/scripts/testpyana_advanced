@@ -27,6 +27,6 @@ while dr.loopEvents():
     for seg in si:
         edep += seg.eDep()
         print("  segment of %s with edep starts at z=%g mm"%(seg.getTrack().pdgName(),
-                                                             seg.firstStep().preGlobalZ()/Core.Units.mm))
+                                                             seg.firstStep().preGlobalZ()/G4Units.Units.mm))
 
-    print("Event had a total edep in the targetbox of %g MeV"%(edep/Core.Units.MeV))
+    print("Event had a total edep in the targetbox of %g MeV"%(edep/G4Units.Units.MeV))
