@@ -12,5 +12,5 @@ namespace pyG4Utils {
 
 PYTHON_MODULE
 {
-  py::def("G4Version", &pyG4Utils::g4version, "Geant4 version string from G4Version.hh");
+  PYDEF("G4Version", &pyG4Utils::g4version, "Geant4 version string from G4Version.hh");
 }

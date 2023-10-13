@@ -66,7 +66,7 @@ if legacy_mode:
                 fct_or(select_val,select_ex),
                 'No packages outside Validation/+Examples/ should depend on pkgs in Validation/+Examples/.' )
 
-core_pkg_deps = ['DGBoost','G4Units']
+core_pkg_deps = ['DGBoost']
 check_rule( select_named_pkg('Core'),
             lambda pd : pd['name'] not in core_pkg_deps,
             'Core package can only have the dependencies %s'%(','.join(core_pkg_deps)))

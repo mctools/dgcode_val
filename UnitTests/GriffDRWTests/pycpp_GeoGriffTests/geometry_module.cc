@@ -9,7 +9,8 @@ public:
   virtual ~GeoGriffTests(){}
   G4VPhysicalVolume* Construct();
 };
-PYTHON_MODULE { GeoConstructPyExport::exportGeo<GeoGriffTests>("GeoGriffTests"); }
+
+PYTHON_MODULE { GeoConstructPyExport::exportGeo<GeoGriffTests>(PYMOD "GeoGriffTests"); }
 
 G4VPhysicalVolume* GeoGriffTests::Construct()
 {

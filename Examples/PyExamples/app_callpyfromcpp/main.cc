@@ -12,7 +12,7 @@ int main(int,char**) {
   py::ensurePyInit();
 
   //Then import the desired module:
-  py::object mod = py::import("PyExamples.Example");
+  py::object mod = py::pyimport("PyExamples.Example");
 
   //And grab the desired function:
   py::object some_function = mod.attr("some_function");

@@ -24,5 +24,4 @@ launcher.cmd_postinit("/tracking/verbose 1")
 
 import G4GeantinoInserter
 G4GeantinoInserter.install()
-
 launcher.go()

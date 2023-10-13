@@ -3,7 +3,7 @@
 
 PYTHON_MODULE
 {
-  py::def("prepreInitHook",&ExampleHooks::prepreInitHook);
-  py::def("preInitHook",&ExampleHooks::preInitHook);
-  py::def("postInitHook",&ExampleHooks::postInitHook);
+  PYDEF("prepreInitHook",&ExampleHooks::prepreInitHook);
+  PYDEF("preInitHook",&ExampleHooks::preInitHook);
+  PYDEF("postInitHook",&ExampleHooks::postInitHook);
 }

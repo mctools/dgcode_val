@@ -3,5 +3,5 @@
 
 PYTHON_MODULE
 {
-  GeoConstructPyExport::exportGeo<G4Tests::GeoTest>("GeoTest");
+  GeoConstructPyExport::exportGeo<G4Tests::GeoTest>(PYMOD "GeoTest");
 }

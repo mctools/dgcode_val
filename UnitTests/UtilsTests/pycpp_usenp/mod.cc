@@ -3,9 +3,14 @@
 
 namespace UtilsTests {
   py::object gensquares() {
-    double * buf;
     std::size_t n = 100000;
+#ifdef DGCODE_USEPYBIND11
+    auto o = py::array_t<double>(n);
+    double * buf = o.mutable_data();
+#else
+    double * buf;
     py::object o = NumpyUtils::create_numpyarray(n,buf);
+#endif
     for (std::size_t i = 0;i<n;++i)
       buf[i] = i*i;
     return o;
@@ -13,8 +18,7 @@ namespace UtilsTests {
 }
 
 
-//PYTHON_MODULE
-BOOST_PYTHON_MODULE( usenp )
+PYTHON_MODULE
 {
-  py::def("gensquares",UtilsTests::gensquares);
+  PYDEF("gensquares",UtilsTests::gensquares);
 }
