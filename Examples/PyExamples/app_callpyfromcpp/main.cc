@@ -12,7 +12,7 @@ int main(int,char**) {
   pyextra::ensurePyInit();
 
   //Then import the desired module:
-  py::object mod = py::pyimport("PyExamples.Example");
+  py::object mod = pyextra::pyimport("PyExamples.Example");
 
   //And grab the desired function:
   py::object some_function = mod.attr("some_function");
