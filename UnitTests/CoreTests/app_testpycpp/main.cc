@@ -4,7 +4,7 @@ int main(int,char**) {
 
   //Test that python can be initialised from compiled code.
 
-  py::ensurePyInit();
+  pyextra::ensurePyInit();
 
   return 0;
 }

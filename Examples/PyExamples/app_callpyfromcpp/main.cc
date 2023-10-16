@@ -9,7 +9,7 @@ int main(int,char**) {
   //First we need to initialise python, since we are not inside a python module
   //here:
 
-  py::ensurePyInit();
+  pyextra::ensurePyInit();
 
   //Then import the desired module:
   py::object mod = py::pyimport("PyExamples.Example");
