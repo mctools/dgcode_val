@@ -9,14 +9,6 @@
 #include "G4PhysicsLists/PhysicsListEmpty.hh"
 #include "G4Interfaces/PhysListProviderBase.hh"
 
-//More work to do this from the C++ side:
-class Empty_Provider : public G4Interfaces::PhysListProviderBase {
-public:
-  Empty_Provider() : G4Interfaces::PhysListProviderBase("ESS_Empty") {}
-  virtual ~Empty_Provider(){}
-  virtual G4VUserPhysicsList * construct() { return new PhysicsListEmpty; }
-};
-
 class DummyGeo : public G4Interfaces::GeoConstructBase {
 public:
 
@@ -47,10 +39,9 @@ int main(int,char**) {
   G4Launcher::Launcher launcher;
   launcher.setGeo(geo);
   launcher.setParticleGun(2112, 0.025*Units::eV, G4ThreeVector(0,0,0), G4ThreeVector(0,0,1));
-  launcher.setOutput("myoutput.griff","REDUCED");
+  launcher.setOutput("none");
   launcher.setSeed(117);
-  //Custom physics lists are not Supported on C++ side (need to instantiate manually): [TODO: is this comment still correct?]
-  launcher.setPhysicsListProvider(new Empty_Provider);
+  launcher.setPhysicsList("ESS_Empty");//ESS_Empty is provided via a python module, making this non-trivial in case of py-from-c++ binding issues.
   launcher.startSimulation(10);
   return 0;
 }
