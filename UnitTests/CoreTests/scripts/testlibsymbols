@@ -5,24 +5,24 @@ if [ ! -f /proc/cpuinfo ]; then
     exit 0
 fi
 
-if [ "x$ESS_LIB_DIR" == "x" -o ! -d $ESS_LIB_DIR ]; then
-    echo "ESS_LIB_DIR not set properly"
+if [ "x$SBLD_LIB_DIR" == "x" -o ! -d $SBLD_LIB_DIR ]; then
+    echo "SBLD_LIB_DIR not set properly"
     exit 1
 fi
 
-LIBS=`echo $ESS_LIB_DIR/*.so`
-if [ "x$LIBS" == "x$ESS_LIB_DIR/*.so" ]; then
-    LIBS=`echo $ESS_LIB_DIR/*.dylib`
+LIBS=`echo $SBLD_LIB_DIR/*.so`
+if [ "x$LIBS" == "x$SBLD_LIB_DIR/*.so" ]; then
+    LIBS=`echo $SBLD_LIB_DIR/*.dylib`
 fi
-if [ "x$LIBS" == "x$ESS_LIB_DIR/*.dylib" ]; then
+if [ "x$LIBS" == "x$SBLD_LIB_DIR/*.dylib" ]; then
     echo "Error: Found no libraries."
     #in principle this would give a false positive if all packages stopped
     #providing libraries, but we assume this is unlikely and thus an error"
     exit 1
 fi
 ##add python libs:
-#PYLIBS=`echo $ESS_INSTALL_PREFIX/python/*/*.so`
-#if [ "x$PYLIBS" != "x$ESS_INSTALL_PREFIX/python/*/*.so" ]; then
+#PYLIBS=`echo $SBLD_INSTALL_PREFIX/python/*/*.so`
+#if [ "x$PYLIBS" != "x$SBLD_INSTALL_PREFIX/python/*/*.so" ]; then
 #    LIBS="$LIBS $PYLIBS"
 #fi
 ERR=0

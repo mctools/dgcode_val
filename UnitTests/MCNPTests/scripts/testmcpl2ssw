@@ -15,8 +15,8 @@ S="$S mcnp5_neutron.w.gz"
 
 for bf1 in $S test_ssw.w; do
     for bf2 in $S; do
-        f1="$ESS_DATA_DIR/MCNPTests/$bf1"
-        f2="$ESS_DATA_DIR/MCNPTests/$bf2"
+        f1="$SBLD_DATA_DIR/MCNPTests/$bf1"
+        f2="$SBLD_DATA_DIR/MCNPTests/$bf2"
         #f1 is data file, f2 is ref file for back conversion
         echo "=====> Testing $bf1 to mcpl (with max info):"
         rm -f m.mcpl new.w

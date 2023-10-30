@@ -5,7 +5,7 @@ import os,glob,sys
 from MCPL import MCPLError,dump_file
 import Core.System as Sys
 
-datadir = os.getenv('ESS_DATA_DIR')
+datadir = os.getenv('SBLD_DATA_DIR')
 files = {}
 for pkg in ('MCPLTests','MCPLTestsFMT2'):
     for ext in ('.mcpl','.mcpl.gz'):

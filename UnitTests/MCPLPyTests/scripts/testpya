@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 set -u
-MCPLFILE=$ESS_DATA_DIR/MCPLTests/reffile_1.mcpl
-MCPLFILE2=$ESS_DATA_DIR/MCPLTests/reffile_12.mcpl
+MCPLFILE=$SBLD_DATA_DIR/MCPLTests/reffile_1.mcpl
+MCPLFILE2=$SBLD_DATA_DIR/MCPLTests/reffile_12.mcpl
 python -c 'import MCPL'
 ess_mcpl_pytool -h
 ess_mcpl_pytool -v

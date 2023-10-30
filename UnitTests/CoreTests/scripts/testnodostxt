@@ -7,7 +7,7 @@
 import os,sys
 
 #installation directory:
-instdir=os.getenv('ESS_INSTALL_PREFIX')
+instdir=os.getenv('SBLD_INSTALL_PREFIX')
 
 #patterns of possible text files:
 patterns=['data/*/*',#might include binary files

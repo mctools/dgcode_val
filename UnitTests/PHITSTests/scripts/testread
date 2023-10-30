@@ -2,14 +2,14 @@
 set -e
 set -u
 
-VARIOUS=$(python3 -c 'import pathlib,os;print(" ".join(sorted(p.name for p in pathlib.Path(os.environ["ESS_DATA_DIR"]).glob("PHITSTests/*_dump_dmp.gz"))))')
+VARIOUS=$(python3 -c 'import pathlib,os;print(" ".join(sorted(p.name for p in pathlib.Path(os.environ["SBLD_DATA_DIR"]).glob("PHITSTests/*_dump_dmp.gz"))))')
 ALL="dump_dmp dump_dmp.gz empty_file empty_file.gz $VARIOUS"
 
 for f in $ALL; do
     echo
     echo "-----------------------------------------------------------------------------------------------"
     echo "Trying to read PHITS file $f"
-    ess_phits_phitsinspect $ESS_DATA_DIR/PHITSTests/$f
+    ess_phits_phitsinspect $SBLD_DATA_DIR/PHITSTests/$f
     echo "-----------------------------------------------------------------------------------------------"
     echo
 done
@@ -20,7 +20,7 @@ for f in $ALL; do
     echo
     echo "-----------------------------------------------------------------------------------------------"
     echo "Trying to convert PHITS file $f to $f.mcpl"
-    ess_phits_phits2mcpl $ESS_DATA_DIR/PHITSTests/$f $f.mcpl
+    ess_phits_phits2mcpl $SBLD_DATA_DIR/PHITSTests/$f $f.mcpl
     echo "-----------------------------------------------------------------------------------------------"
     echo "Dumping result:"
     #NB: The |sed 's#0e+#e+#' part is to make output exactly reproducible on osx:

@@ -19,7 +19,7 @@ for pyio in none ascii utf8; do
             export LANG=$loc
             export LANGUAGE=$loc
         fi
-        cmd="ess_mcpl_pytool $ESS_DATA_DIR/MCPLTests/reffile_encodings.mcpl.gz" > $log
+        cmd="ess_mcpl_pytool $SBLD_DATA_DIR/MCPLTests/reffile_encodings.mcpl.gz" > $log
         $cmd >> $log
         $cmd -nl3 >> $log
         for bk in asciidata asciidata_empty utf8data binarydata 'utf8bløbkey' `echo -ne "notutf8key_\xff\xfe_"`; do

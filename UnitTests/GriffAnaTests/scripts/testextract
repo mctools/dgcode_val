@@ -2,7 +2,7 @@
 
 set -e
 set -u
-DD=$ESS_DATA_DIR/GriffDataRead
+DD=$SBLD_DATA_DIR/GriffDataRead
 
 ess_griffanautils_extractevts $DD/10evts_singleneutron_on_b10_reduced.griff out.griff 5 999
 ess_griffanautils_extractevts $DD/10evts_singleneutron_on_b10_reduced.griff out.griff 5

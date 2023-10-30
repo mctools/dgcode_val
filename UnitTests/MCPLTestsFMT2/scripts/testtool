@@ -3,7 +3,7 @@
 if [ "x$MCPLTESTS_TESTTOOL" == "x" ]; then
     MCPLTESTS_TESTTOOL=ess_mcpl_tool
 fi
-DD="$ESS_DATA_DIR/MCPLTestsFMT2"
+DD="$SBLD_DATA_DIR/MCPLTestsFMT2"
 F2="$DD/reffile_16.mcpl"
 F1=rf16cp.mcpl
 cp "$F2" $F1
@@ -34,7 +34,7 @@ FMISCNOGZ=miscphysnogz.mcpl
 function cmd()
 {
     echo "----------------------------------------------"
-    echo "Running $MCPLTESTS_TESTTOOL ""$@" | sed "s#$ESS_DATA_DIR/MCPLTestsFMT2/#MCPLTestsFMT2/data/#"
+    echo "Running $MCPLTESTS_TESTTOOL ""$@" | sed "s#$SBLD_DATA_DIR/MCPLTestsFMT2/#MCPLTestsFMT2/data/#"
     echo "----------------------------------------------"
     $MCPLTESTS_TESTTOOL "$@"
     if [ $? != 0 ]; then

@@ -9,8 +9,8 @@ import MCPL as mcpl
 files=['miscphys.mcpl.gz','gammas_uw.mcpl.gz','reffile_3.mcpl','reffile_10.mcpl','reffile_13.mcpl','reffile_14.mcpl',
        'difficult_unitvector.mcpl.gz','reffile_crash.mcpl',
        'reffile_empty.mcpl.gz','reffile_userflags_is_pos.mcpl.gz','reffile_uw.mcpl.gz']
-files = ['$ESS_DATA_DIR/MCPLTests/%s'%f for f in files]
-files += ['$ESS_DATA_DIR/MCPLTests/reffile_14.mcpl']
+files = ['$SBLD_DATA_DIR/MCPLTests/%s'%f for f in files]
+files += ['$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl']
 
 filecombinations = list(itertools.chain( itertools.combinations( files, 2 ),#all 2 input files combinations
                                          itertools.islice( itertools.combinations( files, 3 ), 0, None, 17 ),#Every 17th combination with 3 input files
@@ -20,7 +20,7 @@ filecombinations = list(itertools.chain( itertools.combinations( files, 2 ),#all
 def run(cmd):
     sys.stdout.flush()
     sys.stderr.flush()
-    Sys.system_throw(os.path.expandvars(cmd)+' | sed "s#"%s"#<ESS_DATA_DIR>#"'%Sys.quote(os.environ['ESS_DATA_DIR']))
+    Sys.system_throw(os.path.expandvars(cmd)+' | sed "s#"%s"#<SBLD_DATA_DIR>#"'%Sys.quote(os.environ['SBLD_DATA_DIR']))
     sys.stdout.flush()
     sys.stderr.flush()
 

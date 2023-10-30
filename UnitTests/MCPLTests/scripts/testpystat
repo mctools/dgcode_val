@@ -3,7 +3,7 @@ import MCPL as mcpl
 import pathlib,os
 
 def files_for_testing():
-    for p in pathlib.Path(os.environ['ESS_DATA_DIR']).glob('MCPLTests*/*.mcpl*'):
+    for p in pathlib.Path(os.environ['SBLD_DATA_DIR']).glob('MCPLTests*/*.mcpl*'):
         if 'bad' in p.name or 'truncated' in p.name or 'crash' in p.name:
             continue
         yield p

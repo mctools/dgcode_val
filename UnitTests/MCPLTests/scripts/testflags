@@ -19,9 +19,9 @@ if [ $? != 0 ]; then
     exit 1
 fi
 
-rpathflags="-Wl,-rpath,$ESS_LIB_DIR -Wl,-rpath,$ESS_LIB_DIR/links"
+rpathflags="-Wl,-rpath,$SBLD_LIB_DIR -Wl,-rpath,$SBLD_LIB_DIR/links"
 if [ x$CAN_USE_RPATHLINK == x1 ]; then
-    rpathflags="${rpathflags} -Wl,-rpath-link,$ESS_LIB_DIR -Wl,-rpath-link,$ESS_LIB_DIR/links"
+    rpathflags="${rpathflags} -Wl,-rpath-link,$SBLD_LIB_DIR -Wl,-rpath-link,$SBLD_LIB_DIR/links"
 fi
 
 if [ "x${CONDA_PREFIX:-}" != x ]; then
@@ -39,7 +39,7 @@ for a in 0 1; do
             rm -f out.mcpl*
             flags=""
             if [ $a == 1 ]; then
-                flags="-DMCPL_HASZLIB ${flags} -lPKG__MiniZLib -DMCPL_ZLIB_INCPATH=\"MiniZLib/zlib.h\" -I$ESS_INCLUDE_DIR"
+                flags="-DMCPL_HASZLIB ${flags} -lPKG__MiniZLib -DMCPL_ZLIB_INCPATH=\"MiniZLib/zlib.h\" -I$SBLD_INCLUDE_DIR"
             fi
             if [ $b == 1 ]; then
                 flags="${flags} -DMCPL_NO_CUSTOM_GZIP"
@@ -48,9 +48,9 @@ for a in 0 1; do
                 flags="${flags} -DMCPL_NO_EXT_GZIP"
             fi
             echo "=========================================================================="
-            echo "=== Testing flags: "`echo ${flags}|sed "s#$ESS_INCLUDE_DIR#\\$ESSINC#"`
+            echo "=== Testing flags: "`echo ${flags}|sed "s#$SBLD_INCLUDE_DIR#\\$ESSINC#"`
             #echo "===    rpathflags: ${rpathflags}"
-            $CC -std=c99 -lm ${flags} ${rpathflags} -I$ESS_INCLUDE_DIR/MCPL -L$ESS_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
+            $CC -std=c99 -lm ${flags} ${rpathflags} -I$SBLD_INCLUDE_DIR/MCPL -L$SBLD_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
             EC=$?
             ls -1 out.mcpl*
             if [ $? == 0 ]; then

@@ -20,5 +20,5 @@ P=$(python3 -c "import dgbuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
 cp $P/libsrc/mcpl.c .
 cat $P/app_tool/main.c|sed 's#MCPL/mcpl.h#mcpl.h#' > main.c
 #NB: link flags comes *after*, other flags *before* object to compile...:
-$CC -std=c99 -I$ESS_INCLUDE_DIR/MCPL $CFLAGS  -DMCPL_HASZLIB mcpl.c main.c -lm $LDFLAGS -o mcpl_tool_sysgz && \
+$CC -std=c99 -I$SBLD_INCLUDE_DIR/MCPL $CFLAGS  -DMCPL_HASZLIB mcpl.c main.c -lm $LDFLAGS -o mcpl_tool_sysgz && \
 MCPLTESTS_TESTTOOL=./mcpl_tool_sysgz MCPLTESTS_SKIPTRUNCGZ=1 ess_mcpltests_testtool

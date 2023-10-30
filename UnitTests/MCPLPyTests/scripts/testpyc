@@ -44,7 +44,7 @@ try:
 except ImportError:
     from pipes import quote
 
-datadir = os.getenv('ESS_DATA_DIR')
+datadir = os.getenv('SBLD_DATA_DIR')
 file1 = os.path.join(datadir,'MCPLTests/reffile_12.mcpl')
 file2 = os.path.join(datadir,'MCPLTests/reffile_1.mcpl')
 file3 = os.path.join(datadir,'MCPLTests/miscphys.mcpl.gz')

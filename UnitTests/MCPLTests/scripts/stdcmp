@@ -29,12 +29,12 @@ for a in 0 1; do
         for c in 0 1; do
             rm -f out.mcpl*
             flags=""
-            linkflags="-lm -L$ESS_LIB_DIR/"
+            linkflags="-lm -L$SBLD_LIB_DIR/"
             hiddencflags="-Wall -Wextra -Werror -pedantic"
             if [ $a == 1 ]; then
                 linkflags="${linkflags} -lPKG__MiniZLib"
                 flags="${flags} -DMCPL_HASZLIB"
-                hiddencflags="${hiddencflags} -I$ESS_INCLUDE_DIR -DMCPL_ZLIB_INCPATH=\"MiniZLib/zlib.h\""
+                hiddencflags="${hiddencflags} -I$SBLD_INCLUDE_DIR -DMCPL_ZLIB_INCPATH=\"MiniZLib/zlib.h\""
             fi
             if [ $b == 1 ]; then
                 flags="${flags} -DMCPL_NO_CUSTOM_GZIP"
@@ -68,7 +68,7 @@ for a in 0 1; do
                     fi
                     continue
                 fi
-                $COMP -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$ESS_INCLUDE_DIR/MCPL $X $P/libsrc/mcpl.c $X main.c
+                $COMP -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$SBLD_INCLUDE_DIR/MCPL $X $P/libsrc/mcpl.c $X main.c
                 if [ $? != 0 ]; then
                     echo "Failure during ${std} compilation of mcpl.c!"
                     exit 1
@@ -97,7 +97,7 @@ for a in 0 1; do
                     fi
                     continue
                 fi
-                $COMP -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$ESS_INCLUDE_DIR/MCPL/ $X main.c
+                $COMP -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$SBLD_INCLUDE_DIR/MCPL/ $X main.c
                 if [ $? != 0 ]; then
                     echo "Failure during ${std} compilation of mcpl.h!"
                     exit 1

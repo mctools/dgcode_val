@@ -4,7 +4,7 @@ for f in test_ssw.w pi_mins.w.gz pi_minus_v2.w.gz ssw_anti_proton.gz wssx.gz wss
     echo
     echo "============= Inspecting $f ============="
     echo
-    ess_mcnp_sswinspect $ESS_DATA_DIR/MCNPTests/$f >& tmpout.txt
+    ess_mcnp_sswinspect $SBLD_DATA_DIR/MCNPTests/$f >& tmpout.txt
     EC=${PIPESTATUS[0]}
     if [ $EC != 0 ]; then
         echo "ERROR!"
@@ -22,7 +22,7 @@ for mcnpflav in mcnpx mcnp6 mcnp5; do
         echo
         echo "============= Inspecting $f ============="
         echo
-        ess_mcnp_sswinspect $ESS_DATA_DIR/MCNPTests/$f >& tmpout.txt
+        ess_mcnp_sswinspect $SBLD_DATA_DIR/MCNPTests/$f >& tmpout.txt
         EC=${PIPESTATUS[0]}
         head -30 tmpout.txt
         if [ $EC != 0 ]; then

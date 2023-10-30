@@ -6,8 +6,8 @@ fi
 if [ "x$MCPLTESTS_SKIPTRUNCGZ" != "x1" ]; then
     MCPLTESTS_SKIPTRUNCGZ=0
 fi
-DD="$ESS_DATA_DIR/MCPLTests"
-DDv2="$ESS_DATA_DIR/MCPLTestsFMT2"
+DD="$SBLD_DATA_DIR/MCPLTests"
+DDv2="$SBLD_DATA_DIR/MCPLTestsFMT2"
 F2="$DD/reffile_16.mcpl"
 F1=rf16cp.mcpl
 cp "$F2" $F1
@@ -43,7 +43,7 @@ gunzip difficult_unitvector.mcpl.gz
 function cmd()
 {
     echo "----------------------------------------------"
-    echo "Running $MCPLTESTS_TESTTOOL ""$@" | sed "s#$ESS_DATA_DIR/MCPLTests/#MCPLTests/data/#"
+    echo "Running $MCPLTESTS_TESTTOOL ""$@" | sed "s#$SBLD_DATA_DIR/MCPLTests/#MCPLTests/data/#"
     echo "----------------------------------------------"
     $MCPLTESTS_TESTTOOL "$@"
     if [ $? != 0 ]; then
