@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
 
-which ess_coretests_build_is_debug &> /dev/null
+CMD_ISDBG=ess_coretests_build_is_debug# DGBUILD-NO-EXPORT
+CMD_FORCEFPE=ess_coretests_forcefpe
+# DGBUILD-EXPORT-ONLY>>CMD_ISDBG=sbld_coretests_build_is_debug
+# DGBUILD-EXPORT-ONLY>>CMD_FORCEFPE=sbld_coretests_forcefpe
+
+which ${CMD_ISDBG} &> /dev/null
 if [ $? != 0 ]; then
-    echo "ERROR: needs ess_coretests_build_is_debug"
+    echo "ERROR: needs ${CMD_ISDBG}"
     exit 1
 fi
-ess_coretests_build_is_debug && EXPECTED_EC=134 || EXPECTED_EC=0
+ess_coretestqs_build_is_debug && EXPECTED_EC=134 || EXPECTED_EC=0
 if [ ! -f /proc/cpuinfo ]; then
     #FPE detection disabled on mac
     EXPECTED_EC=0
 fi
-ess_coretests_forcefpe 2>stderr 1>stdout
+${CMD_FORCEFPE} 2>stderr 1>stdout
 EC=$?
 cat stdout
 cat stderr
