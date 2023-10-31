@@ -672,7 +672,7 @@ Error: Too few arguments! (run with -h or --help for usage instructions)
 ---> Test -h
 Usage:
 
-  ess_mcnp_ssw2mcpl [options] input.ssw [output.mcpl]
+  sb_mcnp_ssw2mcpl [options] input.ssw [output.mcpl]
 
 Converts the Monte Carlo particles in the input.ssw file (MCNP Surface
 Source Write format) to MCPL format and stores in the designated output
@@ -689,7 +689,7 @@ Options:
 ---> Test --help
 Usage:
 
-  ess_mcnp_ssw2mcpl [options] input.ssw [output.mcpl]
+  sb_mcnp_ssw2mcpl [options] input.ssw [output.mcpl]
 
 Converts the Monte Carlo particles in the input.ssw file (MCNP Surface
 Source Write format) to MCPL format and stores in the designated output

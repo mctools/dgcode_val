@@ -17,7 +17,7 @@ print("*** Load and dump reference file")
 dump(reffile)
 print("*** Create new file")
 assert not os.path.exists(newfile), "file already exists"
-ec=os.system('ess_meshtests_createstd')
+ec=os.system('sb_meshtests_createstd')
 assert ec==0
 assert os.path.exists(newfile)
 print("*** Dump it")

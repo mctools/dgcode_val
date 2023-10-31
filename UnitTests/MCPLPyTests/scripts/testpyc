@@ -3,11 +3,11 @@
 
 #coverage recipe:
 #
-#  coverage2 run --source=MCPL `which ess_mcplpytests_testpyc`
+#  coverage2 run --source=MCPL `which sb_mcplpytests_testpyc`
 #
 #or:
 #
-#  coverage3 run --source=MCPL `which ess_mcplpytests_testpyc`
+#  coverage3 run --source=MCPL `which sb_mcplpytests_testpyc`
 #
 #then get nice html results with:
 #

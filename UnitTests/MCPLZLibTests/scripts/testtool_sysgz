@@ -21,4 +21,4 @@ cp $P/libsrc/mcpl.c .
 cat $P/app_tool/main.c|sed 's#MCPL/mcpl.h#mcpl.h#' > main.c
 #NB: link flags comes *after*, other flags *before* object to compile...:
 $CC -std=c99 -I$SBLD_INCLUDE_DIR/MCPL $CFLAGS  -DMCPL_HASZLIB mcpl.c main.c -lm $LDFLAGS -o mcpl_tool_sysgz && \
-MCPLTESTS_TESTTOOL=./mcpl_tool_sysgz MCPLTESTS_SKIPTRUNCGZ=1 ess_mcpltests_testtool
+MCPLTESTS_TESTTOOL=./mcpl_tool_sysgz MCPLTESTS_SKIPTRUNCGZ=1 sb_mcpltests_testtool

@@ -19,7 +19,7 @@ for pyio in none ascii utf8; do
             export LANG=$loc
             export LANGUAGE=$loc
         fi
-        cmd="ess_mcpl_pytool $SBLD_DATA_DIR/MCPLTests/reffile_encodings.mcpl.gz" > $log
+        cmd="sb_mcpl_pytool $SBLD_DATA_DIR/MCPLTests/reffile_encodings.mcpl.gz" > $log
         $cmd >> $log
         $cmd -nl3 >> $log
         for bk in asciidata asciidata_empty utf8data binarydata 'utf8bløbkey' `echo -ne "notutf8key_\xff\xfe_"`; do
@@ -27,7 +27,7 @@ for pyio in none ascii utf8; do
             $cmd -b"${bk}" >> $log
             echo >> $log
             echo -n md5sum: >> $log
-            $cmd -b"${bk}"|ess_utils_md5sum >> $log
+            $cmd -b"${bk}"|sb_utils_md5sum >> $log
         done
         if [ "x$loc" != "xC" -a "x$pyio" != "xnone" ]; then
             diff -a output_pyio_none_lang_C.txt $log

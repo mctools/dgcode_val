@@ -20,18 +20,18 @@ for bf1 in $S test_ssw.w; do
         #f1 is data file, f2 is ref file for back conversion
         echo "=====> Testing $bf1 to mcpl (with max info):"
         rm -f m.mcpl new.w
-        ess_mcnp_ssw2mcpl -n -d -s $f1 m.mcpl
-        ess_mcpl_tool m.mcpl
+        sb_mcnp_ssw2mcpl -n -d -s $f1 m.mcpl
+        sb_mcpl_tool m.mcpl
         echo "=====> Testing conversion to ssw format of $bf2 (first 10 particles)"
-        ess_mcnp_mcpl2ssw -l10 m.mcpl $f2 new.w || echo fail
+        sb_mcnp_mcpl2ssw -l10 m.mcpl $f2 new.w || echo fail
     done
 done
 
 echo "=====> Test no args"
-ess_mcnp_mcpl2ssw || echo "=====> Non-zero ExitCode detected!"
+sb_mcnp_mcpl2ssw || echo "=====> Non-zero ExitCode detected!"
 
 echo "=====> Test -h"
-ess_mcnp_mcpl2ssw -h
+sb_mcnp_mcpl2ssw -h
 
 echo "=====> Test --help"
-ess_mcnp_mcpl2ssw --help
+sb_mcnp_mcpl2ssw --help

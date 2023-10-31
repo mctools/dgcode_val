@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #set -e
 #set -u
-ess_sh2rtests_run >& output.log
+sb_sh2rtests_run >& output.log
 EC=$?
 if [ "x$EC" != "x0" ]; then
   cat output.log

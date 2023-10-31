@@ -3,7 +3,7 @@
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 210 particles to new file tmp.mcpl
@@ -55,7 +55,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferred a total of 200 particles to new file tmp.mcpl
@@ -107,7 +107,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferred a total of 200 particles to new file tmp.mcpl
@@ -159,7 +159,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' --keepuserflags
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferred a total of 200 particles to new file tmp.mcpl
@@ -211,7 +211,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 200 particles to new file tmp.mcpl
@@ -263,7 +263,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferred a total of 205 particles to new file tmp.mcpl
@@ -316,7 +316,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' --keepuserflags
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
@@ -370,7 +370,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 195 particles to new file tmp.mcpl
@@ -417,7 +417,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 295 particles to new file tmp.mcpl
@@ -469,7 +469,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 210 particles to new file tmp.mcpl
@@ -521,7 +521,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 200 particles to new file tmp.mcpl
@@ -573,7 +573,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -624,7 +624,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' --keepuserflags
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -675,7 +675,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -726,7 +726,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -777,7 +777,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferred a total of 25 particles to new file tmp.mcpl
@@ -834,7 +834,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
@@ -887,7 +887,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -933,7 +933,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 115 particles to new file tmp.mcpl
@@ -985,7 +985,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 30 particles to new file tmp.mcpl
@@ -1037,7 +1037,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -1088,7 +1088,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1129,7 +1129,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1170,7 +1170,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1211,7 +1211,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -1258,7 +1258,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
@@ -1301,7 +1301,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 5 particles to new file tmp.mcpl
@@ -1337,7 +1337,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 105 particles to new file tmp.mcpl
@@ -1389,7 +1389,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -1440,7 +1440,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1481,7 +1481,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1522,7 +1522,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1563,7 +1563,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -1610,7 +1610,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' --keepuserflags
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
@@ -1653,7 +1653,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 5 particles to new file tmp.mcpl
@@ -1689,7 +1689,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 105 particles to new file tmp.mcpl
@@ -1741,7 +1741,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -1792,7 +1792,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1833,7 +1833,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -1874,7 +1874,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -1921,7 +1921,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
@@ -1964,7 +1964,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 5 particles to new file tmp.mcpl
@@ -2000,7 +2000,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 105 particles to new file tmp.mcpl
@@ -2052,7 +2052,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -2103,7 +2103,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -2144,7 +2144,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -2191,7 +2191,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
@@ -2234,7 +2234,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 5 particles to new file tmp.mcpl
@@ -2270,7 +2270,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 105 particles to new file tmp.mcpl
@@ -2322,7 +2322,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -2373,7 +2373,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl).
 MCPL mcpl_forcemerge_files called with 2 files that are compatible for a standard merge => falling back to standard mcpl_merge_files function
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl).
@@ -2416,7 +2416,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' --keepuserflags
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
@@ -2464,7 +2464,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferred a total of 10 particles to new file tmp.mcpl
@@ -2505,7 +2505,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 110 particles to new file tmp.mcpl
@@ -2557,7 +2557,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 25 particles to new file tmp.mcpl
@@ -2613,7 +2613,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -2660,7 +2660,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
@@ -2699,7 +2699,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
@@ -2755,7 +2755,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
@@ -2809,7 +2809,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
@@ -2852,7 +2852,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferred a total of 100 particles to new file tmp.mcpl
@@ -2904,7 +2904,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 15 particles to new file tmp.mcpl
@@ -2950,7 +2950,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 5 particles to new file tmp.mcpl
@@ -2986,7 +2986,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferred a total of 115 particles to new file tmp.mcpl
@@ -3038,7 +3038,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 105 particles to new file tmp.mcpl
@@ -3090,7 +3090,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferred a total of 20 particles to new file tmp.mcpl
@@ -3141,7 +3141,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' --keepuserflags
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
@@ -3205,7 +3205,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
@@ -3269,7 +3269,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz'
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
@@ -3333,7 +3333,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' --keepuserflags
 MCPL force-merge: Transferring 195 particles from file <SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
@@ -3397,7 +3397,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz'
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
@@ -3450,7 +3450,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
@@ -3513,7 +3513,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
@@ -3565,7 +3565,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_uw.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 15 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_uw.mcpl.gz
@@ -3622,7 +3622,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
@@ -3669,7 +3669,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_10.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' --keepuserflags
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_10.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
@@ -3722,7 +3722,7 @@ MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 p
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_13.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_crash.mcpl'
 MCPL WARNING: Input file appears to not have been closed properly. Recovered 4 particles.
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_13.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
@@ -3775,7 +3775,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_14.mcpl' '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz'
 MCPL force-merge: Transferring 5 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_14.mcpl
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
@@ -3839,7 +3839,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/difficult_unitvector.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_empty.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/reffile_userflags_is_pos.mcpl.gz' --keepuserflags
 MCPL force-merge: Transferring 10 particles from file <SBLD_DATA_DIR>/MCPLTests/difficult_unitvector.mcpl.gz
 MCPL force-merge: Transferring 0 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_empty.mcpl.gz
 MCPL force-merge: Transferring 100 particles from file <SBLD_DATA_DIR>/MCPLTests/reffile_userflags_is_pos.mcpl.gz
@@ -3903,7 +3903,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/miscphys.mcpl.gz'
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz).
 MCPL mcpl_forcemerge_files called with 2 files that are compatible for a standard merge => falling back to standard mcpl_merge_files function
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/miscphys.mcpl.gz).
@@ -3956,7 +3956,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz'
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz' '$SBLD_DATA_DIR/MCPLTests/gammas_uw.mcpl.gz'
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz).
 MCPL mcpl_forcemerge_files called with 2 files that are compatible for a standard merge => falling back to standard mcpl_merge_files function
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/gammas_uw.mcpl.gz).
@@ -4010,7 +4010,7 @@ index     pdgcode   ekin[MeV]       x[cm]       y[cm]       z[cm]          ux   
 
 
 
-RUNNING: ess_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' --keepuserflags
+RUNNING: sb_mcpl_tool --forcemerge tmp.mcpl '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' '$SBLD_DATA_DIR/MCPLTests/reffile_3.mcpl' --keepuserflags
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl).
 MCPL mcpl_forcemerge_files called with 2 files that are compatible for a standard merge => falling back to standard mcpl_merge_files function
 MCPL WARNING: Merging file with itself (<SBLD_DATA_DIR>/MCPLTests/reffile_3.mcpl).

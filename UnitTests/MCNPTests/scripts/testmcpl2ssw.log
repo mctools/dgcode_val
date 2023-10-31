@@ -4810,7 +4810,7 @@ Run with -h or --help for usage information
 =====> Test -h
 Usage:
 
-  ess_mcnp_mcpl2ssw [options] <input.mcpl> <reference.ssw> [output.ssw]
+  sb_mcnp_mcpl2ssw [options] <input.mcpl> <reference.ssw> [output.ssw]
 
 Converts the Monte Carlo particles in the input MCPL file to SSW format
 (MCNP Surface Source Write) and stores the result in the designated output
@@ -4840,7 +4840,7 @@ Options:
 =====> Test --help
 Usage:
 
-  ess_mcnp_mcpl2ssw [options] <input.mcpl> <reference.ssw> [output.ssw]
+  sb_mcnp_mcpl2ssw [options] <input.mcpl> <reference.ssw> [output.ssw]
 
 Converts the Monte Carlo particles in the input MCPL file to SSW format
 (MCNP Surface Source Write) and stores the result in the designated output

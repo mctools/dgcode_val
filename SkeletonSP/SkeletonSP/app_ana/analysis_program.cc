@@ -50,7 +50,7 @@ int main(int argc,char**argv) {
     }
   }
 
-  //Save histograms to a file which can be browsed with ess_simplehists_browse:
+  //Save histograms to a file which can be browsed with sb_simplehists_browse:
   hc.saveToFile("skeletonsp",true);
 
   return 0;

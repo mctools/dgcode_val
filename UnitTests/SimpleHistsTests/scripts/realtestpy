@@ -208,14 +208,14 @@ hdeser.dump(True,"s3: ")
 print("Test browse script + reading of reference file")
 
 sys.stdout.flush()
-ec=os.system("ess_simplehists_browse -dd %s"%Core.FindData('SimpleHists','ref.shist'))
+ec=os.system("sb_simplehists_browse -dd %s"%Core.FindData('SimpleHists','ref.shist'))
 assert ec==0
 sys.stdout.flush()
 
 print("Test browse script + reading of reference file in version 0x01")
 
 sys.stdout.flush()
-ec=os.system("ess_simplehists_browse -dd %s"%Core.FindData('SimpleHists','refv1.shist'))
+ec=os.system("sb_simplehists_browse -dd %s"%Core.FindData('SimpleHists','refv1.shist'))
 assert ec==0
 sys.stdout.flush()
 

@@ -24,7 +24,7 @@ G4Launcher::   --> GeoConstructor[G4StdGeometries/GeoEmptyWorld]:
 G4Launcher::   -->   [str] material = "Vacuum"
 G4Launcher::   -->   [dbl] dimension_cm = 100
 G4Launcher:: Setting up particle generation:
-G4Launcher::   --> ParticleGenerator[ess_g4geantinoinsrttests_test/IsotropicNeutronGen]:
+G4Launcher::   --> ParticleGenerator[sb_g4geantinoinsrttests_test/IsotropicNeutronGen]:
 G4Launcher:: Requested to not set output of GRIFF files:
 G4Launcher:: Pre-init done
 G4Launcher:: Calling G4RunManager::Initialize()

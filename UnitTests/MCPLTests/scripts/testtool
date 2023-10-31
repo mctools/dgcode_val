@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "x$MCPLTESTS_TESTTOOL" == "x" ]; then
-    MCPLTESTS_TESTTOOL=ess_mcpl_tool
+    MCPLTESTS_TESTTOOL=sb_mcpl_tool
 fi
 if [ "x$MCPLTESTS_SKIPTRUNCGZ" != "x1" ]; then
     MCPLTESTS_SKIPTRUNCGZ=0
@@ -235,7 +235,7 @@ cmd $DD/reffile_uw.mcpl.gz
 cmd $DD/reffile_encodings.mcpl.gz
 for bk in asciidata asciidata_empty utf8data binarydata 'utf8bløbkey' `echo -ne "notutf8key_\xff\xfe_"`; do
     echo "====> extracting and calculating md5sum of blob with key \"$bk\":"
-    $MCPLTESTS_TESTTOOL $DD/reffile_encodings.mcpl.gz -b"${bk}"|ess_utils_md5sum
+    $MCPLTESTS_TESTTOOL $DD/reffile_encodings.mcpl.gz -b"${bk}"|sb_utils_md5sum
     if [ ${PIPESTATUS[0]} != 0 ]; then
         echo "===> Command failed!"
     fi

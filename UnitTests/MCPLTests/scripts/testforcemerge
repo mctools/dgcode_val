@@ -53,7 +53,7 @@ for i,filelist in enumerate(filecombinations):
 
 
     Sys.rm_f('tmp.mcpl')
-    cmd=Sys.quote_cmd(['ess_mcpl_tool','--forcemerge','tmp.mcpl']+list(filelist))
+    cmd=Sys.quote_cmd(['sb_mcpl_tool','--forcemerge','tmp.mcpl']+list(filelist))
     if keepuf:
         cmd+=' --keepuserflags'
     print('\n\n\n\n\nRUNNING: %s'%cmd,flush=True)

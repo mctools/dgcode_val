@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "x$MCPLTESTS_TESTTOOL" == "x" ]; then
-    MCPLTESTS_TESTTOOL=ess_mcpl_tool
+    MCPLTESTS_TESTTOOL=sb_mcpl_tool
 fi
 DD="$SBLD_DATA_DIR/MCPLTestsFMT2"
 F2="$DD/reffile_16.mcpl"

@@ -11,7 +11,7 @@ from ScanUtils.ScanLauncher import ScanLauncher,ParameterGroup
 from numpy import linspace
 
 #Global setup for all scan jobs:
-scan = ScanLauncher("ess_skeletonsp_simanachain",autoseed=True)
+scan = ScanLauncher("sb_skeletonsp_simanachain",autoseed=True)
 scan.add_global_parameter("rundir")
 scan.add_global_parameter("--cleanup")
 scan.add_global_parameter("--nevts",100000)

@@ -5,7 +5,7 @@
 #silently doesn't do anything when the Geant4 framework is not present.
 
 if [ -d $SBLD_INSTALL_PREFIX/include/G4Launcher/ ]; then
-   ess_skeletonsp_sim -t -lESS_Empty && \
-   ess_skeletonsp_simanachain rundir --cleanup -n1 -lESS_Empty
+   sb_skeletonsp_sim -t -lESS_Empty && \
+   sb_skeletonsp_simanachain rundir --cleanup -n1 -lESS_Empty
 fi
 
