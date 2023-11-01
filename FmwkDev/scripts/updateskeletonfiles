@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #Update skeleton files in "textball" for the newsimprojects script
-from dgbuild.cfg import pkgs
+from simplebuild.cfg import pkgs
 import Utils.textball
 import Utils.GitUtils
 import shlex

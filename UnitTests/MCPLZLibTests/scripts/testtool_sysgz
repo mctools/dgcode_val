@@ -2,7 +2,7 @@
 set -u
 set -e
 #A bit hackish, but we basically want to compile mcpl with system zlib:
-ENVDICT="import pickle;import dgbuild.cfg as cfg;d=pickle.load(open(cfg.dirs.envcache,'rb'))"
+ENVDICT="import pickle;import simplebuild.cfg as cfg;d=pickle.load(open(cfg.dirs.envcache,'rb'))"
 CC=`python -c "$ENVDICT;print(d['system']['volatile']['c']['compiler'])"`
 if [ $? != 0 ]; then
     exit 1
@@ -15,7 +15,7 @@ LDFLAGS=`python -c "$ENVDICT;print(d['extdeps']['ZLib']['ldflags'])"`
 if [ $? != 0 ]; then
     exit 1
 fi
-P=$(python3 -c "import dgbuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
+P=$(python3 -c "import simplebuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
 #cat $P/libsrc/mcpl.c|sed 's#MiniZLib/zlib.h#zlib.h#' > mcpl.c
 cp $P/libsrc/mcpl.c .
 cat $P/app_tool/main.c|sed 's#MCPL/mcpl.h#mcpl.h#' > main.c

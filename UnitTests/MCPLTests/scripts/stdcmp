@@ -7,15 +7,15 @@
 lang="$1"
 
 #A bit hackish, but we want to compile mcpl again and again:
-CC=`python -c 'import os; import pickle; import dgbuild.cfg as cfg; print(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["volatile"]["c"]["compiler"])'`
+CC=`python -c 'import os; import pickle; import simplebuild.cfg as cfg; print(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["volatile"]["c"]["compiler"])'`
 if [ $? != 0 ]; then
     exit 1
 fi
-CCXX=`python -c 'import os; import pickle; import dgbuild.cfg as cfg; print(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["volatile"]["cxx"]["compiler"])'`
+CCXX=`python -c 'import os; import pickle; import simplebuild.cfg as cfg; print(pickle.load(open(cfg.dirs.envcache,"rb"))["system"]["volatile"]["cxx"]["compiler"])'`
 if [ $? != 0 ]; then
     exit 1
 fi
-P=$(python3 -c "import dgbuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
+P=$(python3 -c "import simplebuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
 
 #sliiiightly faster compilation with -O0:
 CC="$CC -O0"

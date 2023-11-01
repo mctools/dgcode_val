@@ -7,11 +7,11 @@ set -u
 
 #A bit hackish, but we want to compile mcpl again and again:
 
-CC=$(python3 -c 'import pickle,dgbuild.cfg as c; print(pickle.loads(c.dirs.envcache.read_bytes())["system"]["langs"]["c"]["compiler"])')
+CC=$(python3 -c 'import pickle,simplebuild.cfg as c; print(pickle.loads(c.dirs.envcache.read_bytes())["system"]["langs"]["c"]["compiler"])')
 
-CAN_USE_RPATHLINK=$(python3 -c 'import pickle,dgbuild.cfg as c; print(int(pickle.loads(c.dirs.envcache.read_bytes())["system"]["langs"]["c"].get("can_use_rpathlink_flag",0)))')
+CAN_USE_RPATHLINK=$(python3 -c 'import pickle,simplebuild.cfg as c; print(int(pickle.loads(c.dirs.envcache.read_bytes())["system"]["langs"]["c"].get("can_use_rpathlink_flag",0)))')
 
-P=$(python3 -c "import dgbuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
+P=$(python3 -c "import simplebuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
 
 mkdir -p fakebadgzip/
 echo 'int main(){ return 1; }' | $CC -xc - -o fakebadgzip/gzip

@@ -3,10 +3,10 @@
 #Unit test against forbidden dependencies (this helps us to remember to update
 #dependencies if e.g. a package moves from Projects/ to Framework/).
 
-import dgbuild.cfg
-pkgs = dgbuild.cfg.pkgs
+import simplebuild.cfg
+pkgs = simplebuild.cfg.pkgs
 
-legacy_mode = not hasattr(dgbuild.cfg.dirs,'projdir')
+legacy_mode = not hasattr(simplebuild.cfg.dirs,'projdir')
 
 def pkg_dep_iter(pkgdata,direct_deps_only=False):
     for pkgdepname in pkgdata.get('deps_pkgs_direct' if direct_deps_only else 'deps_pkgs',[]):
