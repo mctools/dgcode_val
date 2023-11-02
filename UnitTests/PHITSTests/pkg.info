@@ -1,4 +1,4 @@
-package(USEPKG PHITS)
+package(USEPKG PHITS USEEXT Numpy)
 
 #############################################################
 

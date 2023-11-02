@@ -1,4 +1,4 @@
-package(USEPKG MCPL USEEXT ZLib)
+package(USEPKG MCPLTests USEEXT ZLib)
 
 ##########################################################
 
