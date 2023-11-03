@@ -1,7 +1,7 @@
 #include "Core/Python.hh"
 #include "G4Examples/ExampleHookClass.hh"
 
-PYTHON_MODULE3
+PYTHON_MODULE( mod )
 {
   py::class_<ExampleHookClass,Utils::ParametersBase>(mod,"ExampleHookClass")
     .def( py::init<>() )

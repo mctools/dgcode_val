@@ -13,7 +13,7 @@ namespace UtilsTests {
 }
 
 
-PYTHON_MODULE3
+PYTHON_MODULE( mod )
 {
   mod.def("gensquares",UtilsTests::gensquares);
 }
