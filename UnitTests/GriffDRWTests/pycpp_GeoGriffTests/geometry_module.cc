@@ -10,7 +10,7 @@ public:
   G4VPhysicalVolume* Construct();
 };
 
-PYTHON_MODULE { GeoConstructPyExport::exportGeo<GeoGriffTests>(PYMOD "GeoGriffTests"); }
+PYTHON_MODULE3 { GeoConstructPyExport::exportGeo<GeoGriffTests>(mod, "GeoGriffTests"); }
 
 G4VPhysicalVolume* GeoGriffTests::Construct()
 {

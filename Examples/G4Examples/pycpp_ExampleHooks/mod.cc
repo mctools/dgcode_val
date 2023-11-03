@@ -1,9 +1,9 @@
 #include "Core/Python.hh"
 #include "G4Examples/ExampleHooks.hh"
 
-PYTHON_MODULE
+PYTHON_MODULE3
 {
-  PYDEF("prepreInitHook",&ExampleHooks::prepreInitHook);
-  PYDEF("preInitHook",&ExampleHooks::preInitHook);
-  PYDEF("postInitHook",&ExampleHooks::postInitHook);
+  mod.def("prepreInitHook",&ExampleHooks::prepreInitHook);
+  mod.def("preInitHook",&ExampleHooks::preInitHook);
+  mod.def("postInitHook",&ExampleHooks::postInitHook);
 }

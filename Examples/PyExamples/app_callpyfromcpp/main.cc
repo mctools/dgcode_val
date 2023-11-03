@@ -18,7 +18,7 @@ int main(int,char**) {
   py::object some_function = mod.attr("some_function");
 
   //And call it (converting the returned py::object to a C++ double):
-  double res = py::extract<double>(some_function(2.2,-0.4));
+  double res = some_function(2.2,-0.4).cast<double>();
 
   //Print the result:
   printf("Result of calling PyExamples.Example.some_function(2.2,-0.4): %g\n",res);

@@ -10,7 +10,7 @@ namespace pyG4Utils {
   const char * g4version() { return G4Version.c_str(); }
 }
 
-PYTHON_MODULE
+PYTHON_MODULE3
 {
-  PYDEF("G4Version", &pyG4Utils::g4version, "Geant4 version string from G4Version.hh");
+  mod.def("G4Version", &pyG4Utils::g4version, "Geant4 version string from G4Version.hh");
 }
