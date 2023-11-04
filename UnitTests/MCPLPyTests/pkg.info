@@ -1,4 +1,4 @@
-package(USEPKG MCPLTests Utils USEEXT Numpy)
+package( USEPKG MCPLTests Utils USEEXT Numpy matplotlib )
 
 ##########################################################
 
