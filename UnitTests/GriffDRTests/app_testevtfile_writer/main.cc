@@ -7,7 +7,7 @@
 class DummyFormat : public EvtFile::IFormat {
 public:
   DummyFormat() {}
-  uint32_t magicWord() const { return 0x12345678; }
+  std::uint32_t magicWord() const { return 0x12345678; }
   const char* fileExtension() const { return ".dmy"; }
   const char* eventBriefDataName() const { return "brf"; }
   const char* eventFullDataName() const { return "dtld"; }

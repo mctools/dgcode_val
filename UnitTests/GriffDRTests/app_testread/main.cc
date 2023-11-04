@@ -26,7 +26,7 @@ int test_seek(const char* datafile) {
   //and then subsequently seeking around based on those indices, to access track
   //data.
   GriffDataReader dr(datafile);
-  std::vector<std::tuple<unsigned,unsigned,uint32_t,std::string> > tracks;//evtidx, trkidx, checksum, pdgname
+  std::vector<std::tuple<unsigned,unsigned,std::uint32_t,std::string> > tracks;//evtidx, trkidx, checksum, pdgname
   while (dr.loopEvents()) {
     for (unsigned trkidx = 0; trkidx < dr.nTracks(); ++trkidx) {
       tracks.push_back(std::make_tuple(dr.eventIndexInCurrentFile(),trkidx,dr.eventCheckSum(),dr.getTrack(trkidx)->pdgName()));

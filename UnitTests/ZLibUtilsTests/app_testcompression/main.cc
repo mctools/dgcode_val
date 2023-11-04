@@ -1,6 +1,7 @@
 #include "ZLibUtils/Compress.hh"
 #include <string>
 #include <iostream>
+#include "Core/Types.hh"
 
 static const std::string data_orig = "Det sydede og bruste, mens Ilden flammede under Gryden, det var Taellelysets Vugge – og ud af den lune Vugge gled Lyset for[m]fuldendt, helstoebt, skinnende hvidt og slankt det var dannet paa en Maade, som fik Alle, der saae det til at troe at det maatte give Loevte om en lys og straalende Fremtid – og Loevterne, som Alle saae, skulde det virkelig holde og opfylde."
 "Faaret – et nydeligt lille Faar – var Lysets Moder og Smeltegryden var dets Fader. Fra dets Moder havde det arvet sin blendende hvide Krop og en Ahnelse om Livet; men fra / dets Fader havde det faaet Lysten til den flammende Ild, der engang skulde gaae det igjennem Marv og Been – og ”lyse” for det i Livet."
@@ -53,12 +54,12 @@ int main(int,char**) {
   }
 
   ZLibUtils::compressToBuffer("", 0, data_zipped,zippeddataLength);
-  if (zippeddataLength!=sizeof(uint32_t)||*(reinterpret_cast<uint32_t*>(&data_zipped[0]))!=0) {
-    printf("ERROR: compressing empty buffer yields unexpected result %i %i\n",zippeddataLength,*(reinterpret_cast<uint32_t*>(&data_zipped[0])));
+  if (zippeddataLength!=sizeof(std::uint32_t)||*(reinterpret_cast<std::uint32_t*>(&data_zipped[0]))!=0) {
+    printf("ERROR: compressing empty buffer yields unexpected result %i %i\n",zippeddataLength,*(reinterpret_cast<std::uint32_t*>(&data_zipped[0])));
     return 1;
   }
 
-  const uint32_t nullbuffer = 0;
+  const std::uint32_t nullbuffer = 0;
   ZLibUtils::decompressToBuffer(reinterpret_cast<const char*>(&nullbuffer),sizeof(nullbuffer),data_unzipped,unzippeddataLength);
   if (unzippeddataLength!=0) {
     printf("ERROR: uncompressing null buffer yields unexpected result\n");

@@ -15,7 +15,7 @@
 class DummyFormat : public EvtFile::IFormat {
 public:
   DummyFormat() {}
-  uint32_t magicWord() const { return 0x87654321; }
+  std::uint32_t magicWord() const { return 0x87654321; }
   const char* fileExtension() const { return ".dmy2"; }
   const char* eventBriefDataName() const { return "header"; }
   const char* eventFullDataName() const { return "details"; }
@@ -26,8 +26,8 @@ static const DummyFormat dummyFormat;
 class CustomWritableEntry : public EvtFile::IDBEntry {
 
 public:
-  CustomWritableEntry(uint16_t v1,
-              uint16_t v2,
+  CustomWritableEntry(std::uint16_t v1,
+              std::uint16_t v2,
               const std::string& s,
               EvtFile::index_type name)
     : IDBEntry(), m_val1(v1), m_val2(v2), m_str(s), m_nameIdx(name) {}
@@ -37,13 +37,13 @@ public:
     fw.writeDataDBSection(m_val1);
     fw.writeDataDBSection(m_val2);
     assert(m_str.size()<UINT16_MAX);
-    fw.writeDataDBSection((uint16_t)m_str.size());
+    fw.writeDataDBSection((std::uint16_t)m_str.size());
     if (!m_str.empty())
       fw.writeDataDBSection(&(m_str[0]),m_str.size());
     fw.writeDataDBSection(m_nameIdx);
   }
-  uint16_t val1() const { return m_val1; }
-  uint16_t val2() const { return m_val2; }
+  std::uint16_t val1() const { return m_val1; }
+  std::uint16_t val2() const { return m_val2; }
   const std::string& str() const { return m_str; }
   EvtFile::index_type nameIdx() const { return m_nameIdx; }
 
@@ -72,8 +72,8 @@ protected:
   }
 
 private:
-  uint16_t m_val1;
-  uint16_t m_val2;
+  std::uint16_t m_val1;
+  std::uint16_t m_val2;
   std::string m_str;//directly written string
   EvtFile::index_type m_nameIdx;//string kept in another DB section
 };
@@ -89,8 +89,8 @@ public:
     ByteStream::read(data,m_nameIdx);
   }
 
-  uint16_t val1() const { return m_val1; }
-  uint16_t val2() const { return m_val2; }
+  std::uint16_t val1() const { return m_val1; }
+  std::uint16_t val2() const { return m_val2; }
   const std::string& str() const { return m_str; }
   EvtFile::index_type nameIdx() const { return m_nameIdx; }
 
@@ -100,8 +100,8 @@ public:
   }
 
 private:
-  uint16_t m_val1;
-  uint16_t m_val2;
+  std::uint16_t m_val1;
+  std::uint16_t m_val2;
   std::string m_str;//directly written string
   EvtFile::index_type m_nameIdx;//string kept in another DB section
 };
@@ -123,7 +123,7 @@ typedef std::pair<EvtFile::index_type,EvtFile::index_type> AddressType;
 void addCustom(EvtFile::FileWriter&fw,
                EvtFile::DBEntryWriter&ew ,
                EvtFile::DBStringsWriter& sw,
-               uint16_t a,uint16_t b,const char* c,const char * name)
+               std::uint16_t a,std::uint16_t b,const char* c,const char * name)
 {
   CustomWritableEntry * ce = new CustomWritableEntry(a,b,c,sw.getIndex(name));
   ce->ref();

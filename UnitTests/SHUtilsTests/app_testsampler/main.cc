@@ -6,8 +6,8 @@
 SimpleHists::Hist1D * createHist()
 {
   auto h = new SimpleHists::Hist1D(20,-0.2,2.0);
-  uint64_t n = 10000-1;
-  for (uint64_t i = 0; i <= n; ++i) {
+  std::uint64_t n = 10000-1;
+  for (std::uint64_t i = 0; i <= n; ++i) {
     double x = -log(double((i?i:1.0))/n);
     if (x>1.0&&x<1.5)
       x -= 5.0;
@@ -138,8 +138,8 @@ int main(int,char**) {
 
   SimpleHists::Sampler sampler(h_orig);
   auto h_sampled = new SimpleHists::Hist1D(100,-5,5.0);
-  uint64_t n = 1000000-1;
-  for (uint64_t i = 0; i <= n; ++i)
+  std::uint64_t n = 1000000-1;
+  for (std::uint64_t i = 0; i <= n; ++i)
     h_sampled->fill(sampler(double(i)/n));
 
   h_sampled->dump(true);

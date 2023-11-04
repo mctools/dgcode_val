@@ -1,3 +1,4 @@
+#include "Core/Types.hh"
 #include "Mesh/MeshFiller.hh"
 #include "Utils/DelayedAllocVector.hh"
 #include <cstdlib>
@@ -23,8 +24,8 @@ public:
     return double((m_z << 16) + m_w)/double(UINT32_MAX);  /* 32-bit result */
   }
 private:
-  uint32_t m_w;
-  uint32_t m_z;
+  std::uint32_t m_w;
+  std::uint32_t m_z;
 };
 
 template <int NDIM,class TStorage>
