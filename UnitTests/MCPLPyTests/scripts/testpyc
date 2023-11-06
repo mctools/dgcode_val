@@ -97,7 +97,30 @@ testtool([quote(os.path.join(datadir,'MCPLTests/reffile_truncated.mcpl'))])
 testtool([quote(os.path.join(datadir,'MCPLTests/reffile_truncated.mcpl.gz'))])
 testtool([quote(os.path.join(datadir,'MCPLTests/reffile_encodings.mcpl.gz')),'-basciidata'])
 testtool([quote(os.path.join(datadir,'MCPLTests/reffile_encodings.mcpl.gz')),'-butf8data'])
-testtool([quote(os.path.join(datadir,'MCPLTests/reffile_encodings.mcpl.gz')),'-bbinarydata'])
+import contextlib
+@contextlib.contextmanager
+def stdout_buffer_write_hexvalues():
+    #Hack needed to prevent the nasty stuff inside the "binarydata" blob cause
+    #test irreproducibilities (seen in a particular github workflow).
+    import sys
+    _orig_buffer_write = sys.stdout.buffer.write
+    def bufwrite( b ):
+        res = b''
+        for e in b:
+            res += hex(e).encode('ascii')
+        _orig_buffer_write(res)
+    try:
+        sys.stdout.flush()
+        sys.stdout.buffer.flush()
+        sys.stdout.buffer.write = bufwrite
+        yield
+    finally:
+        sys.stdout.buffer.write = _orig_buffer_write
+        sys.stdout.buffer.flush()
+        sys.stdout.flush()
+
+with stdout_buffer_write_hexvalues():
+    testtool([quote(os.path.join(datadir,'MCPLTests/reffile_encodings.mcpl.gz')),'-bbinarydata'])
 
 testtool([quote(os.path.join(datadir,'MCPLTests/reffile_empty.mcpl')),'--stats'])
 testtool([quote(os.path.join(datadir,'MCPLTests/reffile_uw.mcpl.gz')),'--stats'])
