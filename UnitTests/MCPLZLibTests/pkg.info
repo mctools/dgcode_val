@@ -1,7 +1,0 @@
-package(USEPKG MCPLTests USEEXT ZLib)
-
-##########################################################
-
-Package testing MCPL with system install of zlib.
-
-Primary author: thomas.kittelmann@ess.eu

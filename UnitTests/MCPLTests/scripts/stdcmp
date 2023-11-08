@@ -32,9 +32,9 @@ for a in 0 1; do
             linkflags="-lm -L$SBLD_LIB_DIR/"
             hiddencflags="-Wall -Wextra -Werror -pedantic"
             if [ $a == 1 ]; then
-                linkflags="${linkflags} -lPKG__MiniZLib"
+                linkflags="${linkflags} -lz"
                 flags="${flags} -DMCPL_HASZLIB"
-                hiddencflags="${hiddencflags} -I$SBLD_INCLUDE_DIR -DMCPL_ZLIB_INCPATH=\"MiniZLib/zlib.h\""
+                hiddencflags="${hiddencflags} -I$SBLD_INCLUDE_DIR"
             fi
             if [ $b == 1 ]; then
                 flags="${flags} -DMCPL_NO_CUSTOM_GZIP"
