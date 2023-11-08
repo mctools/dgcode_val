@@ -74,4 +74,6 @@ int main()
   VERIFYCONSTANT( h_Planck );
   verify( "k_Boltzmann", CLHEP::k_Boltzmann, Constants::k_Boltzmann, 1e-7 );//<--- NB: REDUCED PRECISION
   verify( "neutron_mass_c2", CLHEP::neutron_mass_c2, Constants::neutron_mass_c2, 1e-7 );//<--- NB: REDUCED PRECISION
+  verify( "proton_mass_c2", CLHEP::proton_mass_c2, Constants::proton_mass_c2, 1e-7 );//<--- NB: REDUCED PRECISION
+  verify( "amu_c2", CLHEP::amu_c2, Constants::amu_c2, 1e-7 );//<--- NB: REDUCED PRECISION
 }

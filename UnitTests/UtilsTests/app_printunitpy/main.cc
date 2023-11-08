@@ -96,6 +96,7 @@ int main()
   EXPORTVAR( Constants, k_Boltzmann );
   EXPORTVAR( Constants, neutron_mass_c2 );
   EXPORTVAR( Constants, proton_mass_c2 );
+  EXPORTVAR( Constants, amu_c2 );
   os << "\n    def __setattr__(self,name,value):\n";
   os << "        raise AttributeError('Constants are read-only ')\n";
   os << "    def __delattr__(self,name,value):\n";
