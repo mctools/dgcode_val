@@ -9,7 +9,7 @@
 
 #include "GriffDataRead/GriffDataReader.hh"
 #include "Core/FindData.hh"
-#include "G4Units/Units.hh"
+#include "Units/Units.hh"
 #include "Core/FPE.hh"
 #include <iostream>
 

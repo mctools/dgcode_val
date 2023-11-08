@@ -26,7 +26,7 @@ void verify( const char * varname, double x_clhep, double x_our, double prec = 1
 
 int main()
 {
-#define VERIFYUNIT( varname ) verify( sbld_stringify(varname), CLHEP:: varname, NewUnits:: varname );
+#define VERIFYUNIT( varname ) verify( sbld_stringify(varname), CLHEP:: varname, Units:: varname );
   VERIFYUNIT( deg );
   VERIFYUNIT( angstrom );
   VERIFYUNIT( nm );
@@ -39,12 +39,13 @@ int main()
   VERIFYUNIT( cm3 );
   VERIFYUNIT( m2 );
   VERIFYUNIT( m3 );
+  VERIFYUNIT( barn );
   VERIFYUNIT( second );
   VERIFYUNIT( ms );
   VERIFYUNIT( millisecond );
   VERIFYUNIT( ns );
   VERIFYUNIT( nanosecond );
-  verify( "meV", CLHEP::eV * 0.001, NewUnits::meV );
+  verify( "meV", CLHEP::eV * 0.001, Units::meV );
   VERIFYUNIT( eV );
   VERIFYUNIT( keV );
   VERIFYUNIT( MeV );
@@ -53,10 +54,10 @@ int main()
   VERIFYUNIT( joule );
   VERIFYUNIT( tesla );
   VERIFYUNIT( newton );
-  verify( "pascal", CLHEP::hep_pascal, NewUnits::pascal );
+  verify( "pascal", CLHEP::hep_pascal, Units::pascal );
   VERIFYUNIT( bar );
   VERIFYUNIT( atmosphere );
-  verify( "atm", CLHEP::atmosphere, NewUnits::atm );
+  verify( "atm", CLHEP::atmosphere, Units::atm );
   VERIFYUNIT( coulomb );
   VERIFYUNIT( kilogram );
   VERIFYUNIT( gram );
@@ -64,13 +65,13 @@ int main()
   VERIFYUNIT( kelvin );
   VERIFYUNIT( mole );
 
-#define VERIFYCONSTANT( varname ) verify( sbld_stringify(varname), CLHEP:: varname, NewConstants:: varname );
+#define VERIFYCONSTANT( varname ) verify( sbld_stringify(varname), CLHEP:: varname, Constants:: varname );
   VERIFYCONSTANT( pi );
   VERIFYCONSTANT( c_light );
   VERIFYCONSTANT( c_squared );
-  verify( "atomic_unit_of_charge", CLHEP::e_SI, NewConstants::atomic_unit_of_charge );
-  verify( "avogadro", CLHEP::Avogadro, NewConstants::avogadro );
+  verify( "atomic_unit_of_charge", CLHEP::e_SI, Constants::atomic_unit_of_charge );
+  verify( "avogadro", CLHEP::Avogadro, Constants::avogadro );
   VERIFYCONSTANT( h_Planck );
-  verify( "k_Boltzmann", CLHEP::k_Boltzmann, NewConstants::k_Boltzmann, 1e-7 );//<--- NB: REDUCED PRECISION
-  verify( "neutron_mass_c2", CLHEP::neutron_mass_c2, NewConstants::neutron_mass_c2, 1e-7 );//<--- NB: REDUCED PRECISION
+  verify( "k_Boltzmann", CLHEP::k_Boltzmann, Constants::k_Boltzmann, 1e-7 );//<--- NB: REDUCED PRECISION
+  verify( "neutron_mass_c2", CLHEP::neutron_mass_c2, Constants::neutron_mass_c2, 1e-7 );//<--- NB: REDUCED PRECISION
 }

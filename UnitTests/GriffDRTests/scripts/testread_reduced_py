@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-from __future__ import print_function
-
 import GriffDataRead
-import G4Units.Units as u
 import Core.FindData
 import Core.FPE
 import sys

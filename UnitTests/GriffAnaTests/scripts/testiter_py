@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from __future__ import print_function
+
 import GriffAnaUtils
 import GriffDataRead
 import Core.FindData
-import G4Units.Units as Units
+from Units import units
 import Core.FPE
 
 Core.FPE.catch_fpe()
@@ -26,7 +26,7 @@ si = GriffAnaUtils.SegmentIterator(dr)
 si.addFilter(GriffAnaUtils.TrackFilter_PDGCode.create(22)).setNegated()
 
 #Only segments with significant energy deposit:
-si.addFilter(GriffAnaUtils.SegmentFilter_EnergyDeposition.create(1*Units.keV))
+si.addFilter(GriffAnaUtils.SegmentFilter_EnergyDeposition.create(1*units.keV))
 
 #particles outside target box only:
 si2 = GriffAnaUtils.SegmentIterator(dr)
@@ -40,7 +40,7 @@ ti.addFilter(tf_alpha_lithium)
 
 #Only steps in lv_targetbox with large energy deposit and from alphas or lithium:
 stepit = GriffAnaUtils.StepIterator(dr)
-stepit.addFilter(GriffAnaUtils.StepFilter_EnergyDeposition.create(50.0*Units.keV))
+stepit.addFilter(GriffAnaUtils.StepFilter_EnergyDeposition.create(50.0*units.keV))
 stepit.addFilter(GriffAnaUtils.SegmentFilter_Volume.create("lv_targetbox"))
 stepit.addFilter(tf_alpha_lithium)
 
@@ -54,7 +54,7 @@ while dr.loopEvents():
                                                                                       dr.nTracks()))
     for segment in si:
         print("  Found segment %i (edep=%.1fkeV in %s) on track %i (pdg=%i)"%(segment.iSegment(),
-                                                                              segment.eDep()/Units.keV,
+                                                                              segment.eDep()/units.keV,
                                                                               segment.volumeName(),
                                                                               segment.getTrack().trackID(),
                                                                               segment.getTrack().pdgCode()))
@@ -68,7 +68,7 @@ while dr.loopEvents():
 
     for step in stepit:
         print("  Found step %i (edep=%.1fkeV in %s) on track %i (%s) segment %i"%(step.iStep(),
-                                                                                step.eDep()/Units.keV,
+                                                                                step.eDep()/units.keV,
                                                                                 step.getSegment().volumeName(),
                                                                                 step.getSegment().getTrack().trackID(),
                                                                                 step.getSegment().getTrack().pdgName(),

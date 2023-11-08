@@ -15,7 +15,7 @@ if not opt.outfile: parser.error("Please specify valid output file")
 
 
 import G4Tests.GeoTest
-import G4Units.Units as Units
+import Units
 import G4Launcher
 
 geo = G4Tests.GeoTest.create()
@@ -26,8 +26,8 @@ vis = False#todo: as option
 launcher = G4Launcher()
 launcher.setGeo(geo)
 launcher.setParticleGun("neutron",
-                      0.025*Units.eV,
-                      (0,0,-1.5*geo.getParameterDouble("worldExtent_meters")*Units.meter),
+                      0.025*Units.units.eV,
+                      (0,0,-1.5*geo.getParameterDouble("worldExtent_meters")*Units.units.meter),
                       (0,0,1))
 
 launcher.setOutput(opt.outfile,opt.mode)

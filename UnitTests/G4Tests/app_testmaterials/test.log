@@ -377,7 +377,7 @@
    ---> State-solid: yes
 
 =========== G4Material getMaterial_BoronCarbide(0.9,-1,20kelvin) ==========
- Material: BoronCarbide_fB10_0.900000_density_2.392578gcm3_temp_20.000000K    density:  2.393 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  32.043 cm 
+ Material: BoronCarbide_fB10_0.900000_density_2.392579gcm3_temp_20.000000K    density:  2.393 g/cm3   RadL:  19.896 cm   Nucl.Int.Length:  32.043 cm 
                        Imean:  84.700 eV   temperature:  20.00 K  pressure:   1.00 atm
 
    --->  Element: Boron_fB10_0.900000 (B)   Z =  5.0   N =    10   A = 10.113 g/mole

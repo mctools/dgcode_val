@@ -1,7 +1,7 @@
 #include "GriffDataRead/GriffDataReader.hh"
 #include "GriffDataRead/DumpObj.hh"
 #include "Core/FindData.hh"
-#include "G4Units/Units.hh"
+#include "Units/Units.hh"
 #include "Core/FPE.hh"
 #include <set>
 #include <iostream>
@@ -33,14 +33,8 @@ int test_seek(const char* datafile) {
     }
   }
 
-#if 0
-  //Obsolete in c++14, but works in c++98 and c++11:
-  std::random_shuffle(tracks.begin(), tracks.end());
-#else
-  //Too new for c++98, but ok in c++11, c++14 and c++17
   auto eng = std::default_random_engine(123456789);
   std::shuffle(tracks.begin(),tracks.end(),eng);
-#endif
 
   auto itE = tracks.end();
   for (auto it = tracks.begin();it!=itE;++it) {

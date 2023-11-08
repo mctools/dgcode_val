@@ -2,10 +2,7 @@
 
 #This script will produce the same output as the C++ app_testread, but it will not carry out as many tests behind the scenes.
 
-from __future__ import print_function
-
 import GriffDataRead
-import G4Units.Units as u
 import Core.FindData
 import Core.FPE
 import sys

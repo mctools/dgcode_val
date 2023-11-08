@@ -6,7 +6,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
   [dbl] fixed_energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
   [dbl] fixed_zdir = 1
@@ -19,7 +19,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
   [dbl] fixed_energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
   [dbl] fixed_zdir = 1
@@ -44,7 +44,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_x_meters = 0
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
-  [dbl] fixed_energy_eV = 0.02524821026408
+  [dbl] fixed_energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
@@ -57,7 +57,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_x_meters = 0
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
-  [dbl] fixed_energy_eV = 0.02524821026408
+  [dbl] fixed_energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
@@ -78,7 +78,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
   [dbl] fixed_energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
   [dbl] fixed_zdir = 1
@@ -91,7 +91,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
   [dbl] fixed_energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
   [dbl] fixed_zdir = 1
@@ -138,7 +138,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
   [dbl] fixed_energy_eV = 0.025
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
   [dbl] fixed_zdir = 1
@@ -151,7 +151,7 @@ ParticleGenerator[G4StdGenerators/SimpleGen]:
   [dbl] fixed_y_meters = 0
   [dbl] fixed_z_meters = 0
   [dbl] fixed_energy_eV = 0.025
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [dbl] fixed_xdir = 0
   [dbl] fixed_ydir = 0
   [dbl] fixed_zdir = 1
@@ -210,7 +210,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -257,7 +257,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -351,7 +351,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -469,7 +469,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_z = no
   [dbl] random_min_z_meters = 0
   [dbl] random_max_z_meters = 0
-  [dbl] fixed_energy_eV = 0.02524821026408
+  [dbl] fixed_energy_eV = 0.025248213087527
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
@@ -516,7 +516,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_z = no
   [dbl] random_min_z_meters = 0
   [dbl] random_max_z_meters = 0
-  [dbl] fixed_energy_eV = 0.02524821026408
+  [dbl] fixed_energy_eV = 0.025248213087527
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
@@ -570,7 +570,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_z = no
   [dbl] random_min_z_meters = 0
   [dbl] random_max_z_meters = 0
-  [dbl] fixed_energy_eV = 0.02524821026408
+  [dbl] fixed_energy_eV = 0.025248213087527
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
@@ -656,7 +656,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -703,7 +703,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -797,7 +797,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -982,7 +982,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -1029,7 +1029,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -1123,7 +1123,7 @@ ParticleGenerator[G4StdGenerators/FlexGen]:
   [flg] randomize_energy = no
   [dbl] random_min_energy_eV = 0
   [dbl] random_max_energy_eV = 0
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [flg] momdir_spherical = no
   [dbl] fixed_polarangle_deg = 0
   [flg] randomize_polarangle = no
@@ -1299,7 +1299,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -1318,7 +1318,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -1356,7 +1356,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -1484,7 +1484,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_x_mm = 0
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
-  [dbl] energy_eV = 0.02524821026408
+  [dbl] energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
@@ -1503,7 +1503,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_x_mm = 0
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
-  [dbl] energy_eV = 0.02524821026408
+  [dbl] energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
@@ -1529,7 +1529,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_x_mm = 0
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
-  [dbl] energy_eV = 0.02524821026408
+  [dbl] energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
@@ -1583,7 +1583,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_x_mm = 0
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
-  [dbl] energy_eV = 0.02524821026408
+  [dbl] energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] neutron_wavelength_spread_aangstrom = 0.1
   [dbl] neutron_thermal_spectrum_kelvin = 0
@@ -1602,7 +1602,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_x_mm = 0
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
-  [dbl] energy_eV = 0.02524821026408
+  [dbl] energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] neutron_wavelength_spread_aangstrom = 0.1
   [dbl] neutron_thermal_spectrum_kelvin = 0
@@ -1628,7 +1628,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_x_mm = 0
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
-  [dbl] energy_eV = 0.02524821026408
+  [dbl] energy_eV = 0.025248213087527
   [dbl] neutron_wavelength_aangstrom = 1.8
   [dbl] neutron_wavelength_spread_aangstrom = 0.1
   [dbl] neutron_thermal_spectrum_kelvin = 0
@@ -1971,7 +1971,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -1990,7 +1990,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -2028,7 +2028,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 100
-  [dbl] neutron_wavelength_aangstrom = 0.02860143375001
+  [dbl] neutron_wavelength_aangstrom = 0.028601435349225
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -2535,7 +2535,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 0.025
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -2554,7 +2554,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 0.025
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1
@@ -2592,7 +2592,7 @@ ParticleGenerator[G4StdGenerators/ProfiledBeamGen]:
   [dbl] offset_y_mm = 0
   [dbl] offset_z_mm = 0
   [dbl] energy_eV = 0.025
-  [dbl] neutron_wavelength_aangstrom = 1.8089134999288
+  [dbl] neutron_wavelength_aangstrom = 1.8089136010721
   [dbl] neutron_wavelength_spread_aangstrom = 0
   [dbl] neutron_thermal_spectrum_kelvin = 0
   [int] fixed_nparticles = 1

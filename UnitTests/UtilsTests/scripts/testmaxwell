@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-from __future__ import print_function
+
 import sys
 import Utils.MaxwellDist as m
-import G4Units.Units as u
+from Units import units as u
 
 
 for a in [0.1,1,10]:
@@ -26,7 +26,7 @@ for a in [0.1,1,10]:
 temp = 273.15*u.kelvin
 rand=0.5
 print('sample neutron speed      for %g K = %g m/s'%(temp/u.kelvin,m.shootThermalNeutronSpeed(temp,rand)/(u.meter/u.second)))
-print('sample neutron EKin       for %g K = %g meV'%(temp/u.kelvin,m.shootThermalNeutronEKin(temp,rand)/(u.millielectronvolt)))
+print('sample neutron EKin       for %g K = %g meV'%(temp/u.kelvin,m.shootThermalNeutronEKin(temp,rand)/(u.meV)))
 print('sample neutron wavelength for %g K = %g Aangstrom'%(temp/u.kelvin,m.shootThermalNeutronWavelength(temp,rand)/(u.angstrom)))
 
 for t in [20,273.15,293.15]:

@@ -1,5 +1,5 @@
 #include "G4Tests/GeoTest.hh"
-#include "G4Units/Units.hh"
+#include "Units/Units.hh"
 #include "G4Box.hh"
 #include "G4LogicalVolume.hh"
 #include "G4PVPlacement.hh"
@@ -9,7 +9,7 @@
 G4VPhysicalVolume* G4Tests::GeoTest::Construct()
 {
   //free parameters:
-  double boron_thickness = getParameterDouble("boronThickness_micron")*Units::micrometer;
+  double boron_thickness = getParameterDouble("boronThickness_micron")*Units::um;
   double world_extent = getParameterDouble("worldExtent_meters")*Units::meter;
 
   //materials

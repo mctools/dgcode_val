@@ -1,6 +1,6 @@
 #include "G4Launcher/Launcher.hh"
 #include "G4Interfaces/GeoConstructBase.hh"
-#include "G4Units/Units.hh"
+#include "Units/Units.hh"
 #include "G4NistManager.hh"
 #include "G4LogicalVolume.hh"
 #include "G4PVPlacement.hh"
@@ -14,7 +14,7 @@ public:
 
   DummyGeo() : GeoConstructBase("DummyGeo")
   {
-    addParameterDouble("boxThickness",1*Units::micrometer,0.01*Units::micrometer,10*Units::micrometer);
+    addParameterDouble("boxThickness",1*Units::um,0.01*Units::um,10*Units::um);
   }
 
   G4VPhysicalVolume* Construct()
@@ -34,7 +34,7 @@ public:
 int main(int,char**) {
 
   DummyGeo * geo = new DummyGeo();
-  geo->setParameterDouble("boxThickness",2*Units::micrometer);
+  geo->setParameterDouble("boxThickness",2*Units::um);
 
   G4Launcher::Launcher launcher;
   launcher.setGeo(geo);

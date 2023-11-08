@@ -2,7 +2,7 @@
 #include "GriffAnaUtils/All.hh"
 
 #include "Core/FindData.hh"
-#include "G4Units/Units.hh"
+#include "Units/Units.hh"
 
 //Custom filter which selects just tracks which are
 //daughters of a primary neutron:

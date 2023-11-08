@@ -2,7 +2,7 @@
 
 import Core.System as Sys
 import XSectParse.ParseXSectFile as XSparse
-import G4Units.Units
+import Units
 import sys
 import pathlib
 import shlex
@@ -36,8 +36,8 @@ settings = [ dict( mat='G4_POLYETHYLENE', physlist='QGSP_BIC_HP+TS', expected = 
 
 use_tmp_dir = not '--local' in sys.argv[1:]
 
-unit_eV = G4Units.Units.eV
-unit_barn = G4Units.Units.barn
+unit_eV = Units.units.eV
+unit_barn = Units.units.barn
 
 with ( Sys.work_in_tmpdir() if use_tmp_dir else Sys.changedir('.') ):
     workdir_base = pathlib.Path('.').absolute().resolve()
