@@ -1,7 +1,0 @@
-package(USEPKG PHITS USEEXT Numpy)
-
-#############################################################
-
-PHITS utilities tests.
-
-primary author: thomas.kittelmann@ess.eu
