@@ -1,4 +1,4 @@
-package(USEPKG MCPL MCPLTestsFMT2 Utils USEEXT Numpy)
+package(USEPKG MCPL MCPLTestsFMT2 Utils USEEXT Numpy ZLib)
 
 ##########################################################
 

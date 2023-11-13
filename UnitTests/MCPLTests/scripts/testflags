@@ -7,11 +7,14 @@ set -u
 
 #A bit hackish, but we want to compile mcpl again and again:
 
-CC=$(python3 -c 'import pickle,simplebuild.cfg as c; print(pickle.loads(c.dirs.envcache.read_bytes())["system"]["langs"]["c"]["compiler"])')
+CC=$(sb_core_queryenv system langs c compiler)
+CAN_USE_RPATHLINK=$(sb_core_queryenv --bool01 system langs c can_use_rpathlink_flag)
+P=$(sb_core_queryenv --pkgdir MCPL)
 
-CAN_USE_RPATHLINK=$(python3 -c 'import pickle,simplebuild.cfg as c; print(int(pickle.loads(c.dirs.envcache.read_bytes())["system"]["langs"]["c"].get("can_use_rpathlink_flag",0)))')
+ZLIB_C_CFLAGS=$(sb_core_queryenv extdeps ZLib cflags_c)
+#Assume same for C++ and C: ZLIB_CXX_CFLAGS=$(sb_core_queryenv extdeps ZLib cflags_cxx)
+ZLIB_LDFLAGS=$(sb_core_queryenv extdeps ZLib ldflags)
 
-P=$(python3 -c "import simplebuild.cfg as c; print(c.pkgs['MCPL']['dirname'])")
 
 mkdir -p fakebadgzip/
 echo 'int main(){ return 1; }' | $CC -xc - -o fakebadgzip/gzip
@@ -38,17 +41,21 @@ for a in 0 1; do
         for c in 0 1; do
             rm -f out.mcpl*
             flags=""
+            flagsprint=""
             if [ $a == 1 ]; then
-                flags="-DMCPL_HASZLIB ${flags} -lz -I$SBLD_INCLUDE_DIR"
+                flags="-DMCPL_HASZLIB ${flags} ${ZLIB_LDFLAGS} ${ZLIB_C_CFLAGS}"
+                flagsprint="-DMCPL_HASZLIB ${flagsprint} \${ZLIBFLAGS}"
             fi
             if [ $b == 1 ]; then
                 flags="${flags} -DMCPL_NO_CUSTOM_GZIP"
+                flagsprint="${flagsprint} -DMCPL_NO_CUSTOM_GZIP"
             fi
             if [ $c == 1 ]; then
                 flags="${flags} -DMCPL_NO_EXT_GZIP"
+                flagsprint="${flagsprint} -DMCPL_NO_EXT_GZIP"
             fi
             echo "=========================================================================="
-            echo "=== Testing flags: "`echo ${flags}|sed "s#$SBLD_INCLUDE_DIR#\\$ESSINC#"`
+            echo "=== Testing flags: ${flagsprint}"
             #echo "===    rpathflags: ${rpathflags}"
             $CC -std=c99 -lm ${flags} ${rpathflags} -I$SBLD_INCLUDE_DIR/MCPL -L$SBLD_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
             EC=$?
