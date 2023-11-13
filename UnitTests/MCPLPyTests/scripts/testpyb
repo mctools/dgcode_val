@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-from __future__ import division, print_function, absolute_import, unicode_literals
-import os,glob,sys
-from MCPL import MCPLError,dump_file
+import os
+import glob
+import sys
+from MCPL import MCPLError, dump_file
 import Core.System as Sys
 
 datadir = os.getenv('SBLD_DATA_DIR')

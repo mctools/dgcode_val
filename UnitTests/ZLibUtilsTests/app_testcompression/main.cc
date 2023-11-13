@@ -3,6 +3,9 @@
 #include <iostream>
 #include "Core/Types.hh"
 
+// Note: H.C.Andersen is no longer copyright!! :-)
+
+
 static const std::string data_orig = "Det sydede og bruste, mens Ilden flammede under Gryden, det var Taellelysets Vugge – og ud af den lune Vugge gled Lyset for[m]fuldendt, helstoebt, skinnende hvidt og slankt det var dannet paa en Maade, som fik Alle, der saae det til at troe at det maatte give Loevte om en lys og straalende Fremtid – og Loevterne, som Alle saae, skulde det virkelig holde og opfylde."
 "Faaret – et nydeligt lille Faar – var Lysets Moder og Smeltegryden var dets Fader. Fra dets Moder havde det arvet sin blendende hvide Krop og en Ahnelse om Livet; men fra / dets Fader havde det faaet Lysten til den flammende Ild, der engang skulde gaae det igjennem Marv og Been – og ”lyse” for det i Livet."
 ""

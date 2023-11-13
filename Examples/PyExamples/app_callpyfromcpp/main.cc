@@ -1,5 +1,6 @@
 #include "Core/Python.hh"
 #include <cstdio>
+#include <pybind11/embed.h> //for scoped_interpreter
 
 int main(int,char**) {
 
@@ -9,7 +10,11 @@ int main(int,char**) {
   //First we need to initialise python, since we are not inside a python module
   //here:
 
-  pyextra::ensurePyInit();
+  py::scoped_interpreter guard{};
+
+  //Alternatively, we could have done this interpreter initialisation with a
+  //call to "pyextra::ensurePyInit();", but that is mostly intended for library
+  //code which does not know if the interpreter is already initialised
 
   //Then import the desired module:
   py::object mod = pyextra::pyimport("PyExamples.Example");
