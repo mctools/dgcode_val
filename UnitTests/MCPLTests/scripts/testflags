@@ -18,7 +18,7 @@ ZLIB_LDFLAGS=$(sb_core_queryenv extdeps ZLib ldflags)
 
 
 mkdir -p fakebadgzip/
-echo 'int main(){ return 1; }' | $CC -xc - -o fakebadgzip/gzip
+echo 'int main(void){ return 1; }' | $CC ${CFLAGS} -xc - -o fakebadgzip/gzip
 if [ $? != 0 ]; then
     exit 1
 fi
@@ -36,7 +36,7 @@ if [ "x${CONDA_PREFIX:-}" != x ]; then
 fi
 
 echo '#include "mcpl.h"' > main.c
-echo 'int main() {mcpl_closeandgzip_outfile(mcpl_create_outfile("out.mcpl"));}' >> main.c
+echo 'int main(void) {mcpl_closeandgzip_outfile(mcpl_create_outfile("out.mcpl"));return 0;}' >> main.c
 for a in 0 1; do
     for b in 0 1; do
         for c in 0 1; do
