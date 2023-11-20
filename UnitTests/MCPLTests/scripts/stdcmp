@@ -11,6 +11,8 @@ lang="$1"
 #A bit hackish, but we want to compile mcpl again and again:
 CC=$(sb_core_queryenv system langs c compiler)
 CCXX=$(sb_core_queryenv system langs cxx compiler)
+CFLAGS_C=$(sb_core_queryenv system langs c cflags)
+CFLAGS_CXX=$(sb_core_queryenv system langs cxx cflags)
 P=$(sb_core_queryenv --pkgdir MCPL)
 
 ZLIB_C_CFLAGS=$(sb_core_queryenv extdeps ZLib cflags_c)
@@ -53,13 +55,15 @@ for a in 0 1; do
             for std in $stds; do
                 echo "=== -> mcpl.h & mcpl.c with --std=${std}"
                 COMP=$CC
+                CFLAGS="${CFLAGS_C}"
                 X=-xc
                 if [[ ${std} == c++* ]]; then
                     COMP=$CCXX
+                    CFLAGS="${CFLAGS_CXX}"
                     X=-xc++
                 fi
                 #silently ignore standards not supported by compiler:
-                echo 'int main(){}' |$COMP -std=${std} $X - >  /dev/null 2>&1
+                echo 'int main(){}' |$COMP ${CFLAGS} -std=${std} $X - >  /dev/null 2>&1
                 if [ $? != 0 ]; then
                     if [ "x${std}" != "xc++11" -a "x${std}" != "xc11" ]; then
                         #sanity check to make sure we dont always run on silent...
@@ -68,7 +72,7 @@ for a in 0 1; do
                     fi
                     continue
                 fi
-                $COMP -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$SBLD_INCLUDE_DIR/MCPL $X $P/libsrc/mcpl.c $X main.c
+                $COMP {$CFLAGS} -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$SBLD_INCLUDE_DIR/MCPL $X $P/libsrc/mcpl.c $X main.c
                 if [ $? != 0 ]; then
                     echo "Failure during ${std} compilation of mcpl.c!"
                     exit 1
@@ -82,13 +86,15 @@ for a in 0 1; do
             for std in $stds; do
                 echo "=== -> mcpl.h with --std=${std}"
                 COMP=$CC
+                CFLAGS="${CFLAGS_C}"
                 X=-xc
                 if [[ ${std} == c++* ]]; then
                     COMP=$CCXX
+                    CFLAGS="${CFLAGS_CXX}"
                     X=-xc++
                 fi
                 #silently ignore standards not supported by compiler:
-                echo 'int main(){}' |$COMP -std=${std} $X - >  /dev/null 2>&1
+                echo 'int main(){}' |$COMP ${CFLAGS} -std=${std} $X - >  /dev/null 2>&1
                 if [ $? != 0 ]; then
                     if [ "x${std}" != "xc++11" -a "x${std}" != "xc++03" -a "x${std}" != "xc90" ]; then
                         #sanity check to make sure we dont always run on silent...
@@ -97,7 +103,7 @@ for a in 0 1; do
                     fi
                     continue
                 fi
-                $COMP -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$SBLD_INCLUDE_DIR/MCPL/ $X main.c
+                $COMP ${CFLAGS} -pedantic -c -std=${std} ${flags} ${hiddencflags} -I$SBLD_INCLUDE_DIR/MCPL/ $X main.c
                 if [ $? != 0 ]; then
                     echo "Failure during ${std} compilation of mcpl.h!"
                     exit 1

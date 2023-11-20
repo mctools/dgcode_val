@@ -8,6 +8,7 @@ set -u
 #A bit hackish, but we want to compile mcpl again and again:
 
 CC=$(sb_core_queryenv system langs c compiler)
+CFLAGS=$(sb_core_queryenv system langs c cflags)
 CAN_USE_RPATHLINK=$(sb_core_queryenv --bool01 system langs c can_use_rpathlink_flag)
 P=$(sb_core_queryenv --pkgdir MCPL)
 
@@ -57,7 +58,7 @@ for a in 0 1; do
             echo "=========================================================================="
             echo "=== Testing flags: ${flagsprint}"
             #echo "===    rpathflags: ${rpathflags}"
-            $CC -std=c99 -lm ${flags} ${rpathflags} -I$SBLD_INCLUDE_DIR/MCPL -L$SBLD_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
+            $CC ${CFLAGS} -std=c99 -lm ${flags} ${rpathflags} -I$SBLD_INCLUDE_DIR/MCPL -L$SBLD_LIB_DIR/ $P/libsrc/mcpl.c main.c -lm ${flags} ${rpathflags} -o main && ./main
             EC=$?
             ls -1 out.mcpl*
             if [ $? == 0 ]; then
